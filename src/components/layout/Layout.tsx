@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import FloatingButtons from "./FloatingButtons";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -20,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
       <main className="flex-1 pt-20">{children}</main>
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };

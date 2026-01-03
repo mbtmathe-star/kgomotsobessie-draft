@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
@@ -15,44 +15,84 @@ const navLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container-custom section-padding py-0">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? "bg-background/95 backdrop-blur-md shadow-md" 
+          : "bg-background/80 backdrop-blur-sm"
+      }`}
+    >
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Kgomotso Bessie Social Workers and Consulting Inc" className="h-14 w-auto" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={logo} 
+              alt="Kgomotso Bessie Social Workers and Consulting Inc" 
+              className="h-12 md:h-14 w-auto transition-transform duration-300 group-hover:scale-105" 
+            />
+            <div className="hidden sm:block">
+              <p className="font-heading text-sm font-semibold text-foreground leading-tight">
+                Kgomotso Bessie
+              </p>
+              <p className="text-xs text-muted-foreground">
+                Social Workers & Consulting
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-primary ${
+                className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-accent ${
                   location.pathname === link.href
                     ? "text-primary"
-                    : "text-foreground/80"
+                    : "text-foreground/70 hover:text-foreground"
                 }`}
               >
                 {link.label}
+                {location.pathname === link.href && (
+                  <motion.div
+                    layoutId="activeNav"
+                    className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full"
+                  />
+                )}
               </Link>
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:block">
-            <Button asChild>
-              <Link to="/contact">Book a Consultation</Link>
+          {/* Desktop CTAs */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a 
+              href="tel:0795871204" 
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              <span>079 587 1204</span>
+            </a>
+            <Button asChild size="default">
+              <Link to="/contact">Book Consultation</Link>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-foreground hover:bg-accent rounded-lg transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -68,28 +108,37 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border"
+            className="lg:hidden bg-background border-t border-border shadow-lg"
           >
-            <nav className="container-custom px-4 py-6 flex flex-col gap-4">
+            <nav className="container-custom px-4 py-6 flex flex-col gap-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}
                   onClick={() => setIsOpen(false)}
-                  className={`text-base font-medium transition-colors py-2 ${
+                  className={`text-base font-medium transition-colors py-3 px-4 rounded-lg ${
                     location.pathname === link.href
-                      ? "text-primary"
-                      : "text-foreground/80"
+                      ? "text-primary bg-accent"
+                      : "text-foreground/80 hover:bg-accent"
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-4">
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
-                  Book a Consultation
-                </Link>
-              </Button>
+              <div className="pt-4 mt-2 border-t border-border space-y-3">
+                <a 
+                  href="tel:0795871204" 
+                  className="flex items-center gap-2 text-sm text-muted-foreground py-2 px-4"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>079 587 1204</span>
+                </a>
+                <Button asChild className="w-full" size="lg">
+                  <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    Book a Consultation
+                  </Link>
+                </Button>
+              </div>
             </nav>
           </motion.div>
         )}
