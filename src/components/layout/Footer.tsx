@@ -1,55 +1,51 @@
 import { Link } from "react-router-dom";
-import { MapPin, Phone, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Phone, Instagram, Linkedin, ArrowRight, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
-      <div className="container-custom section-padding py-12 md:py-16">
+      {/* Pre-Footer CTA */}
+      <div className="border-b border-primary-foreground/10">
+        <div className="container-custom px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="font-heading text-xl md:text-2xl font-semibold text-primary-foreground mb-2">
+                Ready to take the next step?
+              </h3>
+              <p className="text-primary-foreground/70 text-sm">
+                Book a consultation or reach out — we're here to help.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild variant="hero" size="lg">
+                <Link to="/contact">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Book Consultation
+                </Link>
+              </Button>
+              <Button asChild variant="heroOutline" size="lg">
+                <a href="tel:0795871204">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call Now
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer */}
+      <div className="container-custom px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src={logo} alt="KB Social Workers" className="h-20 w-auto mb-4 brightness-0 invert" />
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            <img src={logo} alt="KB Social Workers" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Empowering individuals, families, and organizations through expert clinical social work and transformative wellness consulting.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
-            <nav className="flex flex-col gap-2">
-              <Link to="/" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">Home</Link>
-              <Link to="/about" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">About</Link>
-              <Link to="/services" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">Services</Link>
-              <Link to="/impact" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">Impact</Link>
-              <Link to="/contact" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">Contact</Link>
-            </nav>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Contact Us</h4>
-            <div className="flex flex-col gap-3 text-sm">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                <span className="text-primary-foreground/70">
-                  259 Barkly Road, Homestead,<br />Kimberley, 8301
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:0795871204" className="text-primary-foreground/70 hover:text-primary transition-colors">
-                  079 587 1204
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Social & Registration */}
-          <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Connect</h4>
-            <div className="flex gap-3 mb-4">
+            <div className="flex gap-3">
               <a
                 href="https://instagram.com/kgomotsobessie88"
                 target="_blank"
@@ -69,10 +65,74 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
-            <p className="text-xs text-primary-foreground/50">
-              Reg: K2024800742<br />
-              (Incorporated December 2024)
-            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
+            <nav className="flex flex-col gap-2">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/services", label: "Services" },
+                { to: "/impact", label: "Impact" },
+                { to: "/contact", label: "Contact" },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-primary-foreground/70 hover:text-primary transition-colors text-sm inline-flex items-center group"
+                >
+                  <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-heading text-lg font-semibold mb-4">Services</h4>
+            <nav className="flex flex-col gap-2">
+              {[
+                "Clinical Counselling",
+                "Trauma Interventions",
+                "Employee Wellness",
+                "Crisis Management",
+                "#MatricUngazibulali",
+              ].map((service) => (
+                <Link
+                  key={service}
+                  to="/services"
+                  className="text-primary-foreground/70 hover:text-primary transition-colors text-sm"
+                >
+                  {service}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-heading text-lg font-semibold mb-4">Contact Us</h4>
+            <div className="flex flex-col gap-3 text-sm">
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <span className="text-primary-foreground/70">
+                  259 Barkly Road, Homestead,<br />Kimberley, 8301
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="h-4 w-4 text-primary shrink-0" />
+                <a href="tel:0795871204" className="text-primary-foreground/70 hover:text-primary transition-colors">
+                  079 587 1204
+                </a>
+              </div>
+              <p className="text-xs text-primary-foreground/50 mt-2">
+                Reg: K2024800742<br />
+                (Incorporated December 2024)
+              </p>
+            </div>
           </div>
         </div>
 
