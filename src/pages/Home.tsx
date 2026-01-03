@@ -98,11 +98,10 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-8 bg-primary">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
-              { value: "11+", label: "Years Experience" },
+              { value: "11+", label: "Years in Social Work" },
               { value: "7", label: "Years of #MatricUngazibulali" },
-              { value: "100+", label: "Families Supported" },
               { value: "2024", label: "Practice Founded" },
             ].map((stat, index) => (
               <motion.div
@@ -279,7 +278,7 @@ const Home = () => {
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6">
               <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">Flagship Initiative — 7 Years Strong</span>
+              <span className="text-sm font-medium">Flagship Initiative — 7th Year in 2026</span>
             </motion.div>
 
             <motion.h2
@@ -300,9 +299,9 @@ const Home = () => {
               variants={fadeUp}
               className="text-lg text-primary-foreground/70 leading-relaxed mb-8"
             >
-              Celebrating 7 years of saving lives and restoring hope. Our suicide prevention 
-              and mental health awareness initiative ensures no matriculant faces their 
-              high-pressure transitions alone.
+              A suicide prevention and mental health awareness initiative 
+              working to ensure no matriculant faces their high-pressure 
+              transitions alone.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
