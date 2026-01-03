@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src={logo} alt="KB Social Workers" className="h-16 w-auto mb-4 brightness-0 invert" />
+            <img src={logo} alt="KB Social Workers" className="h-20 w-auto mb-4" />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Empowering individuals, families, and organizations through expert clinical social work and transformative wellness consulting.
             </p>
