@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { MapPin, Phone, Instagram, ArrowRight, Calendar, Facebook, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
-
 const Footer = () => {
-  return (
-    <footer className="bg-foreground text-primary-foreground">
+  return <footer className="bg-foreground text-primary-foreground">
       {/* Pre-Footer CTA */}
       <div className="border-b border-primary-foreground/10">
         <div className="container-custom px-4 sm:px-6 lg:px-8 py-12">
@@ -41,28 +39,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src={logo} alt="KB Social Workers" className="h-20 w-auto mb-4" />
+            <img alt="KB Social Workers" className="h-20 w-auto mb-4" src="/lovable-uploads/acc145b7-87ca-4573-97cd-9a17312ce2c4.png" />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Black woman-owned, Level 1 BBBEE social work practice delivering expert 
               clinical, organisational, and community services.
             </p>
             <div className="flex gap-3">
-              <a
-                href="https://www.facebook.com/profile.php?id=100064121128498"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Facebook"
-              >
+              <a href="https://www.facebook.com/profile.php?id=100064121128498" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="https://instagram.com/kgomotsobessie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Instagram"
-              >
+              <a href="https://instagram.com/kgomotsobessie" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -72,22 +58,25 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
-              {[
-                { to: "/", label: "Home" },
-                { to: "/about", label: "About" },
-                { to: "/services", label: "Services" },
-                { to: "/impact", label: "Impact" },
-                { to: "/contact", label: "Contact" },
-              ].map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className="text-primary-foreground/70 hover:text-primary transition-colors text-sm inline-flex items-center group"
-                >
+              {[{
+              to: "/",
+              label: "Home"
+            }, {
+              to: "/about",
+              label: "About"
+            }, {
+              to: "/services",
+              label: "Services"
+            }, {
+              to: "/impact",
+              label: "Impact"
+            }, {
+              to: "/contact",
+              label: "Contact"
+            }].map(link => <Link key={link.to} to={link.to} className="text-primary-foreground/70 hover:text-primary transition-colors text-sm inline-flex items-center group">
                   <ArrowRight className="h-3 w-3 mr-2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   {link.label}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
           </div>
 
@@ -95,21 +84,9 @@ const Footer = () => {
           <div>
             <h4 className="font-heading text-lg font-semibold mb-4">Services</h4>
             <nav className="flex flex-col gap-2">
-              {[
-                "Individual Counselling",
-                "Family & Couples Therapy",
-                "Employee Wellness",
-                "Crisis Intervention",
-                "Workshops & Training",
-              ].map((service) => (
-                <Link
-                  key={service}
-                  to="/services"
-                  className="text-primary-foreground/70 hover:text-primary transition-colors text-sm"
-                >
+              {["Individual Counselling", "Family & Couples Therapy", "Employee Wellness", "Crisis Intervention", "Workshops & Training"].map(service => <Link key={service} to="/services" className="text-primary-foreground/70 hover:text-primary transition-colors text-sm">
                   {service}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
           </div>
 
@@ -158,8 +135,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
