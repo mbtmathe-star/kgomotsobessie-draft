@@ -141,11 +141,11 @@
 
 @layer components {
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    @apply px-6 sm:px-8 lg:px-12 py-16 md:py-24;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-[1400px] mx-auto;
   }
 
   .text-gradient {

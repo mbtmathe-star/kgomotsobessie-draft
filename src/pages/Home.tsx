@@ -20,7 +20,7 @@ const Home = () => {
 
         {/* Content */}
         <div className="container-custom section-padding relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary-foreground/15 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-5 text-xs">
               <Award className="h-3.5 w-3.5" />
               <span className="font-medium">Black Woman-Owned | Level 1 BBBEE | SACSSP Registered</span>
@@ -82,7 +82,7 @@ const Home = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true,
           margin: "-100px"
-        }} variants={stagger} className="max-w-4xl mx-auto text-center">
+        }} variants={stagger} className="max-w-5xl mx-auto text-center">
             <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               About Our Practice
             </motion.p>
@@ -122,7 +122,7 @@ const Home = () => {
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
               Comprehensive Social Work Services
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
+            <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl mx-auto">
               Expert support for individuals, families, organisations, and communities — 
               delivered with compassion, integrity, and clinical excellence.
             </motion.p>
@@ -179,7 +179,7 @@ const Home = () => {
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
               Ready to Begin Your Journey?
             </h2>
@@ -263,7 +263,7 @@ const Home = () => {
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
               Workshops & Community Initiatives
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
+            <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl mx-auto">
               Interactive programmes designed to build skills, strengthen relationships, 
               and promote mental wellness across communities and organisations.
             </motion.p>
