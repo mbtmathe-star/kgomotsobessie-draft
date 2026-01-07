@@ -39,7 +39,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img alt="KB Social Workers" className="h-20 w-auto mb-4" src="/lovable-uploads/acc145b7-87ca-4573-97cd-9a17312ce2c4.png" />
+            <img alt="KB Social Workers" className="h-20 w-auto mb-4" src={logo} />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
               Black woman-owned, Level 1 BBBEE social work practice delivering expert 
               clinical, organisational, and community services.
