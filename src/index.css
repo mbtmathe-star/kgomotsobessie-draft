@@ -6,97 +6,114 @@
 
 @layer base {
   :root {
-    /* Core brand colors - Teal & White theme */
+    /* Core brand colors - Teal & White theme with better contrast */
     --background: 0 0% 100%;
-    --foreground: 200 15% 15%;
+    --foreground: 200 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 15% 15%;
+    --card-foreground: 200 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 15% 15%;
+    --popover-foreground: 200 20% 12%;
 
     /* Primary - Teal */
-    --primary: 174 62% 47%;
+    --primary: 174 62% 42%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 174 62% 92%;
-    --primary-dark: 174 62% 35%;
+    --primary-light: 174 50% 94%;
+    --primary-dark: 174 65% 32%;
 
-    /* Secondary - Warm gray */
-    --secondary: 200 10% 96%;
-    --secondary-foreground: 200 15% 25%;
+    /* Secondary - Warmer off-white with teal undertone */
+    --secondary: 174 25% 96%;
+    --secondary-foreground: 200 20% 20%;
 
-    /* Muted - Soft gray */
-    --muted: 200 10% 96%;
-    --muted-foreground: 200 10% 45%;
+    /* Section alternate - Light teal wash */
+    --section-alt: 174 35% 97%;
 
-    /* Accent - Light teal */
-    --accent: 174 50% 94%;
-    --accent-foreground: 174 62% 30%;
+    /* Muted - Improved contrast */
+    --muted: 174 20% 95%;
+    --muted-foreground: 200 15% 38%;
+
+    /* Accent - Stronger teal for highlights */
+    --accent: 174 45% 88%;
+    --accent-foreground: 174 65% 25%;
+
+    /* Surface elevated - for cards with depth */
+    --surface-elevated: 174 30% 99%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 15% 90%;
+    --border: 174 20% 88%;
     --input: 200 15% 90%;
-    --ring: 174 62% 47%;
+    --ring: 174 62% 42%;
 
     --radius: 0.625rem;
 
-    /* Custom tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(174 62% 47% / 0.7), hsl(174 62% 35% / 0.75));
-    --card-shadow: 0 4px 20px -4px hsl(200 15% 15% / 0.08);
-    --card-shadow-hover: 0 12px 32px -8px hsl(174 62% 47% / 0.2);
-    --section-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(174 50% 98%) 100%);
+    /* Custom tokens - Enhanced */
+    --hero-gradient: linear-gradient(135deg, hsl(174 62% 42% / 0.75), hsl(174 65% 32% / 0.85));
+    --card-shadow: 0 4px 20px -4px hsl(174 62% 42% / 0.08);
+    --card-shadow-hover: 0 12px 32px -8px hsl(174 62% 42% / 0.18);
+    --section-gradient: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(174 35% 97%) 100%);
+    --card-teal-shadow: 0 4px 24px -6px hsl(174 62% 42% / 0.15);
+    --button-glow: 0 4px 14px -3px hsl(174 62% 42% / 0.4);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 200 15% 25%;
-    --sidebar-primary: 174 62% 47%;
+    --sidebar-foreground: 200 20% 20%;
+    --sidebar-primary: 174 62% 42%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 174 50% 94%;
-    --sidebar-accent-foreground: 174 62% 30%;
-    --sidebar-border: 200 15% 90%;
-    --sidebar-ring: 174 62% 47%;
+    --sidebar-accent: 174 45% 88%;
+    --sidebar-accent-foreground: 174 65% 25%;
+    --sidebar-border: 174 20% 88%;
+    --sidebar-ring: 174 62% 42%;
   }
 
   .dark {
-    --background: 200 15% 8%;
+    --background: 200 20% 7%;
     --foreground: 200 10% 95%;
 
-    --card: 200 15% 12%;
+    --card: 200 20% 10%;
     --card-foreground: 200 10% 95%;
 
-    --popover: 200 15% 12%;
+    --popover: 200 20% 10%;
     --popover-foreground: 200 10% 95%;
 
     --primary: 174 62% 50%;
-    --primary-foreground: 200 15% 8%;
-    --primary-light: 174 40% 20%;
+    --primary-foreground: 200 20% 7%;
+    --primary-light: 174 40% 18%;
     --primary-dark: 174 62% 60%;
 
-    --secondary: 200 15% 18%;
+    --secondary: 200 20% 14%;
     --secondary-foreground: 200 10% 90%;
 
-    --muted: 200 15% 18%;
-    --muted-foreground: 200 10% 60%;
+    --section-alt: 200 20% 11%;
 
-    --accent: 174 40% 18%;
+    --muted: 200 20% 14%;
+    --muted-foreground: 200 10% 55%;
+
+    --accent: 174 40% 16%;
     --accent-foreground: 174 50% 80%;
+
+    --surface-elevated: 200 20% 12%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 15% 20%;
-    --input: 200 15% 20%;
+    --border: 200 20% 18%;
+    --input: 200 20% 18%;
     --ring: 174 62% 50%;
 
-    --sidebar-background: 200 15% 10%;
+    --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --card-shadow-hover: 0 12px 32px -8px hsl(174 62% 50% / 0.2);
+    --card-teal-shadow: 0 4px 24px -6px hsl(174 62% 50% / 0.2);
+    --button-glow: 0 4px 14px -3px hsl(174 62% 50% / 0.5);
+
+    --sidebar-background: 200 20% 9%;
     --sidebar-foreground: 200 10% 90%;
     --sidebar-primary: 174 62% 50%;
-    --sidebar-primary-foreground: 200 15% 8%;
-    --sidebar-accent: 174 40% 18%;
+    --sidebar-primary-foreground: 200 20% 7%;
+    --sidebar-accent: 174 40% 16%;
     --sidebar-accent-foreground: 174 50% 80%;
-    --sidebar-border: 200 15% 20%;
+    --sidebar-border: 200 20% 18%;
     --sidebar-ring: 174 62% 50%;
   }
 }
@@ -132,16 +149,47 @@
     @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
   }
 
+  /* Enhanced card with teal undertone and depth */
   .card-elevated {
-    @apply bg-card rounded-xl border border-border;
+    @apply bg-gradient-to-br from-white to-primary-light/40 rounded-xl border border-border transition-all duration-300;
+    box-shadow: var(--card-shadow);
   }
 
+  .card-elevated:hover {
+    @apply border-primary/30;
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  /* Card with left accent border */
+  .card-accent {
+    @apply card-elevated border-l-4 border-l-primary;
+  }
+
+  /* Section backgrounds */
   .section-teal {
-    @apply bg-gradient-to-b from-primary-light to-background;
+    @apply bg-gradient-to-br from-primary-light via-background to-primary-light/60;
+  }
+
+  .section-alt {
+    background: linear-gradient(135deg, hsl(var(--section-alt)) 0%, hsl(var(--background)) 50%, hsl(var(--section-alt)) 100%);
+  }
+
+  .section-warm {
+    @apply bg-gradient-to-br from-secondary via-background to-accent/30;
   }
 
   .hero-overlay {
     background: var(--hero-gradient);
+  }
+
+  /* Enhanced icon containers */
+  .icon-container {
+    @apply bg-gradient-to-br from-accent to-primary-light border border-primary/10;
+  }
+
+  .icon-container-solid {
+    @apply bg-primary shadow-lg;
+    box-shadow: var(--card-teal-shadow);
   }
 }
 

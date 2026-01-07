@@ -32,7 +32,7 @@ const About = () => {
       <section className="section-padding section-teal">
         <div className="container-custom">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-4xl mx-auto text-center">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               About Our Practice
             </motion.p>
             <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -47,7 +47,7 @@ const About = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
@@ -62,10 +62,10 @@ const About = () => {
           }} transition={{
             duration: 0.6
           }} className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-card-hover">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                 <img alt="Kgomotso Bessie - Founder & Director" className="w-full h-full object-cover" src="/lovable-uploads/0b397c3b-cb56-4e2c-95fd-b1f3789667bd.png" />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-lg hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl hidden md:block">
                 <p className="font-heading text-3xl font-bold">2013</p>
                 <p className="text-sm opacity-90">In Practice Since</p>
               </div>
@@ -78,7 +78,7 @@ const About = () => {
               <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
                 Meet Kgomotso Bessie
               </motion.h2>
-              <motion.p variants={fadeUp} className="text-primary font-medium mb-6">
+              <motion.p variants={fadeUp} className="text-primary font-semibold mb-6">
                 Founder & Director
               </motion.p>
 
@@ -104,7 +104,7 @@ const About = () => {
                 </p>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="mt-8 p-6 bg-accent rounded-xl border-l-4 border-primary">
+              <motion.div variants={fadeUp} className="mt-8 p-6 bg-gradient-to-br from-accent to-primary-light rounded-xl border-l-4 border-primary shadow-md">
                 <p className="text-foreground font-medium italic font-heading text-lg">
                   "Circumstances do not define destiny — resilience does."
                 </p>
@@ -115,12 +115,12 @@ const About = () => {
       </section>
 
       {/* Qualifications */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="text-center mb-12">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               Credentials
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground">
@@ -132,7 +132,7 @@ const About = () => {
           once: true
         }} variants={stagger} className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div variants={fadeUp} className="card-elevated p-8 flex gap-5">
-              <div className="w-14 h-14 shrink-0 rounded-xl bg-accent flex items-center justify-center">
+              <div className="w-14 h-14 shrink-0 rounded-xl icon-container flex items-center justify-center">
                 <GraduationCap className="h-7 w-7 text-primary" />
               </div>
               <div>
@@ -146,7 +146,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="card-elevated p-8 flex gap-5">
-              <div className="w-14 h-14 shrink-0 rounded-xl bg-accent flex items-center justify-center">
+              <div className="w-14 h-14 shrink-0 rounded-xl icon-container flex items-center justify-center">
                 <GraduationCap className="h-7 w-7 text-primary" />
               </div>
               <div>
@@ -160,7 +160,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="card-elevated p-8 flex gap-5">
-              <div className="w-14 h-14 shrink-0 rounded-xl bg-accent flex items-center justify-center">
+              <div className="w-14 h-14 shrink-0 rounded-xl icon-container flex items-center justify-center">
                 <Award className="h-7 w-7 text-primary" />
               </div>
               <div>
@@ -174,7 +174,7 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={fadeUp} className="card-elevated p-8 flex gap-5">
-              <div className="w-14 h-14 shrink-0 rounded-xl bg-accent flex items-center justify-center">
+              <div className="w-14 h-14 shrink-0 rounded-xl icon-container flex items-center justify-center">
                 <Briefcase className="h-7 w-7 text-primary" />
               </div>
               <div>
@@ -191,7 +191,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div initial={{
@@ -202,7 +202,7 @@ const About = () => {
             y: 0
           }} viewport={{
             once: true
-          }} className="card-elevated p-8 border-t-4 border-primary">
+          }} className="card-elevated p-8 border-t-4 border-t-primary">
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
                 To provide expert social work services that promote healing, resilience, 
@@ -220,7 +220,7 @@ const About = () => {
             once: true
           }} transition={{
             delay: 0.1
-          }} className="card-elevated p-8 border-t-4 border-primary">
+          }} className="card-elevated p-8 border-t-4 border-t-primary">
               <h3 className="font-heading text-2xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
                 To be a trusted, reliable, and leading social work practice delivering innovative, 
@@ -233,12 +233,12 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="text-center mb-12">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               What Guides Us
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground">
@@ -250,7 +250,7 @@ const About = () => {
           once: true
         }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {coreValues.map((value, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-6 text-center">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-accent flex items-center justify-center">
+                <div className="w-14 h-14 mx-auto mb-4 rounded-xl icon-container flex items-center justify-center">
                   <value.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">

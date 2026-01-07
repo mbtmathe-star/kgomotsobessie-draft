@@ -30,7 +30,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Contact Info */}

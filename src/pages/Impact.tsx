@@ -66,13 +66,13 @@ const Impact = () => {
       </section>
 
       {/* Campaign Overview */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{
             once: true
           }} variants={stagger}>
-              <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+              <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
                 The Campaign
               </motion.p>
               <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -108,12 +108,12 @@ const Impact = () => {
       </section>
 
       {/* Mission Pillars */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="text-center mb-12">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               Our Mission
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -137,7 +137,7 @@ const Impact = () => {
             title: "No Learner Left Alone",
             description: "Every matriculant deserves to know that someone cares. We ensure no student navigates their high-pressure transition without support."
           }].map((pillar, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-8 text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-primary flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-xl icon-container-solid flex items-center justify-center">
                   <pillar.icon className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
