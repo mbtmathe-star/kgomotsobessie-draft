@@ -11,98 +11,69 @@ import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
 const Home = () => {
   return <>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[85vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img src={heroImage} alt="Supportive care" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 hero-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/80 via-foreground/60 to-foreground/40" />
         </div>
 
         {/* Content */}
         <div className="container-custom section-padding relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-6">
-              <Award className="h-4 w-4" />
-              <span className="text-sm font-medium">Black Woman-Owned | Level 1 BBBEE | SACSSP Registered</span>
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary-foreground/15 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-5 text-xs">
+              <Award className="h-3.5 w-3.5" />
+              <span className="font-medium">Black Woman-Owned | Level 1 BBBEE | SACSSP Registered</span>
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight mb-5">
               Expert Social Work Services
-              <br />
-              <span className="text-primary-foreground/90">for Lasting Impact</span>
+              <span className="block text-primary-foreground/85 mt-1">for Lasting Impact</span>
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-8 max-w-2xl">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-primary-foreground/85 leading-relaxed mb-7 max-w-xl">
               Delivering evidence-based clinical, organisational, and community social work 
-              services that promote healing, resilience, and empowerment across the Northern Cape.
+              services that promote healing, resilience, and empowerment.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <Button asChild size="xl" variant="hero">
+            <motion.div variants={fadeUp} className="flex flex-wrap gap-3">
+              <Button asChild size="lg" variant="hero">
                 <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
+                  <Calendar className="mr-2 h-4 w-4" />
                   Book a Consultation
                 </Link>
               </Button>
-              <Button asChild size="xl" variant="heroOutline">
+              <Button asChild size="lg" variant="heroOutline">
                 <Link to="/services">
-                  Explore Our Services
+                  Our Services
                 </Link>
               </Button>
             </motion.div>
-
-            {/* Quick Contact */}
-            <motion.div variants={fadeUp} className="mt-8 flex items-center gap-4">
-              <a href="tel:0795871204" className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                
-                
-              </a>
-            </motion.div>
           </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div className="absolute bottom-8 left-1/2 -translate-x-1/2" animate={{
-        y: [0, 10, 0]
-      }} transition={{
-        repeat: Infinity,
-        duration: 1.5
-      }}>
-          <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/50 flex justify-center pt-2">
-            <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
-          </div>
-        </motion.div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-8 bg-primary">
+      <section className="py-6 bg-primary">
         <div className="container-custom px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-6 text-center max-w-2xl mx-auto">
             {[{
             value: "2013",
             label: "In Practice Since"
           }, {
             value: "11+",
-            label: "Years of Experience"
+            label: "Years Experience"
           }, {
             value: "Level 1",
             label: "BBBEE Contributor"
-          }].map((stat, index) => <motion.div key={index} initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            delay: index * 0.1
-          }}>
-                <p className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground">
+          }].map((stat, index) => (
+              <div key={index}>
+                <p className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground">
                   {stat.value}
                 </p>
-                <p className="text-sm text-primary-foreground/70 mt-1">{stat.label}</p>
-              </motion.div>)}
+                <p className="text-xs text-primary-foreground/70 mt-1">{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -178,18 +149,17 @@ const Home = () => {
             title: "Crisis & Trauma Support",
             description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
             link: "/services"
-          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-8 text-center group hover:border-primary/20 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-dark transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-                <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-accent flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="bg-card rounded-xl p-7 text-center border border-border hover:border-primary/30 transition-colors">
+                <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-accent flex items-center justify-center">
+                  <service.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                   {service.description}
                 </p>
-                <Link to={service.link} className="inline-flex items-center text-primary font-medium text-sm group-hover:gap-2 transition-all">
+                <Link to={service.link} className="inline-flex items-center text-primary font-medium text-sm hover:underline">
                   Learn More <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </motion.div>)}
@@ -243,12 +213,14 @@ const Home = () => {
           }, {
             icon: Shield,
             text: "Safe, Confidential & Supportive Environment"
-          }].map((item, index) => <motion.div key={index} variants={fadeUp} className="flex items-center gap-4 p-4 rounded-xl bg-accent/50">
-                <div className="w-10 h-10 shrink-0 rounded-lg bg-primary flex items-center justify-center">
-                  <item.icon className="h-5 w-5 text-primary-foreground" />
+          }].map((item, index) => (
+              <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-accent/40 border border-border">
+                <div className="w-9 h-9 shrink-0 rounded-lg bg-primary flex items-center justify-center">
+                  <item.icon className="h-4 w-4 text-primary-foreground" />
                 </div>
                 <p className="text-sm font-medium text-foreground">{item.text}</p>
-              </motion.div>)}
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
@@ -306,12 +278,12 @@ const Home = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-elevated p-8 text-center"
+                className="bg-card rounded-xl p-6 text-center border border-border"
               >
-                <div className="w-14 h-14 mx-auto rounded-xl bg-accent flex items-center justify-center mb-6">
-                  <workshop.icon className="h-7 w-7 text-primary" />
+                <div className="w-12 h-12 mx-auto rounded-lg bg-accent flex items-center justify-center mb-4">
+                  <workshop.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
                   {workshop.title}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -332,19 +304,18 @@ const Home = () => {
             <motion.h3 variants={fadeUp} className="font-heading text-xl font-semibold text-foreground text-center mb-6">
               Breakfast with my Teenager — Event Highlights
             </motion.h3>
-            <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-3 gap-3 max-w-3xl mx-auto">
               {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeUp}
-                  className="aspect-[4/3] overflow-hidden rounded-xl shadow-md"
+                  className="aspect-[4/3] overflow-hidden rounded-lg"
                 >
                   <img
                     src={img}
                     alt={`Breakfast with my Teenager event photo ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
@@ -369,39 +340,23 @@ const Home = () => {
       {/* Mission & Vision Preview */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <motion.div initial={{
-            opacity: 0,
-            x: -20
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} viewport={{
-            once: true
-          }} className="card-elevated p-8">
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <h3 className="font-heading text-lg font-bold text-primary mb-3">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
                 To provide expert social work services that promote healing, resilience, 
                 and empowerment while upholding the highest ethical standards.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div initial={{
-            opacity: 0,
-            x: 20
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} viewport={{
-            once: true
-          }} className="card-elevated p-8">
-              <h3 className="font-heading text-xl font-bold text-primary mb-4">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed">
+            <div className="bg-card rounded-xl p-6 border border-border">
+              <h3 className="font-heading text-lg font-bold text-primary mb-3">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed text-sm">
                 To be a trusted, reliable, and leading social work practice delivering innovative, 
                 accessible, and personalised services that strengthen individuals, organisations, 
                 and communities.
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -409,31 +364,29 @@ const Home = () => {
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="max-w-3xl mx-auto text-center">
-            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
               Ready to Begin Your Journey?
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-lg text-primary-foreground/90 mb-8">
+            </h2>
+            <p className="text-primary-foreground/85 mb-6">
               Take the first step towards healing, growth, and resilience. 
               Schedule your consultation today.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="xl" variant="heroOutline">
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button asChild size="lg" variant="heroOutline">
                 <Link to="/contact">
-                  <Calendar className="mr-2 h-5 w-5" />
+                  <Calendar className="mr-2 h-4 w-4" />
                   Book a Consultation
                 </Link>
               </Button>
-              <Button asChild size="xl" variant="heroOutline">
+              <Button asChild size="lg" variant="heroOutline">
                 <a href="tel:0795871204">
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-2 h-4 w-4" />
                   Call Now
                 </a>
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </>;
