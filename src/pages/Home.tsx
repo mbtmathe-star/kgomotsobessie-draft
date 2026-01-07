@@ -77,13 +77,13 @@ const Home = () => {
       </section>
 
       {/* About Practice Intro */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true,
           margin: "-100px"
         }} variants={stagger} className="max-w-4xl mx-auto text-center">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               About Our Practice
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
@@ -110,13 +110,13 @@ const Home = () => {
       </section>
 
       {/* Services Snapshot */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true,
           margin: "-100px"
         }} variants={stagger} className="text-center mb-12">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               What We Offer
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -147,8 +147,8 @@ const Home = () => {
             title: "Crisis & Trauma Support",
             description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
             link: "/services"
-          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="bg-card rounded-xl p-7 text-center border border-border hover:border-primary/30 transition-colors">
-                <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-accent flex items-center justify-center">
+          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-7 text-center border-l-4 border-l-primary">
+                <div className="w-14 h-14 mx-auto mb-5 rounded-xl icon-container flex items-center justify-center">
                   <service.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
@@ -157,8 +157,8 @@ const Home = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                   {service.description}
                 </p>
-                <Link to={service.link} className="inline-flex items-center text-primary font-medium text-sm hover:underline">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                <Link to={service.link} className="inline-flex items-center text-primary font-semibold text-sm hover:text-primary-dark group">
+                  Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </motion.div>)}
           </motion.div>
@@ -206,12 +206,12 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="text-center mb-12">
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               Why Choose Us
             </motion.p>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -240,25 +240,25 @@ const Home = () => {
           }, {
             icon: Shield,
             text: "Safe, Confidential & Supportive Environment"
-          }].map((item, index) => <div key={index} className="flex items-center gap-3 p-4 rounded-lg bg-accent/40 border border-border">
-                <div className="w-9 h-9 shrink-0 rounded-lg bg-primary flex items-center justify-center">
-                  <item.icon className="h-4 w-4 text-primary-foreground" />
+          }].map((item, index) => <motion.div key={index} variants={fadeUp} className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-br from-white to-accent/50 border border-primary/15 shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                  <item.icon className="h-5 w-5 text-primary-foreground" />
                 </div>
                 <p className="text-sm font-medium text-foreground">{item.text}</p>
-              </div>)}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
 
       {/* Annual Events & Workshops */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="text-center mb-12">
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-gradient-to-r from-primary/15 to-accent text-primary px-5 py-2.5 rounded-full mb-4 border border-primary/20">
               <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">Annual Events & Workshops</span>
+              <span className="text-sm font-semibold">Annual Events & Workshops</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
               Workshops & Community Initiatives
@@ -284,8 +284,8 @@ const Home = () => {
             icon: Briefcase,
             title: "Healthy Entrepreneur Wellness",
             description: "Leadership mental health, stress management, and building resilience for business success."
-          }].map((workshop, index) => <motion.div key={index} variants={fadeUp} className="bg-card rounded-xl p-6 text-center border border-border">
-                <div className="w-12 h-12 mx-auto rounded-lg bg-accent flex items-center justify-center mb-4">
+          }].map((workshop, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-6 text-center">
+                <div className="w-12 h-12 mx-auto rounded-lg icon-container flex items-center justify-center mb-4">
                   <workshop.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-2">
@@ -304,8 +304,12 @@ const Home = () => {
             <motion.h3 variants={fadeUp} className="font-heading text-xl font-semibold text-foreground text-center mb-6">
               Breakfast with my Teenager — Event Highlights
             </motion.h3>
-            <div className="grid grid-cols-3 gap-3 max-w-3xl mx-auto">
-              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => {})}
+            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
+                <div key={index} className="aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+                  <img src={img} alt={`Breakfast event highlight ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
+              ))}
             </div>
 
             {/* Event Video */}

@@ -173,7 +173,7 @@ const Services = () => {
       </section>
 
       {/* Individual & Family Services */}
-      <section className="section-padding">
+      <section className="section-padding section-warm">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -183,7 +183,7 @@ const Services = () => {
             className="mb-12"
           >
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl icon-container-solid flex items-center justify-center">
                 <Heart className="h-6 w-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
@@ -206,9 +206,9 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full"
+                className="card-elevated p-8 flex flex-col h-full border-l-4 border-l-primary"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
                   <service.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
@@ -218,7 +218,7 @@ const Services = () => {
                   {service.description}
                 </p>
                 <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-primary font-medium">Who it's for:</p>
+                  <p className="text-xs text-primary font-semibold">Who it's for:</p>
                   <p className="text-xs text-muted-foreground mt-1">{service.forWho}</p>
                 </div>
               </motion.div>
@@ -228,7 +228,7 @@ const Services = () => {
       </section>
 
       {/* Employee Health & Wellness */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding section-alt">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -238,7 +238,7 @@ const Services = () => {
             className="mb-12"
           >
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl icon-container-solid flex items-center justify-center">
                 <Briefcase className="h-6 w-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
@@ -261,9 +261,9 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full"
+                className="card-elevated p-8 flex flex-col h-full border-l-4 border-l-primary"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
                   <service.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
@@ -273,7 +273,7 @@ const Services = () => {
                   {service.description}
                 </p>
                 <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-primary font-medium">Who it's for:</p>
+                  <p className="text-xs text-primary font-semibold">Who it's for:</p>
                   <p className="text-xs text-muted-foreground mt-1">{service.forWho}</p>
                 </div>
               </motion.div>
