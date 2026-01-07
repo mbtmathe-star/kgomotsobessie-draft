@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Shield, Sparkles, Phone, Calendar } from "lucide-react";
+import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, FileCheck, UserCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroImage from "@/assets/hero-support.jpg";
-import matricImage from "@/assets/matric-students.jpg";
+import workshopImage from "@/assets/workshop-breakfast-1.jpg";
 
 const Home = () => {
   return (
@@ -33,25 +33,25 @@ const Home = () => {
               variants={fadeUp}
               className="inline-flex items-center gap-2 bg-primary-foreground/20 backdrop-blur-sm text-primary-foreground px-4 py-2 rounded-full mb-6"
             >
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">Kimberley, Northern Cape</span>
+              <Award className="h-4 w-4" />
+              <span className="text-sm font-medium">Black Woman-Owned | Level 1 BBBEE | SACSSP Registered</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
             >
-              Resilience in Action.
+              Expert Social Work Services
               <br />
-              <span className="text-primary-foreground/90">Care in Practice.</span>
+              <span className="text-primary-foreground/90">for Lasting Impact</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-primary-foreground/90 leading-relaxed mb-8 max-w-2xl"
             >
-              Empowering individuals, families, and organizations across the Northern Cape 
-              through expert clinical social work and transformative wellness consulting.
+              Delivering evidence-based clinical, organisational, and community social work 
+              services that promote healing, resilience, and empowerment across the Northern Cape.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
@@ -62,8 +62,8 @@ const Home = () => {
                 </Link>
               </Button>
               <Button asChild size="xl" variant="heroOutline">
-                <Link to="/impact">
-                  Join #MatricUngazibulali
+                <Link to="/services">
+                  Explore Our Services
                 </Link>
               </Button>
             </motion.div>
@@ -100,9 +100,9 @@ const Home = () => {
         <div className="container-custom px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
-              { value: "11+", label: "Years in Social Work" },
-              { value: "7", label: "Years of #MatricUngazibulali" },
-              { value: "2024", label: "Practice Founded" },
+              { value: "2013", label: "In Practice Since" },
+              { value: "11+", label: "Years of Experience" },
+              { value: "Level 1", label: "BBBEE Contributor" },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -121,7 +121,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Intro Section */}
+      {/* About Practice Intro */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
@@ -138,21 +138,23 @@ const Home = () => {
               variants={fadeUp}
               className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6"
             >
-              Where Clinical Excellence Meets Community Heart
+              A Trusted, Registered Social Work Practice
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="text-lg text-muted-foreground leading-relaxed mb-8"
             >
-              Based in Kimberley, Northern Cape, Kgomotso Bessie Social Workers and Consulting Inc. 
-              is both a clinical social work practice and a strategic wellness consultancy. 
-              We are rooted in community resilience, dedicated to restoring hope, and committed 
-              to transforming lives through evidence-based practice and compassionate care.
+              Kgomotso Bessie Social Workers and Consulting Inc. is a Black woman-owned, 
+              Level 1 BBBEE social work practice based in Kimberley, Northern Cape. Founded by 
+              Kgomotso Bessie — a qualified social worker with a Master's in Disaster Management 
+              and over 11 years of experience across government, community work, and private practice — 
+              we deliver personalised, ethical, and evidence-based services to individuals, families, 
+              organisations, and communities.
             </motion.p>
             <motion.div variants={fadeUp}>
               <Button asChild variant="outline" size="lg">
                 <Link to="/about">
-                  Learn Our Story
+                  Meet the Founder
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -178,10 +180,11 @@ const Home = () => {
               variants={fadeUp}
               className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
             >
-              Our Services
+              Comprehensive Social Work Services
             </motion.h2>
             <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive support for individuals, families, and organizations.
+              Expert support for individuals, families, organisations, and communities — 
+              delivered with compassion, integrity, and clinical excellence.
             </motion.p>
           </motion.div>
 
@@ -195,23 +198,23 @@ const Home = () => {
             {[
               {
                 icon: Heart,
-                title: "Clinical Private Practice",
+                title: "Individual & Family Services",
                 description:
-                  "Individual and family counselling, trauma interventions, grief and bereavement support, and specialized parenting programs.",
+                  "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
                 link: "/services",
               },
               {
                 icon: Users,
-                title: "Strategic Wellness Consulting",
+                title: "Employee Health & Wellness",
                 description:
-                  "Employee health and wellness programs, mental health advocacy, and The Healthy Entrepreneur Workshop for founders.",
+                  "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions for organisations.",
                 link: "/services",
               },
               {
                 icon: Shield,
-                title: "Crisis & Disaster Management",
+                title: "Crisis & Trauma Support",
                 description:
-                  "Community resilience building, emergency social response strategies, and professional debriefing services.",
+                  "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
                 link: "/services",
               },
             ].map((service, index) => (
@@ -257,12 +260,63 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Impact Highlight */}
+      {/* Why Choose Us */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="text-center mb-12"
+          >
+            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+              Why Choose Us
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
+              Trusted, Professional, Results-Driven
+            </motion.h2>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+          >
+            {[
+              { icon: FileCheck, text: "SACSSP Registered Practice (1033-819)" },
+              { icon: Award, text: "Registered & Licensed Professionals" },
+              { icon: CheckCircle, text: "Evidence-Based & Ethical Care" },
+              { icon: UserCheck, text: "Personalised & Flexible Service Delivery" },
+              { icon: Users, text: "In-Person, Virtual & Community-Based Options" },
+              { icon: Shield, text: "Safe, Confidential & Supportive Environment" },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="flex items-center gap-4 p-4 rounded-xl bg-accent/50"
+              >
+                <div className="w-10 h-10 shrink-0 rounded-lg bg-primary flex items-center justify-center">
+                  <item.icon className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <p className="text-sm font-medium text-foreground">{item.text}</p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Workshops & Initiatives */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={matricImage}
-            alt="Matric students studying"
+            src={workshopImage}
+            alt="Breakfast with my Teenager workshop"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-foreground/85" />
@@ -277,64 +331,69 @@ const Home = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6">
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">Flagship Initiative — 7th Year in 2026</span>
+              <Users className="h-4 w-4" />
+              <span className="text-sm font-medium">Workshops & Community Initiatives</span>
             </motion.div>
 
             <motion.h2
               variants={fadeUp}
               className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6"
             >
-              #MatricUngazibulali
+              Breakfast with my Teenager
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
-              className="text-xl text-primary-foreground/80 mb-4"
+              className="text-lg text-primary-foreground/80 leading-relaxed mb-8"
             >
-              "Matric, Don't Kill Yourself"
-            </motion.p>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/70 leading-relaxed mb-8"
-            >
-              A suicide prevention and mental health awareness initiative 
-              working to ensure no matriculant faces their high-pressure 
-              transitions alone.
+              An interactive workshop designed to bring parents and teenagers closer together. 
+              Focus on improving communication, building trust, and strengthening family bonds 
+              in a supportive, facilitated environment.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" variant="hero">
-                <Link to="/impact">
-                  Learn About Our Impact
+                <Link to="/contact">
+                  Request More Information
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </Button>
-              <Button asChild size="lg" variant="heroOutline">
-                <Link to="/contact">Become a Partner</Link>
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Testimonial/Quote Section */}
+      {/* Mission & Vision Preview */}
       <section className="section-padding">
         <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <div className="text-6xl text-primary/20 font-heading mb-4">"</div>
-            <blockquote className="font-heading text-2xl md:text-3xl text-foreground italic leading-relaxed mb-6">
-              Circumstances do not define destiny — resilience does.
-            </blockquote>
-            <p className="text-primary font-medium">— Kgomotso Bessie, Founder</p>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="card-elevated p-8"
+            >
+              <h3 className="font-heading text-xl font-bold text-primary mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To provide expert social work services that promote healing, resilience, 
+                and empowerment while upholding the highest ethical standards.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="card-elevated p-8"
+            >
+              <h3 className="font-heading text-xl font-bold text-primary mb-4">Our Vision</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To be a trusted, reliable, and leading social work practice delivering innovative, 
+                accessible, and personalised services that strengthen individuals, organisations, 
+                and communities.
+              </p>
+            </motion.div>
+          </div>
         </div>
       </section>
 

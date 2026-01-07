@@ -8,84 +8,112 @@ import {
   Brain,
   Briefcase,
   MessageCircle,
-  Home,
-  Sparkles,
   Building2,
   AlertTriangle,
+  Baby,
+  Sparkles,
+  Clock,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
+import workshopBreakfast from "@/assets/workshop-breakfast-1.jpg";
+import workshopParenting from "@/assets/workshop-parenting.jpg";
+import workshopPresentation from "@/assets/workshop-presentation.jpg";
 
 const Services = () => {
-  const clinicalServices = [
+  const individualServices = [
     {
       icon: Heart,
-      title: "Individual & Family Counselling",
+      title: "Individual Counselling & Therapy",
       description:
-        "Comprehensive support for family preservation, relationship dynamics, grief, and bereavement. We help families navigate challenges while strengthening bonds.",
-      forWho: "Individuals and families facing life transitions, relationship difficulties, or loss",
-    },
-    {
-      icon: Brain,
-      title: "Trauma Interventions",
-      description:
-        "Professional debriefing and therapeutic crisis support to help process traumatic experiences. Evidence-based approaches tailored to your unique needs.",
-      forWho: "Trauma survivors, first responders, and those affected by critical incidents",
-    },
-    {
-      icon: MessageCircle,
-      title: "Parenting in the 21st Century",
-      description:
-        "Modern parenting programs including our signature #BreakfastWithMyTeenager initiative, designed to strengthen parent-child communication.",
-      forWho: "Parents navigating the complexities of raising children in the digital age",
-    },
-  ];
-
-  const consultingServices = [
-    {
-      icon: Building2,
-      title: "Employee Health & Wellness Programs (EHWP)",
-      description:
-        "Comprehensive workplace wellness solutions that promote mental health, reduce burnout, and create supportive organizational cultures.",
-      forWho: "Organizations committed to employee wellbeing and productivity",
+        "Support for anxiety, depression, trauma, grief, and personal development. Evidence-based therapeutic approaches tailored to your unique needs.",
+      forWho: "Adults seeking personal growth, healing, and mental wellness support",
     },
     {
       icon: Users,
-      title: "Mental Health Advocacy & Culture Consulting",
+      title: "Family & Couples Counselling",
       description:
-        "Strategic guidance on building mentally healthy workplaces, developing policies, and fostering inclusive organizational cultures.",
-      forWho: "HR leaders, executives, and organizations seeking culture transformation",
+        "Strengthening relationships through improved communication, conflict resolution, and rebuilding trust within families and partnerships.",
+      forWho: "Couples and families navigating relationship challenges",
     },
     {
-      icon: Sparkles,
-      title: "The Healthy Entrepreneur Workshop",
+      icon: Baby,
+      title: "Child & Adolescent Support",
       description:
-        "Specialized support for founders navigating leadership pressure, isolation, and the unique mental health challenges of entrepreneurship.",
-      forWho: "Business owners, startup founders, and entrepreneurs",
+        "Behavioural and emotional support for young people and their families. Age-appropriate interventions that address developmental challenges.",
+      forWho: "Children, teenagers, and their parents/guardians",
+    },
+  ];
+
+  const organisationalServices = [
+    {
+      icon: Building2,
+      title: "Employee Health & Wellness Services",
+      description:
+        "Comprehensive workplace wellness programmes designed to promote mental health, reduce burnout, and build supportive organisational cultures.",
+      forWho: "Organisations committed to employee wellbeing and productivity",
+    },
+    {
+      icon: Clock,
+      title: "Trauma Debriefing (Within 72 Hours)",
+      description:
+        "Rapid response trauma debriefing services for workplace incidents. Professional support delivered within 72 hours post-incident.",
+      forWho: "Organisations responding to workplace trauma or critical incidents",
+    },
+    {
+      icon: Users,
+      title: "Group & Individual Interventions",
+      description:
+        "Tailored group sessions and one-on-one support for staff facing work-related stress, burnout, or personal challenges.",
+      forWho: "Teams and individuals within organisational settings",
     },
   ];
 
   const crisisServices = [
     {
-      icon: Shield,
-      title: "Community Resilience Building",
-      description:
-        "Developing community-level strategies to enhance collective coping mechanisms and social support networks during challenging times.",
-      forWho: "Communities, municipalities, and regional organizations",
-    },
-    {
       icon: AlertTriangle,
-      title: "Emergency Social Response",
+      title: "Crisis Intervention",
       description:
-        "Rapid deployment of social work services during disasters, emergencies, and critical community incidents.",
-      forWho: "Emergency services, disaster response teams, and affected communities",
+        "Immediate professional support during acute crisis situations. Stabilisation and safety planning for individuals and families in distress.",
+      forWho: "Individuals and families in acute crisis",
     },
     {
-      icon: Home,
-      title: "Professional Debriefing Services",
+      icon: Brain,
+      title: "Trauma Support (Immediate & Long-Term)",
       description:
-        "Structured support for professionals and teams following exposure to traumatic events or high-stress situations.",
-      forWho: "First responders, healthcare workers, and frontline staff",
+        "Comprehensive trauma services from initial response through to long-term healing. Evidence-based approaches for all types of trauma.",
+      forWho: "Trauma survivors at any stage of their healing journey",
+    },
+    {
+      icon: Shield,
+      title: "Disaster-Related Psychosocial Services",
+      description:
+        "Specialised support for communities and individuals affected by disasters. Expertise in disaster management and community resilience.",
+      forWho: "Communities, emergency services, and disaster response teams",
+    },
+  ];
+
+  const workshops = [
+    {
+      image: workshopBreakfast,
+      title: "Breakfast with my Teenager",
+      description:
+        "An interactive workshop designed to bring parents and teenagers closer together. Focus on improving communication, building trust, and strengthening family bonds.",
+      cta: "Contact us to learn more or join the next session",
+    },
+    {
+      image: workshopParenting,
+      title: "Parenting in the 21st Century",
+      description:
+        "A workshop for modern parenting challenges. Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
+      cta: "Request more information to participate",
+    },
+    {
+      image: workshopPresentation,
+      title: "Healthy Entrepreneur Wellness",
+      description:
+        "Corporate and entrepreneur wellness programme focused on leadership mental health, stress management, and building resilience for business success.",
+      cta: "Contact us to schedule a session for your team",
     },
   ];
 
@@ -107,20 +135,20 @@ const Services = () => {
               variants={fadeUp}
               className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6"
             >
-              Comprehensive Care for Every Need
+              Comprehensive Social Work Services
             </motion.h1>
             <motion.p
               variants={fadeUp}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              From individual counselling to organizational wellness consulting, 
-              we offer evidence-based services designed to heal, strengthen, and transform.
+              Expert support for individuals, families, organisations, and communities — 
+              delivered with compassion, integrity, and clinical excellence.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Clinical Private Practice */}
+      {/* Individual & Family Services */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
@@ -135,11 +163,11 @@ const Services = () => {
                 <Heart className="h-6 w-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Clinical Private Practice
+                Individual & Family Services
               </h2>
             </motion.div>
             <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
-              Personalized therapeutic services rooted in compassion and clinical excellence.
+              Personalised therapeutic services rooted in compassion and clinical excellence.
             </motion.p>
           </motion.div>
 
@@ -150,7 +178,7 @@ const Services = () => {
             variants={stagger}
             className="grid md:grid-cols-3 gap-8"
           >
-            {clinicalServices.map((service, index) => (
+            {individualServices.map((service, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
@@ -175,7 +203,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Strategic Wellness Consulting */}
+      {/* Employee Health & Wellness */}
       <section className="section-padding bg-secondary">
         <div className="container-custom">
           <motion.div
@@ -190,11 +218,11 @@ const Services = () => {
                 <Briefcase className="h-6 w-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Strategic Wellness Consulting
+                Employee Health & Wellness Services
               </h2>
             </motion.div>
             <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
-              Organizational solutions that prioritize mental health and build thriving workplace cultures.
+              Organisational solutions that prioritise mental health and build thriving workplace cultures.
             </motion.p>
           </motion.div>
 
@@ -205,7 +233,7 @@ const Services = () => {
             variants={stagger}
             className="grid md:grid-cols-3 gap-8"
           >
-            {consultingServices.map((service, index) => (
+            {organisationalServices.map((service, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
@@ -230,7 +258,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Crisis & Disaster Management */}
+      {/* Trauma, Crisis & Disaster Support */}
       <section className="section-padding">
         <div className="container-custom">
           <motion.div
@@ -245,11 +273,11 @@ const Services = () => {
                 <Shield className="h-6 w-6 text-primary-foreground" />
               </div>
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Crisis & Disaster Management
+                Trauma, Crisis Intervention & Disaster Support
               </h2>
             </motion.div>
             <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
-              Specialized expertise in emergency response and building community resilience.
+              Specialised expertise in emergency response and building community resilience.
             </motion.p>
           </motion.div>
 
@@ -285,6 +313,72 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Workshops & Support Groups */}
+      <section className="section-padding bg-secondary">
+        <div className="container-custom">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="text-center mb-12"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+              <Sparkles className="h-4 w-4" />
+              <span className="text-sm font-medium">Request More Information</span>
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
+              Workshops & Community Initiatives
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
+              Interactive programmes designed to build skills, strengthen relationships, 
+              and promote mental wellness across communities and organisations.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="grid md:grid-cols-3 gap-8"
+          >
+            {workshops.map((workshop, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="card-elevated overflow-hidden flex flex-col"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={workshop.image}
+                    alt={workshop.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                    {workshop.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                    {workshop.description}
+                  </p>
+                  <Button asChild variant="outline" size="sm" className="w-full">
+                    <Link to="/contact">
+                      <MessageCircle className="mr-2 h-4 w-4" />
+                      {workshop.cta}
+                    </Link>
+                  </Button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
@@ -305,12 +399,12 @@ const Services = () => {
               variants={fadeUp}
               className="text-lg text-primary-foreground/90 mb-8"
             >
-              Schedule a free initial consultation and let's explore how we can best support your journey.
+              Schedule a consultation and let's explore how we can best support your journey.
             </motion.p>
             <motion.div variants={fadeUp}>
               <Button asChild size="xl" variant="heroOutline">
                 <Link to="/contact">
-                  Book Your Free Consultation
+                  Book Your Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

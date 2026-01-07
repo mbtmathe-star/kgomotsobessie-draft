@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Instagram, Linkedin, MessageCircle, Send, Building2, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, MessageCircle, Send, Building2, Clock, Shield, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -65,7 +65,7 @@ const Contact = () => {
               variants={fadeUp}
               className="text-lg text-muted-foreground leading-relaxed"
             >
-              Whether you're seeking personal support, organizational consulting, 
+              Whether you're seeking personal support, organisational consulting, 
               or partnership opportunities — we're here to listen and help.
             </motion.p>
           </motion.div>
@@ -100,8 +100,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
                     <p className="text-muted-foreground text-sm">
-                      259 Barkly Road, Homestead<br />
-                      Kimberley, 8301<br />
+                      Medicare, 259 Barkly Road, Homestead<br />
+                      Kimberley 8301<br />
                       Northern Cape, South Africa
                     </p>
                   </div>
@@ -123,17 +123,19 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Registration */}
+                {/* Email */}
                 <div className="flex gap-4">
                   <div className="w-12 h-12 shrink-0 rounded-xl bg-accent flex items-center justify-center">
-                    <Building2 className="h-5 w-5 text-primary" />
+                    <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Registration</h3>
-                    <p className="text-muted-foreground text-sm">
-                      K2024800742<br />
-                      (Incorporated December 2024)
-                    </p>
+                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                    <a
+                      href="mailto:kgomotsobessie88@gmail.com"
+                      className="text-primary hover:text-primary-dark transition-colors text-sm"
+                    >
+                      kgomotsobessie88@gmail.com
+                    </a>
                   </div>
                 </div>
 
@@ -152,27 +154,42 @@ const Contact = () => {
                 </div>
               </motion.div>
 
+              {/* Registration Details */}
+              <motion.div variants={fadeUp} className="mt-8 p-4 bg-accent/50 rounded-xl">
+                <div className="flex items-start gap-3">
+                  <Shield className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <div className="text-sm">
+                    <h3 className="font-semibold text-foreground mb-2">Professional Registration</h3>
+                    <p className="text-muted-foreground space-y-1">
+                      <span className="block">Company Reg: 2024/800742/21</span>
+                      <span className="block">SACSSP Reg: 1033-819</span>
+                      <span className="block">BHF Number: 9990890001145061</span>
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
               {/* Social Links */}
               <motion.div variants={fadeUp} className="mt-8">
                 <h3 className="font-semibold text-foreground mb-4">Connect With Us</h3>
                 <div className="flex gap-3">
                   <a
-                    href="https://instagram.com/kgomotsobessie88"
+                    href="https://www.facebook.com/profile.php?id=100064121128498"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://instagram.com/kgomotsobessie"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
                     aria-label="Instagram"
                   >
                     <Instagram className="h-5 w-5" />
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/kgomotso-bessie"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="h-5 w-5" />
                   </a>
                 </div>
               </motion.div>
@@ -300,9 +317,9 @@ const Contact = () => {
           <div className="text-center">
             <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
             <p className="text-lg font-medium text-foreground">
-              259 Barkly Road, Homestead
+              Medicare, 259 Barkly Road, Homestead
             </p>
-            <p className="text-muted-foreground">Kimberley, 8301</p>
+            <p className="text-muted-foreground">Kimberley 8301</p>
             <a
               href="https://maps.google.com/?q=259+Barkly+Road+Homestead+Kimberley+8301"
               target="_blank"
