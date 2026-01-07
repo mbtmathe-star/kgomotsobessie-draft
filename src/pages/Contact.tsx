@@ -1,42 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Instagram, MessageCircle, Send, Building2, Clock, Shield, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, MessageCircle, Send, Clock, Shield, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { fadeUp, stagger } from "@/lib/animations";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. We'll get back to you within 24-48 hours.",
-    });
-
-    setFormData({ name: "", email: "", phone: "", message: "" });
-    setIsSubmitting(false);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
   const whatsappNumber = "27795871204";
   const whatsappMessage = encodeURIComponent("Hello! I would like to inquire about your services.");
@@ -233,7 +205,17 @@ const Contact = () => {
                   Fill out the form below and we'll respond within 24-48 hours.
                 </p>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  action="https://formsubmit.co/kgomotsobessie88@gmail.com" 
+                  method="POST"
+                  className="space-y-6"
+                >
+                  {/* FormSubmit configuration */}
+                  <input type="hidden" name="_subject" value="New Contact Form Submission - KB Social Workers" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_next" value={`${window.location.origin}/contact?submitted=true`} />
+                  
                   <div className="grid sm:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -241,8 +223,6 @@ const Contact = () => {
                         id="name"
                         name="name"
                         placeholder="Your full name"
-                        value={formData.name}
-                        onChange={handleChange}
                         required
                         className="h-12"
                       />
@@ -254,8 +234,6 @@ const Contact = () => {
                         name="email"
                         type="email"
                         placeholder="you@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
                         required
                         className="h-12"
                       />
@@ -269,8 +247,6 @@ const Contact = () => {
                       name="phone"
                       type="tel"
                       placeholder="079 000 0000"
-                      value={formData.phone}
-                      onChange={handleChange}
                       className="h-12"
                     />
                   </div>
@@ -281,8 +257,6 @@ const Contact = () => {
                       id="message"
                       name="message"
                       placeholder="Tell us how we can help you..."
-                      value={formData.message}
-                      onChange={handleChange}
                       required
                       rows={5}
                       className="resize-none"
@@ -293,16 +267,9 @@ const Contact = () => {
                     type="submit"
                     size="lg"
                     className="w-full"
-                    disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
-                      "Sending..."
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="ml-2 h-5 w-5" />
-                      </>
-                    )}
+                    Send Message
+                    <Send className="ml-2 h-5 w-5" />
                   </Button>
                 </form>
               </motion.div>
