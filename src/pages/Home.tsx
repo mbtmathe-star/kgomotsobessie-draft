@@ -77,7 +77,7 @@ const Home = () => {
       </section>
 
       {/* About Practice Intro */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true,
@@ -110,7 +110,7 @@ const Home = () => {
       </section>
 
       {/* Services Snapshot */}
-      <section className="section-padding section-alt">
+      <section className="section-padding section-teal">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true,
@@ -206,7 +206,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true

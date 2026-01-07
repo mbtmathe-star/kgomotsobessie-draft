@@ -173,7 +173,7 @@ const Services = () => {
       </section>
 
       {/* Individual & Family Services */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <motion.div
             initial="hidden"
@@ -228,7 +228,7 @@ const Services = () => {
       </section>
 
       {/* Employee Health & Wellness */}
-      <section className="section-padding section-alt">
+      <section className="section-padding section-teal">
         <div className="container-custom">
           <motion.div
             initial="hidden"

@@ -66,7 +66,7 @@ const Impact = () => {
       </section>
 
       {/* Campaign Overview */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{
@@ -108,7 +108,7 @@ const Impact = () => {
       </section>
 
       {/* Mission Pillars */}
-      <section className="section-padding section-alt">
+      <section className="section-padding section-teal">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
