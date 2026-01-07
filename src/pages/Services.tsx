@@ -16,9 +16,11 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
-import workshopBreakfast from "@/assets/workshop-breakfast-1.jpg";
 import workshopParenting from "@/assets/workshop-parenting.jpg";
 import workshopPresentation from "@/assets/workshop-presentation.jpg";
+import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
+import breakfastGallery2 from "@/assets/workshop-breakfast-2.jpg";
+import breakfastGallery3 from "@/assets/workshop-breakfast-3.jpg";
 
 const Services = () => {
   const individualServices = [
@@ -95,26 +97,32 @@ const Services = () => {
 
   const workshops = [
     {
-      image: workshopBreakfast,
+      icon: Users,
       title: "Breakfast with my Teenager",
       description:
         "An interactive workshop designed to bring parents and teenagers closer together. Focus on improving communication, building trust, and strengthening family bonds.",
       cta: "Contact us to learn more or join the next session",
     },
     {
-      image: workshopParenting,
+      icon: Baby,
       title: "Parenting in the 21st Century",
       description:
         "A workshop for modern parenting challenges. Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
       cta: "Request more information to participate",
     },
     {
-      image: workshopPresentation,
+      icon: Briefcase,
       title: "Healthy Entrepreneur Wellness",
       description:
         "Corporate and entrepreneur wellness programme focused on leadership mental health, stress management, and building resilience for business success.",
       cta: "Contact us to schedule a session for your team",
     },
+  ];
+
+  const breakfastGalleryImages = [
+    { src: breakfastGallery1, alt: "Breakfast with my Teenager event - parents and teens connecting" },
+    { src: breakfastGallery2, alt: "Breakfast with my Teenager workshop session" },
+    { src: breakfastGallery3, alt: "Breakfast with my Teenager community gathering" },
   ];
 
   return (
@@ -350,31 +358,90 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-elevated overflow-hidden flex flex-col"
+                className="card-elevated p-8 flex flex-col h-full"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={workshop.image}
-                    alt={workshop.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
+                  <workshop.icon className="h-7 w-7 text-primary" />
                 </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                    {workshop.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                    {workshop.description}
-                  </p>
-                  <Button asChild variant="outline" size="sm" className="w-full">
-                    <Link to="/contact">
-                      <MessageCircle className="mr-2 h-4 w-4" />
-                      {workshop.cta}
-                    </Link>
-                  </Button>
-                </div>
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  {workshop.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                  {workshop.description}
+                </p>
+                <Button asChild variant="outline" size="sm" className="w-full">
+                  <Link to="/contact">
+                    <MessageCircle className="mr-2 h-4 w-4" />
+                    {workshop.cta}
+                  </Link>
+                </Button>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Breakfast with my Teenager Gallery */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="text-center mb-12"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+              <Users className="h-4 w-4" />
+              <span className="text-sm font-medium">Event Highlights</span>
+            </motion.div>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
+              Breakfast with my Teenager
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
+              Moments from our signature event bringing parents and teenagers together 
+              for meaningful conversations over breakfast.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="grid md:grid-cols-3 gap-6"
+          >
+            {breakfastGalleryImages.map((image, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="aspect-[4/3] overflow-hidden rounded-2xl shadow-lg"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center mt-8"
+          >
+            <Button asChild variant="outline" size="lg">
+              <Link to="/contact">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Inquire About the Next Event
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
