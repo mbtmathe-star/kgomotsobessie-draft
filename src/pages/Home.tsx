@@ -331,28 +331,7 @@ const Home = () => {
       </section>
 
       {/* Mission & Vision Preview */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-card rounded-xl p-6 border border-border">
-              <h3 className="font-heading text-lg font-bold text-primary mb-3">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                To provide expert social work services that promote healing, resilience, 
-                and empowerment while upholding the highest ethical standards.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-xl p-6 border border-border">
-              <h3 className="font-heading text-lg font-bold text-primary mb-3">Our Vision</h3>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                To be a trusted, reliable, and leading social work practice delivering innovative, 
-                accessible, and personalised services that strengthen individuals, organisations, 
-                and communities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </>;
 };
 export default Home;
