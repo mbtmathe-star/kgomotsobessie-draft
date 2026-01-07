@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, FileCheck, UserCheck } from "lucide-react";
+import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, FileCheck, UserCheck, Sparkles, Baby, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroImage from "@/assets/hero-support.jpg";
-import workshopImage from "@/assets/workshop-breakfast-1.jpg";
+import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
+import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
+import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
+
 const Home = () => {
   return <>
       {/* Hero Section */}
@@ -250,40 +253,115 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Workshops & Initiatives */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={workshopImage} alt="Breakfast with my Teenager workshop" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/85" />
-        </div>
-
-        <div className="container-custom section-padding relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="max-w-3xl mx-auto text-center">
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/20 text-primary px-4 py-2 rounded-full mb-6">
-              <Users className="h-4 w-4" />
-              <span className="text-sm font-medium">Workshops & Community Initiatives</span>
+      {/* Annual Events & Workshops */}
+      <section className="section-padding bg-secondary">
+        <div className="container-custom">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="text-center mb-12"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+              <Sparkles className="h-4 w-4" />
+              <span className="text-sm font-medium">Annual Events & Workshops</span>
             </motion.div>
-
-            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-              Breakfast with my Teenager
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
+            >
+              Workshops & Community Initiatives
             </motion.h2>
-
-            <motion.p variants={fadeUp} className="text-lg text-primary-foreground/80 leading-relaxed mb-8">
-              An interactive workshop designed to bring parents and teenagers closer together. 
-              Focus on improving communication, building trust, and strengthening family bonds 
-              in a supportive, facilitated environment.
+            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
+              Interactive programmes designed to build skills, strengthen relationships, 
+              and promote mental wellness across communities and organisations.
             </motion.p>
+          </motion.div>
 
-            <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" variant="hero">
-                <Link to="/contact">
-                  Request More Information
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="grid md:grid-cols-3 gap-8 mb-12"
+          >
+            {[
+              {
+                icon: Users,
+                title: "Breakfast with my Teenager",
+                description: "An interactive workshop designed to bring parents and teenagers closer together through meaningful conversations.",
+              },
+              {
+                icon: Baby,
+                title: "Parenting in the 21st Century",
+                description: "Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
+              },
+              {
+                icon: Briefcase,
+                title: "Healthy Entrepreneur Wellness",
+                description: "Leadership mental health, stress management, and building resilience for business success.",
+              },
+            ].map((workshop, index) => (
+              <motion.div
+                key={index}
+                variants={fadeUp}
+                className="card-elevated p-8 text-center"
+              >
+                <div className="w-14 h-14 mx-auto rounded-xl bg-accent flex items-center justify-center mb-6">
+                  <workshop.icon className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                  {workshop.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {workshop.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Breakfast with my Teenager Preview Gallery */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="mb-8"
+          >
+            <motion.h3 variants={fadeUp} className="font-heading text-xl font-semibold text-foreground text-center mb-6">
+              Breakfast with my Teenager — Event Highlights
+            </motion.h3>
+            <div className="grid grid-cols-3 gap-4 max-w-4xl mx-auto">
+              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  className="aspect-[4/3] overflow-hidden rounded-xl shadow-md"
+                >
+                  <img
+                    src={img}
+                    alt={`Breakfast with my Teenager event photo ${index + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="text-center"
+          >
+            <Button asChild size="lg">
+              <Link to="/services">
+                View All Events & Gallery
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
