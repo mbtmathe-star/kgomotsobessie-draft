@@ -47,7 +47,7 @@ const About = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
@@ -115,7 +115,7 @@ const About = () => {
       </section>
 
       {/* Qualifications */}
-      <section className="section-padding section-alt">
+      <section className="section-padding section-teal">
         <div className="container-custom">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
@@ -191,7 +191,7 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-padding section-warm">
+      <section className="section-padding section-cream">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <motion.div initial={{
