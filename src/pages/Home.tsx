@@ -7,6 +7,7 @@ import heroImage from "@/assets/hero-support.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
+import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
 
 const Home = () => {
   return <>
@@ -178,6 +179,35 @@ const Home = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="section-padding bg-primary">
+        <div className="container-custom">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
+              Ready to Begin Your Journey?
+            </h2>
+            <p className="text-primary-foreground/85 mb-6">
+              Take the first step towards healing, growth, and resilience. 
+              Schedule your consultation today.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Button asChild size="lg" variant="heroOutline">
+                <Link to="/contact">
+                  <Calendar className="mr-2 h-4 w-4" />
+                  Book a Consultation
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="heroOutline">
+                <a href="tel:0795871204">
+                  <Phone className="mr-2 h-4 w-4" />
+                  Call Now
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="section-padding">
         <div className="container-custom">
@@ -318,6 +348,19 @@ const Home = () => {
                 </div>
               ))}
             </div>
+
+            {/* Event Video */}
+            <div className="mt-8 max-w-2xl mx-auto">
+              <video 
+                className="w-full rounded-lg" 
+                controls 
+                preload="metadata"
+                poster={breakfastGallery1}
+              >
+                <source src={breakfastEventVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </motion.div>
 
           <motion.div
@@ -325,7 +368,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            className="text-center"
+            className="text-center mt-8"
           >
             <Button asChild size="lg">
               <Link to="/services">
@@ -356,35 +399,6 @@ const Home = () => {
                 accessible, and personalised services that strengthen individuals, organisations, 
                 and communities.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary-foreground mb-3">
-              Ready to Begin Your Journey?
-            </h2>
-            <p className="text-primary-foreground/85 mb-6">
-              Take the first step towards healing, growth, and resilience. 
-              Schedule your consultation today.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <Button asChild size="lg" variant="heroOutline">
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Book a Consultation
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="heroOutline">
-                <a href="tel:0795871204">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Call Now
-                </a>
-              </Button>
             </div>
           </div>
         </div>
