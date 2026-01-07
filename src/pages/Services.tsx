@@ -21,6 +21,14 @@ import workshopPresentation from "@/assets/workshop-presentation.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery2 from "@/assets/workshop-breakfast-2.jpg";
 import breakfastGallery3 from "@/assets/workshop-breakfast-3.jpg";
+import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
+import breakfastGallery5 from "@/assets/breakfast-gallery-5.jpg";
+import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
+import breakfastGallery7 from "@/assets/breakfast-gallery-7.jpg";
+import breakfastGallery8 from "@/assets/breakfast-gallery-8.jpg";
+import breakfastGallery9 from "@/assets/breakfast-gallery-9.jpg";
+import breakfastGallery10 from "@/assets/breakfast-gallery-10.jpg";
+import breakfastGallery11 from "@/assets/breakfast-gallery-11.jpg";
 
 const Services = () => {
   const individualServices = [
@@ -123,6 +131,14 @@ const Services = () => {
     { src: breakfastGallery1, alt: "Breakfast with my Teenager event - parents and teens connecting" },
     { src: breakfastGallery2, alt: "Breakfast with my Teenager workshop session" },
     { src: breakfastGallery3, alt: "Breakfast with my Teenager community gathering" },
+    { src: breakfastGallery4, alt: "Family photo at Breakfast with my Teenager event" },
+    { src: breakfastGallery5, alt: "Parents and teens at Breakfast with my Teenager" },
+    { src: breakfastGallery6, alt: "Speaker presenting at the workshop" },
+    { src: breakfastGallery7, alt: "Workshop facilitator engaging with attendees" },
+    { src: breakfastGallery8, alt: "Guest speaker sharing insights" },
+    { src: breakfastGallery9, alt: "Keynote presentation at the event" },
+    { src: breakfastGallery10, alt: "Speaker addressing parents and teenagers" },
+    { src: breakfastGallery11, alt: "Workshop facilitator leading a session" },
   ];
 
   return (
