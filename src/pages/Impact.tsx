@@ -5,54 +5,31 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import matricImage from "@/assets/matric-students.jpg";
 import communityImage from "@/assets/community-resilience.jpg";
-
 const Impact = () => {
-  return (
-    <>
+  return <>
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={matricImage}
-            alt="Matric students"
-            className="w-full h-full object-cover"
-          />
+          <img src={matricImage} alt="Matric students" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-overlay" />
         </div>
 
         <div className="container-custom section-padding relative z-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-3xl"
-          >
-            <motion.div
-              variants={fadeUp}
-              className="inline-flex items-center gap-2 bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-full mb-6"
-            >
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary-foreground/20 text-primary-foreground px-4 py-2 rounded-full mb-6">
               <Sparkles className="h-4 w-4" />
               <span className="text-sm font-medium">Flagship Initiative</span>
             </motion.div>
 
-            <motion.h1
-              variants={fadeUp}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6"
-            >
+            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6">
               #MatricUngazibulali
             </motion.h1>
 
-            <motion.p
-              variants={fadeUp}
-              className="text-xl text-primary-foreground/90 leading-relaxed mb-4"
-            >
+            <motion.p variants={fadeUp} className="text-xl text-primary-foreground/90 leading-relaxed mb-4">
               "Matric, Don't Kill Yourself"
             </motion.p>
 
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/80 leading-relaxed"
-            >
+            <motion.p variants={fadeUp} className="text-lg text-primary-foreground/80 leading-relaxed">
               A suicide prevention and mental health awareness initiative dedicated to 
               protecting our youth during one of life's most challenging transitions.
             </motion.p>
@@ -63,13 +40,9 @@ const Impact = () => {
       {/* Milestone Section */}
       <section className="section-padding bg-primary">
         <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="text-center"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="text-center">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-3 mb-6">
               <Calendar className="h-8 w-8 text-primary-foreground" />
               <span className="font-heading text-5xl md:text-6xl font-bold text-primary-foreground">
@@ -80,17 +53,11 @@ const Impact = () => {
               </span>
             </motion.div>
 
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-2xl md:text-3xl font-semibold text-primary-foreground mb-4"
-            >
+            <motion.h2 variants={fadeUp} className="font-heading text-2xl md:text-3xl font-semibold text-primary-foreground mb-4">
               Celebrating Our 7th Anniversary in 2026
             </motion.h2>
 
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/80 max-w-2xl mx-auto"
-            >
+            <motion.p variants={fadeUp} className="text-lg text-primary-foreground/80 max-w-2xl mx-auto">
               Seven years of saving lives, restoring hope, and building a movement 
               that ensures no matriculant faces their struggles alone.
             </motion.p>
@@ -102,19 +69,13 @@ const Impact = () => {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
                 The Campaign
               </motion.p>
-              <motion.h2
-                variants={fadeUp}
-                className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6"
-              >
+              <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
                 What is #MatricUngazibulali?
               </motion.h2>
 
@@ -141,21 +102,7 @@ const Impact = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-card-hover">
-                <img
-                  src={communityImage}
-                  alt="Community support"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </motion.div>
+            
           </div>
         </div>
       </section>
@@ -163,56 +110,33 @@ const Impact = () => {
       {/* Mission Pillars */}
       <section className="section-padding bg-secondary">
         <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="text-center mb-12"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="text-center mb-12">
             <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
               Our Mission
             </motion.p>
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
-            >
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
               How We Make an Impact
             </motion.h2>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {[
-              {
-                icon: Target,
-                title: "Restoring Societal Stability",
-                description:
-                  "By addressing youth mental health at its roots, we contribute to healthier families, stronger communities, and a more stable society.",
-              },
-              {
-                icon: School,
-                title: "School & Community Partnerships",
-                description:
-                  "We partner with schools, traditional leadership, and local organizations to create comprehensive support systems for learners.",
-              },
-              {
-                icon: Heart,
-                title: "No Learner Left Alone",
-                description:
-                  "Every matriculant deserves to know that someone cares. We ensure no student navigates their high-pressure transition without support.",
-              },
-            ].map((pillar, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="card-elevated p-8 text-center"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid md:grid-cols-3 gap-8">
+            {[{
+            icon: Target,
+            title: "Restoring Societal Stability",
+            description: "By addressing youth mental health at its roots, we contribute to healthier families, stronger communities, and a more stable society."
+          }, {
+            icon: School,
+            title: "School & Community Partnerships",
+            description: "We partner with schools, traditional leadership, and local organizations to create comprehensive support systems for learners."
+          }, {
+            icon: Heart,
+            title: "No Learner Left Alone",
+            description: "Every matriculant deserves to know that someone cares. We ensure no student navigates their high-pressure transition without support."
+          }].map((pillar, index) => <motion.div key={index} variants={fadeUp} className="card-elevated p-8 text-center">
                 <div className="w-16 h-16 mx-auto mb-6 rounded-xl bg-primary flex items-center justify-center">
                   <pillar.icon className="h-8 w-8 text-primary-foreground" />
                 </div>
@@ -222,8 +146,7 @@ const Impact = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {pillar.description}
                 </p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -231,17 +154,10 @@ const Impact = () => {
       {/* Partnership CTA */}
       <section className="section-padding">
         <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-4xl mx-auto"
-          >
-            <motion.div
-              variants={fadeUp}
-              className="bg-accent rounded-2xl p-8 md:p-12 text-center border border-primary/20"
-            >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-4xl mx-auto">
+            <motion.div variants={fadeUp} className="bg-accent rounded-2xl p-8 md:p-12 text-center border border-primary/20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-primary flex items-center justify-center">
                 <HandHeart className="h-8 w-8 text-primary-foreground" />
               </div>
@@ -277,23 +193,13 @@ const Impact = () => {
       {/* Final CTA */}
       <section className="section-padding bg-foreground">
         <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4"
-            >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-3xl mx-auto text-center">
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
               Together, We Save Lives
             </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/80 mb-8"
-            >
+            <motion.p variants={fadeUp} className="text-lg text-primary-foreground/80 mb-8">
               Whether you're a student who needs support, a parent seeking guidance, 
               or an organization wanting to make a difference — we're here for you.
             </motion.p>
@@ -311,8 +217,6 @@ const Impact = () => {
           </motion.div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Impact;
