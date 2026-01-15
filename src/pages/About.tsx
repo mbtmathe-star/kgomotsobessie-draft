@@ -5,70 +5,50 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import communityImage from "@/assets/community-resilience.jpg";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-
 const About = () => {
-  const coreValues = [
-    {
-      icon: Heart,
-      title: "Compassion & Empathy",
-      description: "Care delivered with kindness and understanding"
-    },
-    {
-      icon: Scale,
-      title: "Integrity & Ethics",
-      description: "Professionalism, confidentiality, and accountability"
-    },
-    {
-      icon: Shield,
-      title: "Empowerment",
-      description: "Strength-based practice that builds resilience"
-    },
-    {
-      icon: Handshake,
-      title: "Collaboration",
-      description: "Working with families, organisations, and communities"
-    },
-    {
-      icon: Users,
-      title: "Inclusivity",
-      description: "Serving diverse populations with equity and fairness"
-    }
-  ];
-
-  const qualifications = [
-    {
-      icon: GraduationCap,
-      title: "Master's in Disaster Management",
-      description: "Advanced expertise in crisis, emergency, and disaster response"
-    },
-    {
-      icon: GraduationCap,
-      title: "Postgraduate Diploma in Disaster Management",
-      description: "Specialised training in emergency and community resilience"
-    },
-    {
-      icon: Award,
-      title: "Bachelor of Social Work",
-      description: "Foundation in clinical social work practice"
-    },
-    {
-      icon: Briefcase,
-      title: "13+ Years Experience",
-      description: "Government, community work, private practice & organisational wellness"
-    }
-  ];
-
-  return (
-    <>
+  const coreValues = [{
+    icon: Heart,
+    title: "Compassion & Empathy",
+    description: "Care delivered with kindness and understanding"
+  }, {
+    icon: Scale,
+    title: "Integrity & Ethics",
+    description: "Professionalism, confidentiality, and accountability"
+  }, {
+    icon: Shield,
+    title: "Empowerment",
+    description: "Strength-based practice that builds resilience"
+  }, {
+    icon: Handshake,
+    title: "Collaboration",
+    description: "Working with families, organisations, and communities"
+  }, {
+    icon: Users,
+    title: "Inclusivity",
+    description: "Serving diverse populations with equity and fairness"
+  }];
+  const qualifications = [{
+    icon: GraduationCap,
+    title: "Master's in Disaster Management",
+    description: "Advanced expertise in crisis, emergency, and disaster response"
+  }, {
+    icon: GraduationCap,
+    title: "Postgraduate Diploma in Disaster Management",
+    description: "Specialised training in emergency and community resilience"
+  }, {
+    icon: Award,
+    title: "Bachelor of Social Work",
+    description: "Foundation in clinical social work practice"
+  }, {
+    icon: Briefcase,
+    title: "13+ Years Experience",
+    description: "Government, community work, private practice & organisational wellness"
+  }];
+  return <>
       {/* Hero Section */}
       <section className="section-py bg-section-teal hero-curve-left">
         <div className="container-wide relative z-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-            className="max-w-3xl"
-          >
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
             <motion.p variants={fadeUp} className="text-overline mb-4">
               About Our Practice
             </motion.p>
@@ -88,19 +68,19 @@ const About = () => {
         <div className="container-wide">
           <div className="layout-split">
             {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: -30
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
               <div className="aspect-[4/5] rounded overflow-hidden">
-                <img
-                  alt="Kgomotso Bessie - Founder & Director"
-                  className="w-full h-full object-cover"
-                  src={founderPortrait}
-                />
+                <img alt="Kgomotso Bessie - Founder & Director" className="w-full h-full object-cover" src="/lovable-uploads/04d35b07-8cbc-4a76-922e-4b1b033e6721.jpg" />
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
                 <p className="text-2xl md:text-3xl font-bold">2012</p>
@@ -109,12 +89,9 @@ const About = () => {
             </motion.div>
 
             {/* Content */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-2">
                 Meet Kgomotso Bessie
               </motion.h2>
@@ -158,13 +135,9 @@ const About = () => {
       {/* Qualifications */}
       <section className="section-py bg-section-cream">
         <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl mb-14"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl mb-14">
             <motion.p variants={fadeUp} className="text-overline mb-4">
               Credentials
             </motion.p>
@@ -173,19 +146,10 @@ const About = () => {
             </motion.h2>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="space-y-0 divide-y divide-border/60"
-          >
-            {qualifications.map((qual, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="py-8 md:py-10 flex flex-col md:flex-row gap-5"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="space-y-0 divide-y divide-border/60">
+            {qualifications.map((qual, index) => <motion.div key={index} variants={fadeUp} className="py-8 md:py-10 flex flex-col md:flex-row gap-5">
                 <div className="icon-box-lg shrink-0">
                   <qual.icon className="h-6 w-6 text-white" />
                 </div>
@@ -197,8 +161,7 @@ const About = () => {
                     {qual.description}
                   </p>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -207,12 +170,15 @@ const About = () => {
       <section className="section-py bg-white">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="p-8 md:p-10 bg-section-light border-l-4 border-primary"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} className="p-8 md:p-10 bg-section-light border-l-4 border-primary">
               <h3 className="text-2xl font-semibold text-foreground mb-4">Our Mission</h3>
               <p className="text-body">
                 To provide expert social work services that promote healing, resilience, 
@@ -220,13 +186,17 @@ const About = () => {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="p-8 md:p-10 bg-section-light border-l-4 border-primary"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            delay: 0.1
+          }} className="p-8 md:p-10 bg-section-light border-l-4 border-primary">
               <h3 className="text-2xl font-semibold text-foreground mb-4">Our Vision</h3>
               <p className="text-body">
                 To be a trusted, reliable, and leading social work practice delivering innovative, 
@@ -241,13 +211,9 @@ const About = () => {
       {/* Core Values */}
       <section className="section-py bg-section-teal section-curve-left">
         <div className="container-wide relative z-10">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl mb-14"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl mb-14">
             <motion.p variants={fadeUp} className="text-overline mb-4">
               What Guides Us
             </motion.p>
@@ -256,19 +222,10 @@ const About = () => {
             </motion.h2>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10"
-          >
-            {coreValues.map((value, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="flex items-start gap-4"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+            {coreValues.map((value, index) => <motion.div key={index} variants={fadeUp} className="flex items-start gap-4">
                 <div className="icon-box-lg shrink-0">
                   <value.icon className="h-6 w-6 text-white" />
                 </div>
@@ -280,8 +237,7 @@ const About = () => {
                     {value.description}
                   </p>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -294,13 +250,9 @@ const About = () => {
         </div>
 
         <div className="container-wide section-py relative z-10">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl">
             <motion.h2 variants={fadeUp} className="text-headline text-white mb-6">
               Ready to Work With Us?
             </motion.h2>
@@ -324,8 +276,6 @@ const About = () => {
           </motion.div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default About;
