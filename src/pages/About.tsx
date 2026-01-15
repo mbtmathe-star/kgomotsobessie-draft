@@ -4,6 +4,7 @@ import { ArrowRight, GraduationCap, Briefcase, Award, Heart, Users, Shield, Hand
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import communityImage from "@/assets/community-resilience.jpg";
+import founderPortrait from "@/assets/founder-portrait.jpg";
 
 const About = () => {
   const coreValues = [
@@ -98,7 +99,7 @@ const About = () => {
                 <img
                   alt="Kgomotso Bessie - Founder & Director"
                   className="w-full h-full object-cover"
-                  src="/lovable-uploads/0b397c3b-cb56-4e2c-95fd-b1f3789667bd.png"
+                  src={founderPortrait}
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
