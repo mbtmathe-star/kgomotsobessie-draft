@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Heart, School, Sparkles, Calendar, Target, HandHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
-import matricImage from "@/assets/matric-students.jpg";
 import communityImage from "@/assets/community-resilience.jpg";
 
 const Impact = () => {
@@ -28,15 +27,10 @@ const Impact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={matricImage} alt="Matric students" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
-        </div>
-
-        <div className="container-wide section-padding relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl">
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full mb-6 border border-white/20">
+      <section className="bg-primary py-20 md:py-28">
+        <div className="container-wide">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full mb-6 border border-white/20">
               <Sparkles className="h-4 w-4" />
               <span className="text-sm font-medium">Flagship Initiative</span>
             </motion.div>

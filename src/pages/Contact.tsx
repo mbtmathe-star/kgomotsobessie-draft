@@ -15,7 +15,7 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="section-padding section-teal">
+      <section className="bg-primary py-20 md:py-28">
         <div className="container-wide">
           <motion.div
             initial="hidden"
@@ -23,13 +23,13 @@ const Contact = () => {
             variants={stagger}
             className="max-w-3xl"
           >
-            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-sm mb-3">
               Get in Touch
             </motion.p>
-            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Let's Start Your Journey
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-muted-foreground leading-relaxed">
+            <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
               Whether you're seeking personal support, organisational consulting, 
               or partnership opportunities — we're here to listen and help.
             </motion.p>
