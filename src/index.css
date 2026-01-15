@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    /* Core brand colors - Modern Teal & White */
+    /* Core brand colors - Clean White & Teal */
     --background: 0 0% 100%;
     --foreground: 210 20% 12%;
 
@@ -16,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 12%;
 
-    /* Primary - Rich Teal */
+    /* Primary - Professional Teal */
     --primary: 174 55% 32%;
     --primary-foreground: 0 0% 100%;
     --primary-light: 174 40% 95%;
@@ -26,17 +26,17 @@
     --secondary: 210 15% 96%;
     --secondary-foreground: 210 20% 15%;
 
-    /* Section backgrounds */
-    --section-cream: 45 30% 97%;
-    --section-teal-wash: 174 35% 96%;
-    --section-warm: 35 25% 97%;
+    /* Section backgrounds - Very subtle */
+    --section-cream: 45 20% 98%;
+    --section-teal-wash: 174 25% 97%;
+    --section-warm: 35 15% 98%;
 
     /* Muted */
-    --muted: 210 15% 94%;
-    --muted-foreground: 210 12% 45%;
+    --muted: 210 10% 94%;
+    --muted-foreground: 210 12% 40%;
 
     /* Accent */
-    --accent: 174 45% 92%;
+    --accent: 174 35% 94%;
     --accent-foreground: 174 60% 22%;
 
     --surface-elevated: 0 0% 99%;
@@ -44,24 +44,25 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 15% 90%;
-    --input: 210 15% 90%;
+    --border: 210 10% 92%;
+    --input: 210 10% 92%;
     --ring: 174 55% 32%;
 
-    --radius: 0.5rem;
+    /* Sharp corners for buttons/inputs */
+    --radius: 0.25rem;
 
-    /* Shadows */
-    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
-    --card-shadow-hover: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
-    --button-glow: 0 4px 14px -3px hsl(174 55% 32% / 0.4);
+    /* Minimal shadows */
+    --card-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+    --card-shadow-hover: 0 4px 12px -2px rgb(0 0 0 / 0.06);
+    --button-glow: 0 2px 8px -2px hsl(174 55% 32% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 210 20% 15%;
     --sidebar-primary: 174 55% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 174 45% 92%;
+    --sidebar-accent: 174 35% 94%;
     --sidebar-accent-foreground: 174 60% 22%;
-    --sidebar-border: 210 15% 90%;
+    --sidebar-border: 210 10% 92%;
     --sidebar-ring: 174 55% 32%;
   }
 
@@ -83,9 +84,9 @@
     --secondary: 210 20% 12%;
     --secondary-foreground: 210 10% 90%;
 
-    --section-cream: 210 15% 10%;
-    --section-teal-wash: 174 25% 12%;
-    --section-warm: 35 15% 10%;
+    --section-cream: 210 15% 8%;
+    --section-teal-wash: 174 25% 10%;
+    --section-warm: 35 15% 8%;
 
     --muted: 210 20% 12%;
     --muted-foreground: 210 10% 55%;
@@ -127,69 +128,71 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply font-semibold tracking-tight;
   }
 }
 
 @layer components {
-  /* Layout containers */
+  /* Layout containers - Wider for flowing content */
   .container-main {
-    @apply max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-8;
+    @apply max-w-6xl mx-auto w-full px-6 sm:px-8 lg:px-12;
   }
 
   .container-wide {
-    @apply max-w-[1400px] mx-auto w-full px-5 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto w-full px-6 sm:px-8 lg:px-12;
   }
 
   .container-narrow {
-    @apply max-w-4xl mx-auto w-full px-5 sm:px-6 lg:px-8;
+    @apply max-w-3xl mx-auto w-full px-6 sm:px-8;
   }
 
-  /* Section spacing */
+  /* Section spacing - Generous vertical rhythm */
   .section-py {
-    @apply py-16 md:py-20 lg:py-24;
+    @apply py-20 md:py-28 lg:py-32;
   }
 
   .section-py-sm {
-    @apply py-10 md:py-14;
+    @apply py-12 md:py-16;
   }
 
-  /* Section backgrounds */
+  /* Section backgrounds - Pure white dominant */
   .bg-section-white {
     @apply bg-white;
   }
 
   .bg-section-light {
-    @apply bg-[hsl(210_15%_98%)];
+    @apply bg-[hsl(210_10%_98%)];
   }
 
   .bg-section-teal {
-    @apply bg-[hsl(174_35%_96%)];
+    @apply bg-[hsl(174_30%_97%)];
   }
 
   .bg-section-cream {
-    @apply bg-[hsl(45_30%_97%)];
+    @apply bg-[hsl(45_20%_98%)];
   }
 
   .bg-section-dark {
     @apply bg-foreground text-white;
   }
 
-  /* Typography */
+  /* Typography - Clean, modern hierarchy */
   .text-display {
-    @apply font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight;
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold leading-[1.1] tracking-tight;
   }
 
   .text-headline {
-    @apply font-heading text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.1];
+    @apply text-3xl sm:text-4xl md:text-[2.75rem] font-bold leading-[1.15];
   }
 
   .text-title {
-    @apply font-heading text-2xl sm:text-3xl font-normal leading-tight;
+    @apply text-2xl sm:text-3xl font-semibold leading-tight;
   }
 
   .text-subtitle {
@@ -204,54 +207,84 @@
     @apply text-sm font-semibold uppercase tracking-widest text-primary;
   }
 
-  /* Cards */
-  .card-base {
-    @apply bg-white rounded-lg border border-border p-6 md:p-8 transition-all duration-300;
-    box-shadow: var(--card-shadow);
+  /* Minimal item styling - No heavy cards */
+  .item-minimal {
+    @apply py-6 border-b border-border/60 last:border-b-0;
   }
 
-  .card-base:hover {
-    box-shadow: var(--card-shadow-hover);
-    @apply border-primary/20;
+  .item-feature {
+    @apply py-8 md:py-10;
   }
 
-  .card-feature {
-    @apply card-base relative overflow-hidden;
-  }
-
-  .card-feature::before {
-    @apply content-[''] absolute top-0 left-0 w-1 h-full bg-primary opacity-0 transition-opacity duration-300;
-  }
-
-  .card-feature:hover::before {
-    @apply opacity-100;
-  }
-
-  /* Icon containers */
+  /* Icon containers - Clean, professional */
   .icon-box {
-    @apply w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0;
+    @apply w-11 h-11 rounded bg-primary flex items-center justify-center shrink-0;
   }
 
   .icon-box-lg {
-    @apply w-14 h-14 rounded-xl bg-primary flex items-center justify-center shrink-0;
+    @apply w-14 h-14 rounded bg-primary flex items-center justify-center shrink-0;
   }
 
   .icon-box-light {
-    @apply w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center shrink-0;
+    @apply w-11 h-11 rounded bg-primary/10 flex items-center justify-center shrink-0;
   }
 
-  /* Buttons enhancements */
+  .icon-box-outline {
+    @apply w-11 h-11 rounded border-2 border-primary flex items-center justify-center shrink-0;
+  }
+
+  /* Buttons - Sharp corners with gradient on primary CTA */
+  .btn-primary-gradient {
+    @apply bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] text-white;
+  }
+
   .btn-glow {
     box-shadow: var(--button-glow);
   }
 
   .btn-glow:hover {
-    box-shadow: 0 6px 20px -3px hsl(174 55% 32% / 0.5);
+    box-shadow: 0 4px 12px -2px hsl(174 55% 32% / 0.4);
+  }
+
+  /* Left decorative curve - Hero accent */
+  .hero-curve-left {
+    position: relative;
+  }
+
+  .hero-curve-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(174 30% 96%) 0%, hsl(174 20% 98%) 100%);
+    border-radius: 0 0 40% 0;
+    z-index: 0;
+  }
+
+  /* Section curve accent - Left side only */
+  .section-curve-left {
+    position: relative;
+  }
+
+  .section-curve-left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    max-width: 400px;
+    height: 60%;
+    background: linear-gradient(180deg, hsl(174 25% 96%) 0%, transparent 100%);
+    border-radius: 0 0 50% 0;
+    z-index: 0;
+    pointer-events: none;
   }
 
   /* Grid layouts */
   .grid-2 {
-    @apply grid md:grid-cols-2 gap-6 lg:gap-8;
+    @apply grid md:grid-cols-2 gap-8 lg:gap-12;
   }
 
   .grid-3 {
@@ -264,11 +297,11 @@
 
   /* Two-column layouts */
   .layout-split {
-    @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+    @apply grid lg:grid-cols-2 gap-12 lg:gap-20 items-center;
   }
 
   .layout-split-reverse {
-    @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+    @apply grid lg:grid-cols-2 gap-12 lg:gap-20 items-center;
   }
 
   .layout-split-reverse > *:first-child {
@@ -279,9 +312,28 @@
     @apply lg:order-1;
   }
 
+  /* Content flow utilities */
+  .content-flow > * + * {
+    @apply mt-6;
+  }
+
+  .content-flow-sm > * + * {
+    @apply mt-4;
+  }
+
+  /* Divider line */
+  .divider {
+    @apply h-px bg-border/60 my-12 md:my-16;
+  }
+
+  /* Image styling - Sharp corners */
+  .img-sharp {
+    @apply rounded overflow-hidden;
+  }
+
   /* Legacy compatibility classes */
   .section-padding {
-    @apply section-py px-5 sm:px-6 lg:px-8;
+    @apply section-py px-6 sm:px-8 lg:px-12;
   }
 
   .container-custom {
@@ -305,7 +357,7 @@
   }
 
   .section-divider {
-    @apply border-t border-border/50;
+    @apply border-t border-border/40;
   }
 
   .icon-container-solid {
@@ -317,11 +369,24 @@
   }
 
   .card-elevated {
-    @apply card-base;
+    @apply bg-white p-6 md:p-8;
+  }
+
+  .card-base {
+    @apply bg-white p-6 md:p-8;
+  }
+
+  .card-feature {
+    @apply bg-white p-6 md:p-8;
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+
+  .font-heading {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply font-semibold;
   }
 }
 

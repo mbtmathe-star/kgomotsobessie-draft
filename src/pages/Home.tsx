@@ -12,34 +12,34 @@ import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
 const Home = () => {
   return (
     <>
-      {/* Hero Section - Full Width Split Layout */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex">
-        {/* Left Content */}
-        <div className="w-full lg:w-1/2 flex items-center bg-foreground relative z-10">
-          <div className="w-full max-w-2xl mx-auto lg:mx-0 lg:ml-auto px-6 sm:px-10 lg:px-16 xl:px-20 py-20 lg:py-0">
-            <motion.div initial="hidden" animate="visible" variants={stagger}>
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-white/10 text-white/90 px-4 py-2 rounded-full mb-8 text-sm border border-white/10">
+      {/* Hero Section - Full Width with Left Curve */}
+      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center hero-curve-left bg-white overflow-hidden">
+        <div className="container-wide relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Content */}
+            <motion.div initial="hidden" animate="visible" variants={stagger} className="py-16 lg:py-0">
+              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-6">
                 <Award className="h-4 w-4" />
                 <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
               </motion.div>
 
-              <motion.h1 variants={fadeUp} className="text-display text-white mb-6">
+              <motion.h1 variants={fadeUp} className="text-display text-foreground mb-6">
                 Expert Social Work Services
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
+              <motion.p variants={fadeUp} className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
                 Delivering evidence-based clinical, organisational, and community social work 
                 services that promote healing, resilience, and empowerment.
               </motion.p>
 
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="btn-glow">
+                <Button asChild size="lg" className="btn-primary-gradient btn-glow">
                   <Link to="/contact">
                     <Calendar className="mr-2 h-5 w-5" />
                     Book a Consultation
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                <Button asChild size="lg" variant="outline">
                   <Link to="/services">
                     View Services
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -47,19 +47,25 @@ const Home = () => {
                 </Button>
               </motion.div>
             </motion.div>
-          </div>
-        </div>
 
-        {/* Right Image */}
-        <div className="hidden lg:block lg:w-1/2 absolute lg:relative inset-0">
-          <img src={heroImage} alt="Supportive care" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground via-foreground/50 to-transparent lg:hidden" />
+            {/* Right Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="hidden lg:block"
+            >
+              <div className="aspect-[4/5] rounded overflow-hidden">
+                <img src={heroImage} alt="Supportive care" className="w-full h-full object-cover" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Stats Strip */}
-      <section className="bg-primary">
-        <div className="container-wide py-6 md:py-8">
+      <section className="bg-primary py-8">
+        <div className="container-wide">
           <div className="grid grid-cols-3 divide-x divide-white/20">
             {[
               { value: "2013", label: "In Practice Since" },
@@ -67,7 +73,7 @@ const Home = () => {
               { value: "Level 1", label: "BBBEE Contributor" }
             ].map((stat, index) => (
               <div key={index} className="text-center px-4">
-                <p className="font-heading text-2xl md:text-3xl lg:text-4xl text-white">{stat.value}</p>
+                <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{stat.value}</p>
                 <p className="text-xs md:text-sm text-white/70 mt-1">{stat.label}</p>
               </div>
             ))}
@@ -76,7 +82,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="section-py bg-section-white">
+      <section className="section-py bg-white">
         <div className="container-wide">
           <div className="layout-split">
             {/* Content */}
@@ -92,7 +98,7 @@ const Home = () => {
               <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-6">
                 A Trusted, Registered Social Work Practice
               </motion.h2>
-              <motion.div variants={fadeUp} className="space-y-4 text-body">
+              <motion.div variants={fadeUp} className="space-y-5 text-body">
                 <p>
                   Kgomotso Bessie Social Workers and Consulting Inc. is a Black woman-owned, 
                   Level 1 BBBEE social work practice based in Kimberley, Northern Cape.
@@ -104,7 +110,7 @@ const Home = () => {
                   and communities.
                 </p>
               </motion.div>
-              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
+              <motion.div variants={fadeUp} className="mt-10">
                 <Button asChild size="lg" variant="outline">
                   <Link to="/about">
                     Meet the Founder
@@ -122,15 +128,15 @@ const Home = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="aspect-[4/5] rounded overflow-hidden">
                 <img
                   src="/lovable-uploads/0b397c3b-cb56-4e2c-95fd-b1f3789667bd.png"
                   alt="Kgomotso Bessie - Founder"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-primary text-white p-5 md:p-6 rounded-xl shadow-lg">
-                <p className="font-heading text-2xl md:text-3xl">2013</p>
+              <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-primary text-white p-5 md:p-6 rounded">
+                <p className="text-2xl md:text-3xl font-bold">2013</p>
                 <p className="text-sm text-white/80">In Practice Since</p>
               </div>
             </motion.div>
@@ -139,14 +145,14 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="section-py bg-section-light">
-        <div className="container-wide">
+      <section className="section-py bg-section-light section-curve-left">
+        <div className="container-wide relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12"
+            className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16"
           >
             <div className="max-w-2xl">
               <motion.p variants={fadeUp} className="text-overline mb-4">
@@ -161,7 +167,7 @@ const Home = () => {
               </motion.p>
             </div>
             <motion.div variants={fadeUp}>
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="btn-primary-gradient btn-glow">
                 <Link to="/services">
                   View All Services
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -175,7 +181,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid-3"
+            className="space-y-0 divide-y divide-border/60"
           >
             {[
               {
@@ -200,31 +206,35 @@ const Home = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-feature"
+                className="py-10 md:py-12"
               >
-                <div className="icon-box-lg mb-6">
-                  <service.icon className="h-6 w-6 text-white" />
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="icon-box-lg">
+                    <service.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-5 max-w-2xl">
+                      {service.description}
+                    </p>
+                    <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+                          <Check className="h-4 w-4 text-primary shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link
+                    to="/services"
+                    className="inline-flex items-center text-primary font-medium text-sm hover:underline group shrink-0"
+                  >
+                    Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
-                <h3 className="text-title text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                      <Check className="h-4 w-4 text-primary shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to="/services"
-                  className="inline-flex items-center text-primary font-medium text-sm hover:underline group"
-                >
-                  Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
               </motion.div>
             ))}
           </motion.div>
@@ -232,11 +242,11 @@ const Home = () => {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-primary">
-        <div className="container-wide py-12 md:py-16">
+      <section className="bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-14 md:py-16">
+        <div className="container-wide">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
-              <h2 className="font-heading text-2xl md:text-3xl text-white mb-2">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                 Ready to Begin Your Journey?
               </h2>
               <p className="text-white/80 text-lg">
@@ -262,14 +272,14 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="section-py bg-section-white">
+      <section className="section-py bg-white">
         <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-2xl mb-12"
+            className="max-w-2xl mb-14"
           >
             <motion.p variants={fadeUp} className="text-overline mb-4">
               Why Choose Us
@@ -284,7 +294,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid-3"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10"
           >
             {[
               { icon: FileCheck, title: "SACSSP Registered", description: "Practice Registration 1033-819" },
@@ -297,13 +307,13 @@ const Home = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="flex items-start gap-4 p-5 rounded-xl bg-section-light border border-border/50"
+                className="flex items-start gap-4"
               >
                 <div className="icon-box shrink-0">
                   <item.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-foreground mb-1">{item.title}</h3>
+                  <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
               </motion.div>
@@ -320,11 +330,11 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-2xl mb-12"
+            className="max-w-2xl mb-14"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4 text-sm border border-primary/20">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
               <Sparkles className="h-4 w-4" />
-              <span className="font-medium">Annual Events & Workshops</span>
+              <span>Annual Events & Workshops</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">
               Workshops & Community Initiatives
@@ -340,7 +350,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid-3 mb-14"
+            className="space-y-0 divide-y divide-border/60 mb-16"
           >
             {[
               {
@@ -362,17 +372,21 @@ const Home = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-base"
+                className="py-8 md:py-10"
               >
-                <div className="icon-box-light mb-5">
-                  <workshop.icon className="h-5 w-5 text-primary" />
+                <div className="flex flex-col md:flex-row md:items-start gap-5">
+                  <div className="icon-box-light">
+                    <workshop.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-foreground mb-2">
+                      {workshop.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed max-w-2xl">
+                      {workshop.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-title text-foreground mb-3">
-                  {workshop.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {workshop.description}
-                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -384,12 +398,12 @@ const Home = () => {
             viewport={{ once: true }}
             variants={stagger}
           >
-            <motion.h3 variants={fadeUp} className="font-heading text-xl text-foreground mb-6">
+            <motion.h3 variants={fadeUp} className="text-xl font-semibold text-foreground mb-6">
               Breakfast with my Teenager — Event Highlights
             </motion.h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
               {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden rounded-lg">
+                <div key={index} className="aspect-[4/3] overflow-hidden rounded">
                   <img
                     src={img}
                     alt={`Breakfast event highlight ${index + 1}`}
@@ -397,7 +411,7 @@ const Home = () => {
                   />
                 </div>
               ))}
-              <div className="aspect-[4/3] overflow-hidden rounded-lg relative group">
+              <div className="aspect-[4/3] overflow-hidden rounded relative group">
                 <video
                   className="w-full h-full object-cover"
                   controls
@@ -410,7 +424,7 @@ const Home = () => {
             </div>
 
             <div className="mt-10 text-center">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="btn-primary-gradient btn-glow">
                 <Link to="/services">
                   View All Events & Gallery
                   <ArrowRight className="ml-2 h-4 w-4" />

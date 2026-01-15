@@ -60,8 +60,8 @@ const About = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="section-py bg-section-teal">
-        <div className="container-wide">
+      <section className="section-py bg-section-teal hero-curve-left">
+        <div className="container-wide relative z-10">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -83,7 +83,7 @@ const About = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="section-py bg-section-white">
+      <section className="section-py bg-white">
         <div className="container-wide">
           <div className="layout-split">
             {/* Image */}
@@ -94,15 +94,15 @@ const About = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="aspect-[4/5] rounded overflow-hidden">
                 <img
                   alt="Kgomotso Bessie - Founder & Director"
                   className="w-full h-full object-cover"
                   src="/lovable-uploads/0b397c3b-cb56-4e2c-95fd-b1f3789667bd.png"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded-xl shadow-lg">
-                <p className="font-heading text-2xl md:text-3xl">2013</p>
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
+                <p className="text-2xl md:text-3xl font-bold">2013</p>
                 <p className="text-sm text-white/80">In Practice Since</p>
               </div>
             </motion.div>
@@ -121,7 +121,7 @@ const About = () => {
                 Founder & Director
               </motion.p>
 
-              <motion.div variants={fadeUp} className="space-y-4 text-body">
+              <motion.div variants={fadeUp} className="space-y-5 text-body">
                 <p>
                   Kgomotso Bessie is a qualified social worker with a passion for empowering 
                   individuals, families, and communities. With over <strong className="text-foreground">11 years of experience</strong> spanning 
@@ -143,9 +143,9 @@ const About = () => {
                 </p>
               </motion.div>
 
-              <motion.div variants={fadeUp} className="mt-8 p-6 bg-section-light rounded-xl border-l-4 border-primary">
+              <motion.div variants={fadeUp} className="mt-10 p-6 bg-section-light border-l-4 border-primary">
                 <Quote className="h-6 w-6 text-primary mb-3" />
-                <p className="text-foreground font-heading text-xl italic">
+                <p className="text-foreground text-xl italic font-medium">
                   "Circumstances do not define destiny — resilience does."
                 </p>
               </motion.div>
@@ -162,7 +162,7 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-2xl mb-12"
+            className="max-w-2xl mb-14"
           >
             <motion.p variants={fadeUp} className="text-overline mb-4">
               Credentials
@@ -177,19 +177,19 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid-2"
+            className="space-y-0 divide-y divide-border/60"
           >
             {qualifications.map((qual, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-base flex gap-5"
+                className="py-8 md:py-10 flex flex-col md:flex-row gap-5"
               >
                 <div className="icon-box-lg shrink-0">
                   <qual.icon className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl text-foreground mb-2">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
                     {qual.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -203,16 +203,16 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-py bg-section-white">
+      <section className="section-py bg-white">
         <div className="container-wide">
-          <div className="grid-2">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="p-8 md:p-10 rounded-2xl bg-section-light border-l-4 border-primary"
+              className="p-8 md:p-10 bg-section-light border-l-4 border-primary"
             >
-              <h3 className="font-heading text-2xl text-foreground mb-4">Our Mission</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Mission</h3>
               <p className="text-body">
                 To provide expert social work services that promote healing, resilience, 
                 and empowerment while upholding the highest ethical standards.
@@ -224,9 +224,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="p-8 md:p-10 rounded-2xl bg-section-light border-l-4 border-primary"
+              className="p-8 md:p-10 bg-section-light border-l-4 border-primary"
             >
-              <h3 className="font-heading text-2xl text-foreground mb-4">Our Vision</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Vision</h3>
               <p className="text-body">
                 To be a trusted, reliable, and leading social work practice delivering innovative, 
                 accessible, and personalised services that strengthen individuals, organisations, 
@@ -238,14 +238,14 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-py bg-section-teal">
-        <div className="container-wide">
+      <section className="section-py bg-section-teal section-curve-left">
+        <div className="container-wide relative z-10">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-2xl mb-12"
+            className="max-w-2xl mb-14"
           >
             <motion.p variants={fadeUp} className="text-overline mb-4">
               What Guides Us
@@ -260,23 +260,25 @@ const About = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid-3"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10"
           >
             {coreValues.map((value, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-base"
+                className="flex items-start gap-4"
               >
-                <div className="icon-box-lg mb-5">
+                <div className="icon-box-lg shrink-0">
                   <value.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="font-heading text-xl text-foreground mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-muted-foreground">
-                  {value.description}
-                </p>
+                <div>
+                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                    {value.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {value.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -306,7 +308,7 @@ const About = () => {
               wellness services — we're here to help.
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="btn-glow">
+              <Button asChild size="lg" className="btn-primary-gradient btn-glow">
                 <Link to="/services">
                   Explore Our Services
                   <ArrowRight className="ml-2 h-5 w-5" />
