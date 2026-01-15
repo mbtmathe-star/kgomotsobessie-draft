@@ -4,6 +4,7 @@ import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, 
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
+import founderPortrait from "@/assets/founder-portrait.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -132,7 +133,7 @@ const Home = () => {
             >
               <div className="aspect-[4/5] rounded overflow-hidden">
                 <img
-                  src="/lovable-uploads/0b397c3b-cb56-4e2c-95fd-b1f3789667bd.png"
+                  src={founderPortrait}
                   alt="Kgomotso Bessie - Founder"
                   className="w-full h-full object-cover"
                 />
