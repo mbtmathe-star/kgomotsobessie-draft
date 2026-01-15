@@ -46,16 +46,16 @@ const About = () => {
   }];
   return <>
       {/* Hero Section */}
-      <section className="section-py bg-section-teal hero-curve-left">
-        <div className="container-wide relative z-10">
+      <section className="bg-primary py-20 md:py-28">
+        <div className="container-wide">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
-            <motion.p variants={fadeUp} className="text-overline mb-4">
+            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-sm mb-4">
               About Our Practice
             </motion.p>
-            <motion.h1 variants={fadeUp} className="text-display text-foreground mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               A Trusted Social Work Practice
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-subtitle">
+            <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
               Black woman-owned, Level 1 BBBEE Social Work Practice delivering expert 
               clinical, organisational, and community services with compassion and integrity.
             </motion.p>
