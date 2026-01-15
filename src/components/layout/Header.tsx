@@ -57,7 +57,7 @@ const Header = () => {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:0795871204" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:0713787172" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
               
               
             </a>
@@ -90,9 +90,9 @@ const Header = () => {
                   {link.label}
                 </Link>)}
               <div className="pt-4 mt-2 border-t border-border space-y-3">
-                <a href="tel:0795871204" className="flex items-center gap-2 text-sm text-muted-foreground py-2 px-4">
+                <a href="tel:0713787172" className="flex items-center gap-2 text-sm text-muted-foreground py-2 px-4">
                   <Phone className="h-4 w-4" />
-                  <span>079 587 1204</span>
+                  <span>071 378 7172</span>
                 </a>
                 <Button asChild className="w-full" size="lg">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>

@@ -9,7 +9,7 @@ import { fadeUp, stagger } from "@/lib/animations";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const whatsappNumber = "27795871204";
+  const whatsappNumber = "27713787172";
   const whatsappMessage = encodeURIComponent("Hello! I would like to inquire about your services.");
 
   return (
@@ -75,9 +75,9 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                    <a href="tel:0795871204" className="text-primary hover:text-primary-dark transition-colors text-lg font-medium">
-                      079 587 1204
+                    <h3 className="font-semibold text-foreground mb-1">Phone / WhatsApp</h3>
+                    <a href="tel:0713787172" className="text-primary hover:text-primary-dark transition-colors text-lg font-medium">
+                      071 378 7172
                     </a>
                   </div>
                 </div>
@@ -123,6 +123,14 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
+              </motion.div>
+
+              {/* Payment Methods */}
+              <motion.div variants={fadeUp} className="mt-6 p-6 bg-accent/50 rounded-xl border border-border">
+                <h3 className="font-semibold text-foreground mb-3">Payment Methods</h3>
+                <p className="text-muted-foreground">
+                  We accept <strong className="text-foreground">cash</strong> and electronic payments for all consultations.
+                </p>
               </motion.div>
 
               {/* Social Links */}
