@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
+import breakfastWorkshop from "@/assets/breakfast-workshop.png";
+import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
+import workshopParenting from "@/assets/workshop-parenting.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -71,8 +74,8 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid grid-cols-3 divide-x divide-white/20">
             {[
-              { value: "2013", label: "In Practice Since" },
-              { value: "11+", label: "Years Experience" },
+              { value: "2012", label: "In Practice Since" },
+              { value: "13+", label: "Years Experience" },
               { value: "Level 1", label: "BBBEE Contributor" }
             ].map((stat, index) => (
               <div key={index} className="text-center px-4">
@@ -108,7 +111,7 @@ const Home = () => {
                 </p>
                 <p>
                   Founded by Kgomotso Bessie — a qualified social worker with a Master's in 
-                  Disaster Management and over 11 years of experience — we deliver personalised, 
+                  Disaster Management and over 13 years of experience — we deliver personalised, 
                   ethical, and evidence-based services to individuals, families, organisations, 
                   and communities.
                 </p>
@@ -139,7 +142,7 @@ const Home = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-primary text-white p-5 md:p-6 rounded">
-                <p className="text-2xl md:text-3xl font-bold">2013</p>
+                <p className="text-2xl md:text-3xl font-bold">2012</p>
                 <p className="text-sm text-white/80">In Practice Since</p>
               </div>
             </motion.div>
@@ -264,7 +267,7 @@ const Home = () => {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
-                <a href="tel:0795871204">
+                <a href="tel:0713787172">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now
                 </a>
@@ -359,17 +362,20 @@ const Home = () => {
               {
                 icon: Users,
                 title: "Breakfast with my Teenager",
-                description: "An interactive workshop designed to bring parents and teenagers closer together through meaningful conversations."
+                description: "An interactive workshop designed to bring parents and teenagers closer together through meaningful conversations.",
+                image: breakfastWorkshop
               },
               {
                 icon: Baby,
                 title: "Parenting in the 21st Century",
-                description: "Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families."
+                description: "Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
+                image: workshopParenting
               },
               {
                 icon: Briefcase,
                 title: "Healthy Entrepreneur Wellness",
-                description: "Leadership mental health, stress management, and building resilience for business success."
+                description: "Leadership mental health, stress management, and building resilience for business success.",
+                image: healthyEntrepreneur
               }
             ].map((workshop, index) => (
               <motion.div
@@ -377,9 +383,13 @@ const Home = () => {
                 variants={fadeUp}
                 className="py-8 md:py-10"
               >
-                <div className="flex flex-col md:flex-row md:items-start gap-5">
-                  <div className="icon-box-light">
-                    <workshop.icon className="h-5 w-5 text-primary" />
+                <div className="flex flex-col md:flex-row md:items-start gap-6">
+                  <div className="w-full md:w-48 h-32 md:h-28 rounded overflow-hidden shrink-0">
+                    <img 
+                      src={workshop.image} 
+                      alt={workshop.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-foreground mb-2">

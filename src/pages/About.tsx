@@ -53,7 +53,7 @@ const About = () => {
     },
     {
       icon: Briefcase,
-      title: "11+ Years Experience",
+      title: "13+ Years Experience",
       description: "Government, community work, private practice & organisational wellness"
     }
   ];
@@ -103,7 +103,7 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
-                <p className="text-2xl md:text-3xl font-bold">2013</p>
+                <p className="text-2xl md:text-3xl font-bold">2012</p>
                 <p className="text-sm text-white/80">In Practice Since</p>
               </div>
             </motion.div>
@@ -125,13 +125,13 @@ const About = () => {
               <motion.div variants={fadeUp} className="space-y-5 text-body">
                 <p>
                   Kgomotso Bessie is a qualified social worker with a passion for empowering 
-                  individuals, families, and communities. With over <strong className="text-foreground">11 years of experience</strong> spanning 
+                  individuals, families, and communities. With over <strong className="text-foreground">13 years of experience</strong> spanning 
                   government service, community work, private practice, and organisational wellness, 
                   she brings a wealth of expertise to every engagement.
                 </p>
 
                 <p>
-                  In practice since <strong className="text-foreground">2013</strong>, Kgomotso has worked extensively 
+                  In practice since <strong className="text-foreground">2012</strong>, Kgomotso has worked extensively 
                   with the Department of Social Development and the South African Police Service (SAPS), 
                   supporting families and communities through their most challenging moments.
                 </p>

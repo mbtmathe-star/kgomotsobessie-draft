@@ -24,7 +24,7 @@ const Footer = () => {
                 </Link>
               </Button>
               <Button asChild variant="heroOutline" size="lg">
-                <a href="tel:0795871204">
+                <a href="tel:0713787172">
                   <Phone className="mr-2 h-4 w-4" />
                   Call Now
                 </a>
@@ -102,8 +102,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
-                <a href="tel:0795871204" className="text-primary-foreground/70 hover:text-primary transition-colors">
-                  079 587 1204
+                <a href="tel:0713787172" className="text-primary-foreground/70 hover:text-primary transition-colors">
+                  071 378 7172
                 </a>
               </div>
               <div className="flex items-center gap-3">

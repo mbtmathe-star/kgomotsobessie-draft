@@ -18,7 +18,7 @@ const FloatingButtons = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const whatsappNumber = "27795871204";
+  const whatsappNumber = "27713787172";
   const whatsappMessage = encodeURIComponent("Hello! I would like to inquire about your services.");
 
   return (
@@ -50,7 +50,7 @@ const FloatingButtons = () => {
           >
             {/* Phone Button */}
             <motion.a
-              href="tel:0795871204"
+              href="tel:0713787172"
               className="w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary-dark transition-colors flex items-center justify-center shadow-lg"
               aria-label="Call us"
               whileHover={{ scale: 1.1 }}
