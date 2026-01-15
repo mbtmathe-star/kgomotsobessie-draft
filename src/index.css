@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:wght@400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,118 +6,114 @@
 
 @layer base {
   :root {
-    /* Core brand colors - Teal & White theme with rich contrast */
+    /* Core brand colors - Modern Teal & White */
     --background: 0 0% 100%;
-    --foreground: 200 25% 10%;
+    --foreground: 210 20% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 25% 10%;
+    --card-foreground: 210 20% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 25% 10%;
+    --popover-foreground: 210 20% 12%;
 
-    /* Primary - Deep Teal */
-    --primary: 174 62% 38%;
+    /* Primary - Rich Teal */
+    --primary: 174 55% 32%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 174 45% 92%;
-    --primary-dark: 174 65% 28%;
+    --primary-light: 174 40% 95%;
+    --primary-dark: 174 60% 22%;
 
-    /* Secondary - Warm cream with subtle warmth */
-    --secondary: 40 30% 96%;
-    --secondary-foreground: 200 25% 15%;
+    /* Secondary */
+    --secondary: 210 15% 96%;
+    --secondary-foreground: 210 20% 15%;
 
-    /* Section backgrounds - More distinct */
-    --section-cream: 40 35% 95%;
-    --section-teal-wash: 174 40% 94%;
-    --section-warm: 30 30% 97%;
+    /* Section backgrounds */
+    --section-cream: 45 30% 97%;
+    --section-teal-wash: 174 35% 96%;
+    --section-warm: 35 25% 97%;
 
-    /* Muted - Better contrast */
-    --muted: 174 15% 94%;
-    --muted-foreground: 200 20% 35%;
+    /* Muted */
+    --muted: 210 15% 94%;
+    --muted-foreground: 210 12% 45%;
 
-    /* Accent - Richer teal for highlights */
-    --accent: 174 50% 85%;
-    --accent-foreground: 174 70% 22%;
+    /* Accent */
+    --accent: 174 45% 92%;
+    --accent-foreground: 174 60% 22%;
 
-    /* Surface elevated - subtle teal tint */
-    --surface-elevated: 174 25% 98%;
+    --surface-elevated: 0 0% 99%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 174 25% 85%;
-    --input: 200 15% 90%;
-    --ring: 174 62% 38%;
+    --border: 210 15% 90%;
+    --input: 210 15% 90%;
+    --ring: 174 55% 32%;
 
-    --radius: 0.625rem;
+    --radius: 0.5rem;
 
-    /* Custom tokens - Enhanced */
-    --hero-gradient: linear-gradient(135deg, hsl(174 62% 38% / 0.8), hsl(174 65% 28% / 0.9));
-    --card-shadow: 0 4px 20px -4px hsl(174 62% 38% / 0.1);
-    --card-shadow-hover: 0 12px 32px -8px hsl(174 62% 38% / 0.2);
-    --card-teal-shadow: 0 4px 24px -6px hsl(174 62% 38% / 0.18);
-    --button-glow: 0 4px 14px -3px hsl(174 62% 38% / 0.45);
+    /* Shadows */
+    --card-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+    --card-shadow-hover: 0 10px 25px -5px rgb(0 0 0 / 0.08), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+    --button-glow: 0 4px 14px -3px hsl(174 55% 32% / 0.4);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 200 25% 15%;
-    --sidebar-primary: 174 62% 38%;
+    --sidebar-foreground: 210 20% 15%;
+    --sidebar-primary: 174 55% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 174 50% 85%;
-    --sidebar-accent-foreground: 174 70% 22%;
-    --sidebar-border: 174 25% 85%;
-    --sidebar-ring: 174 62% 38%;
+    --sidebar-accent: 174 45% 92%;
+    --sidebar-accent-foreground: 174 60% 22%;
+    --sidebar-border: 210 15% 90%;
+    --sidebar-ring: 174 55% 32%;
   }
 
   .dark {
-    --background: 200 25% 6%;
-    --foreground: 200 10% 95%;
+    --background: 210 20% 6%;
+    --foreground: 210 10% 95%;
 
-    --card: 200 25% 9%;
-    --card-foreground: 200 10% 95%;
+    --card: 210 20% 9%;
+    --card-foreground: 210 10% 95%;
 
-    --popover: 200 25% 9%;
-    --popover-foreground: 200 10% 95%;
+    --popover: 210 20% 9%;
+    --popover-foreground: 210 10% 95%;
 
-    --primary: 174 62% 50%;
-    --primary-foreground: 200 25% 6%;
-    --primary-light: 174 40% 16%;
-    --primary-dark: 174 62% 60%;
+    --primary: 174 50% 45%;
+    --primary-foreground: 210 20% 6%;
+    --primary-light: 174 35% 15%;
+    --primary-dark: 174 55% 55%;
 
-    --secondary: 200 25% 12%;
-    --secondary-foreground: 200 10% 90%;
+    --secondary: 210 20% 12%;
+    --secondary-foreground: 210 10% 90%;
 
-    --section-cream: 200 20% 10%;
-    --section-teal-wash: 174 30% 12%;
-    --section-warm: 30 15% 10%;
+    --section-cream: 210 15% 10%;
+    --section-teal-wash: 174 25% 12%;
+    --section-warm: 35 15% 10%;
 
-    --muted: 200 25% 12%;
-    --muted-foreground: 200 10% 55%;
+    --muted: 210 20% 12%;
+    --muted-foreground: 210 10% 55%;
 
-    --accent: 174 40% 16%;
-    --accent-foreground: 174 50% 80%;
+    --accent: 174 35% 15%;
+    --accent-foreground: 174 45% 80%;
 
-    --surface-elevated: 200 25% 11%;
+    --surface-elevated: 210 20% 11%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 25% 16%;
-    --input: 200 25% 16%;
-    --ring: 174 62% 50%;
+    --border: 210 20% 16%;
+    --input: 210 20% 16%;
+    --ring: 174 50% 45%;
 
     --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
-    --card-shadow-hover: 0 12px 32px -8px hsl(174 62% 50% / 0.25);
-    --card-teal-shadow: 0 4px 24px -6px hsl(174 62% 50% / 0.25);
-    --button-glow: 0 4px 14px -3px hsl(174 62% 50% / 0.5);
+    --card-shadow-hover: 0 12px 32px -8px hsl(174 50% 45% / 0.25);
+    --button-glow: 0 4px 14px -3px hsl(174 50% 45% / 0.5);
 
-    --sidebar-background: 200 25% 8%;
-    --sidebar-foreground: 200 10% 90%;
-    --sidebar-primary: 174 62% 50%;
-    --sidebar-primary-foreground: 200 25% 6%;
-    --sidebar-accent: 174 40% 16%;
-    --sidebar-accent-foreground: 174 50% 80%;
-    --sidebar-border: 200 25% 16%;
-    --sidebar-ring: 174 62% 50%;
+    --sidebar-background: 210 20% 8%;
+    --sidebar-foreground: 210 10% 90%;
+    --sidebar-primary: 174 50% 45%;
+    --sidebar-primary-foreground: 210 20% 6%;
+    --sidebar-accent: 174 35% 15%;
+    --sidebar-accent-foreground: 174 45% 80%;
+    --sidebar-border: 210 20% 16%;
+    --sidebar-ring: 174 50% 45%;
   }
 }
 
@@ -135,111 +131,197 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading tracking-tight;
   }
 }
 
 @layer components {
-  .section-padding {
-    @apply px-6 sm:px-8 lg:px-16 xl:px-20 py-16 md:py-20 lg:py-24;
-  }
-
-  .section-padding-compact {
-    @apply px-6 sm:px-8 lg:px-16 xl:px-20 py-10 md:py-14;
-  }
-
-  .container-custom {
-    @apply max-w-[1440px] mx-auto w-full;
+  /* Layout containers */
+  .container-main {
+    @apply max-w-7xl mx-auto w-full px-5 sm:px-6 lg:px-8;
   }
 
   .container-wide {
-    @apply max-w-[1600px] mx-auto w-full;
+    @apply max-w-[1400px] mx-auto w-full px-5 sm:px-6 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto w-full px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section-py {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-py-sm {
+    @apply py-10 md:py-14;
+  }
+
+  /* Section backgrounds */
+  .bg-section-white {
+    @apply bg-white;
+  }
+
+  .bg-section-light {
+    @apply bg-[hsl(210_15%_98%)];
+  }
+
+  .bg-section-teal {
+    @apply bg-[hsl(174_35%_96%)];
+  }
+
+  .bg-section-cream {
+    @apply bg-[hsl(45_30%_97%)];
+  }
+
+  .bg-section-dark {
+    @apply bg-foreground text-white;
+  }
+
+  /* Typography */
+  .text-display {
+    @apply font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight;
+  }
+
+  .text-headline {
+    @apply font-heading text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.1];
+  }
+
+  .text-title {
+    @apply font-heading text-2xl sm:text-3xl font-normal leading-tight;
+  }
+
+  .text-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg text-muted-foreground leading-relaxed;
+  }
+
+  .text-overline {
+    @apply text-sm font-semibold uppercase tracking-widest text-primary;
+  }
+
+  /* Cards */
+  .card-base {
+    @apply bg-white rounded-lg border border-border p-6 md:p-8 transition-all duration-300;
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-base:hover {
+    box-shadow: var(--card-shadow-hover);
+    @apply border-primary/20;
+  }
+
+  .card-feature {
+    @apply card-base relative overflow-hidden;
+  }
+
+  .card-feature::before {
+    @apply content-[''] absolute top-0 left-0 w-1 h-full bg-primary opacity-0 transition-opacity duration-300;
+  }
+
+  .card-feature:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Icon containers */
+  .icon-box {
+    @apply w-12 h-12 rounded-lg bg-primary flex items-center justify-center shrink-0;
+  }
+
+  .icon-box-lg {
+    @apply w-14 h-14 rounded-xl bg-primary flex items-center justify-center shrink-0;
+  }
+
+  .icon-box-light {
+    @apply w-12 h-12 rounded-lg bg-primary-light flex items-center justify-center shrink-0;
+  }
+
+  /* Buttons enhancements */
+  .btn-glow {
+    box-shadow: var(--button-glow);
+  }
+
+  .btn-glow:hover {
+    box-shadow: 0 6px 20px -3px hsl(174 55% 32% / 0.5);
+  }
+
+  /* Grid layouts */
+  .grid-2 {
+    @apply grid md:grid-cols-2 gap-6 lg:gap-8;
+  }
+
+  .grid-3 {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8;
+  }
+
+  .grid-4 {
+    @apply grid sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+
+  /* Two-column layouts */
+  .layout-split {
+    @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+  }
+
+  .layout-split-reverse {
+    @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
+  }
+
+  .layout-split-reverse > *:first-child {
+    @apply lg:order-2;
+  }
+
+  .layout-split-reverse > *:last-child {
+    @apply lg:order-1;
+  }
+
+  /* Legacy compatibility classes */
+  .section-padding {
+    @apply section-py px-5 sm:px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply container-main;
+  }
+
+  .two-col-layout {
+    @apply layout-split;
+  }
+
+  .section-white {
+    @apply bg-section-white;
+  }
+
+  .section-teal {
+    @apply bg-section-teal;
+  }
+
+  .section-cream {
+    @apply bg-section-cream;
+  }
+
+  .section-divider {
+    @apply border-t border-border/50;
+  }
+
+  .icon-container-solid {
+    @apply icon-box;
+  }
+
+  .icon-container {
+    @apply icon-box-light;
+  }
+
+  .card-elevated {
+    @apply card-base;
   }
 
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
-  }
-
-  /* Enhanced card with teal undertone and depth */
-  .card-elevated {
-    @apply bg-white rounded-lg border border-border transition-all duration-300;
-    box-shadow: var(--card-shadow);
-  }
-
-  .card-elevated:hover {
-    @apply border-primary/30;
-    box-shadow: var(--card-shadow-hover);
-  }
-
-  /* Card with left accent border */
-  .card-accent {
-    @apply card-elevated border-l-4 border-l-primary;
-  }
-
-  /* Section backgrounds - Professional and distinct */
-  .section-white {
-    @apply bg-white;
-  }
-
-  .section-teal {
-    background: linear-gradient(180deg, hsl(174 40% 96%) 0%, hsl(174 35% 94%) 100%);
-  }
-
-  .section-alt {
-    background: linear-gradient(180deg, hsl(200 15% 97%) 0%, hsl(200 10% 95%) 100%);
-  }
-
-  .section-warm {
-    background: linear-gradient(180deg, hsl(40 30% 97%) 0%, hsl(35 25% 95%) 100%);
-  }
-
-  .section-cream {
-    background: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(30 20% 96%) 100%);
-  }
-
-  .section-divider {
-    @apply border-t border-border/60;
-  }
-
-  .hero-overlay {
-    background: var(--hero-gradient);
-  }
-
-  /* Icon containers */
-  .icon-container {
-    @apply bg-gradient-to-br from-primary-light to-accent/60 border border-primary/10;
-  }
-
-  .icon-container-solid {
-    @apply bg-primary text-primary-foreground;
-    box-shadow: 0 4px 12px -2px hsl(174 62% 38% / 0.3);
-  }
-
-  /* Two-column layouts */
-  .two-col-layout {
-    @apply grid lg:grid-cols-2 gap-10 lg:gap-16 items-center;
-  }
-
-  /* Content blocks */
-  .content-block {
-    @apply space-y-4;
-  }
-
-  .content-block h2 {
-    @apply font-heading text-3xl md:text-4xl font-bold text-foreground;
-  }
-
-  .content-block p {
-    @apply text-muted-foreground leading-relaxed;
-  }
-
-  /* Feature list styling */
-  .feature-list {
-    @apply space-y-3;
-  }
-
-  .feature-list li {
-    @apply flex items-start gap-3;
   }
 }
 
