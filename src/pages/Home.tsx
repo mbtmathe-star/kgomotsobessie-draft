@@ -12,31 +12,20 @@ import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
 import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
-
 const Home = () => {
-  return (
-    <>
+  return <>
       {/* Hero Section - Full Width Banner */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src={heroOffice} 
-            alt="Professional social work office" 
-            className="w-full h-full object-cover"
-          />
+          <img src={heroOffice} alt="Professional social work office" className="w-full h-full object-cover" />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
         </div>
         
         {/* Content */}
         <div className="container-wide relative z-10">
-          <motion.div 
-            initial="hidden" 
-            animate="visible" 
-            variants={stagger} 
-            className="max-w-2xl py-16 lg:py-0"
-          >
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl py-16 lg:py-0">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary-foreground/80 text-sm font-medium mb-6">
               <Award className="h-4 w-4" />
               <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
@@ -73,16 +62,19 @@ const Home = () => {
       <section className="bg-primary py-8">
         <div className="container-wide">
           <div className="grid grid-cols-3 divide-x divide-white/20">
-            {[
-              { value: "2012", label: "In Practice Since" },
-              { value: "13+", label: "Years Experience" },
-              { value: "Level 1", label: "BBBEE Contributor" }
-            ].map((stat, index) => (
-              <div key={index} className="text-center px-4">
+            {[{
+            value: "2012",
+            label: "In Practice Since"
+          }, {
+            value: "13+",
+            label: "Years Experience"
+          }, {
+            value: "Level 1",
+            label: "BBBEE Contributor"
+          }].map((stat, index) => <div key={index} className="text-center px-4">
                 <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{stat.value}</p>
                 <p className="text-xs md:text-sm text-white/70 mt-1">{stat.label}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -92,12 +84,9 @@ const Home = () => {
         <div className="container-wide">
           <div className="layout-split">
             {/* Content */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.p variants={fadeUp} className="text-overline mb-4">
                 About Our Practice
               </motion.p>
@@ -127,19 +116,19 @@ const Home = () => {
             </motion.div>
 
             {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.95
+          }} whileInView={{
+            opacity: 1,
+            scale: 1
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
               <div className="aspect-[4/5] rounded overflow-hidden">
-                <img
-                  src={founderPortrait}
-                  alt="Kgomotso Bessie - Founder"
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d5724d65-408f-47cd-a10d-b013ca1ae53b.jpg" />
               </div>
               <div className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-primary text-white p-5 md:p-6 rounded">
                 <p className="text-2xl md:text-3xl font-bold">2012</p>
@@ -153,13 +142,9 @@ const Home = () => {
       {/* Services Section */}
       <section className="section-py bg-section-light section-curve-left">
         <div className="container-wide relative z-10">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
             <div className="max-w-2xl">
               <motion.p variants={fadeUp} className="text-overline mb-4">
                 What We Offer
@@ -182,38 +167,25 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="space-y-0 divide-y divide-border/60"
-          >
-            {[
-              {
-                icon: Heart,
-                title: "Individual & Family Services",
-                description: "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
-                features: ["Individual Counselling", "Family Therapy", "Grief Support"],
-              },
-              {
-                icon: Users,
-                title: "Employee Health & Wellness",
-                description: "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions for organisations.",
-                features: ["Workplace Wellness", "Trauma Debriefing", "Group Interventions"],
-              },
-              {
-                icon: Shield,
-                title: "Crisis & Trauma Support",
-                description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
-                features: ["Crisis Intervention", "Trauma Support", "Disaster Response"],
-              }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="py-10 md:py-12"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="space-y-0 divide-y divide-border/60">
+            {[{
+            icon: Heart,
+            title: "Individual & Family Services",
+            description: "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
+            features: ["Individual Counselling", "Family Therapy", "Grief Support"]
+          }, {
+            icon: Users,
+            title: "Employee Health & Wellness",
+            description: "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions for organisations.",
+            features: ["Workplace Wellness", "Trauma Debriefing", "Group Interventions"]
+          }, {
+            icon: Shield,
+            title: "Crisis & Trauma Support",
+            description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
+            features: ["Crisis Intervention", "Trauma Support", "Disaster Response"]
+          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="py-10 md:py-12">
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="icon-box-lg">
                     <service.icon className="h-6 w-6 text-white" />
@@ -226,23 +198,17 @@ const Home = () => {
                       {service.description}
                     </p>
                     <ul className="flex flex-wrap gap-x-6 gap-y-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+                      {service.features.map((feature, i) => <li key={i} className="flex items-center gap-2 text-sm text-foreground">
                           <Check className="h-4 w-4 text-primary shrink-0" />
                           {feature}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center text-primary font-medium text-sm hover:underline group shrink-0"
-                  >
+                  <Link to="/services" className="inline-flex items-center text-primary font-medium text-sm hover:underline group shrink-0">
                     Learn More <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -280,13 +246,9 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="section-py bg-white">
         <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl mb-14"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl mb-14">
             <motion.p variants={fadeUp} className="text-overline mb-4">
               Why Choose Us
             </motion.p>
@@ -295,26 +257,34 @@ const Home = () => {
             </motion.h2>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10"
-          >
-            {[
-              { icon: FileCheck, title: "SACSSP Registered", description: "Practice Registration 1033-819" },
-              { icon: Award, title: "Licensed Professionals", description: "Registered & certified practitioners" },
-              { icon: CheckCircle, title: "Evidence-Based Care", description: "Ethical, proven methodologies" },
-              { icon: UserCheck, title: "Personalised Service", description: "Flexible, tailored delivery" },
-              { icon: Users, title: "Multiple Modalities", description: "In-person, virtual & community options" },
-              { icon: Shield, title: "Safe & Confidential", description: "Supportive environment guaranteed" }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="flex items-start gap-4"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
+            {[{
+            icon: FileCheck,
+            title: "SACSSP Registered",
+            description: "Practice Registration 1033-819"
+          }, {
+            icon: Award,
+            title: "Licensed Professionals",
+            description: "Registered & certified practitioners"
+          }, {
+            icon: CheckCircle,
+            title: "Evidence-Based Care",
+            description: "Ethical, proven methodologies"
+          }, {
+            icon: UserCheck,
+            title: "Personalised Service",
+            description: "Flexible, tailored delivery"
+          }, {
+            icon: Users,
+            title: "Multiple Modalities",
+            description: "In-person, virtual & community options"
+          }, {
+            icon: Shield,
+            title: "Safe & Confidential",
+            description: "Supportive environment guaranteed"
+          }].map((item, index) => <motion.div key={index} variants={fadeUp} className="flex items-start gap-4">
                 <div className="icon-box shrink-0">
                   <item.icon className="h-5 w-5 text-white" />
                 </div>
@@ -322,8 +292,7 @@ const Home = () => {
                   <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.description}</p>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -331,13 +300,9 @@ const Home = () => {
       {/* Workshops Section */}
       <section className="section-py bg-section-cream">
         <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl mb-14"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl mb-14">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
               <Sparkles className="h-4 w-4" />
               <span>Annual Events & Workshops</span>
@@ -351,45 +316,28 @@ const Home = () => {
             </motion.p>
           </motion.div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="space-y-0 divide-y divide-border/60 mb-16"
-          >
-            {[
-              {
-                icon: Users,
-                title: "Breakfast with my Teenager",
-                description: "An interactive workshop designed to bring parents and teenagers closer together through meaningful conversations.",
-                image: breakfastWorkshop
-              },
-              {
-                icon: Baby,
-                title: "Parenting in the 21st Century",
-                description: "Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
-                image: workshopParenting
-              },
-              {
-                icon: Briefcase,
-                title: "Healthy Entrepreneur Wellness",
-                description: "Leadership mental health, stress management, and building resilience for business success.",
-                image: healthyEntrepreneur
-              }
-            ].map((workshop, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="py-8 md:py-10"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="space-y-0 divide-y divide-border/60 mb-16">
+            {[{
+            icon: Users,
+            title: "Breakfast with my Teenager",
+            description: "An interactive workshop designed to bring parents and teenagers closer together through meaningful conversations.",
+            image: breakfastWorkshop
+          }, {
+            icon: Baby,
+            title: "Parenting in the 21st Century",
+            description: "Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
+            image: workshopParenting
+          }, {
+            icon: Briefcase,
+            title: "Healthy Entrepreneur Wellness",
+            description: "Leadership mental health, stress management, and building resilience for business success.",
+            image: healthyEntrepreneur
+          }].map((workshop, index) => <motion.div key={index} variants={fadeUp} className="py-8 md:py-10">
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="w-full md:w-48 h-32 md:h-28 rounded overflow-hidden shrink-0">
-                    <img 
-                      src={workshop.image} 
-                      alt={workshop.title}
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={workshop.image} alt={workshop.title} className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-foreground mb-2">
@@ -400,37 +348,22 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
 
           {/* Gallery Preview */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger}>
             <motion.h3 variants={fadeUp} className="text-xl font-semibold text-foreground mb-6">
               Breakfast with my Teenager — Event Highlights
             </motion.h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden rounded">
-                  <img
-                    src={img}
-                    alt={`Breakfast event highlight ${index + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
+              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => <div key={index} className="aspect-[4/3] overflow-hidden rounded">
+                  <img src={img} alt={`Breakfast event highlight ${index + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                </div>)}
               <div className="aspect-[4/3] overflow-hidden rounded relative group">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  poster={breakfastGallery1}
-                >
+                <video className="w-full h-full object-cover" controls preload="metadata" poster={breakfastGallery1}>
                   <source src={breakfastEventVideo} type="video/mp4" />
                 </video>
               </div>
@@ -447,8 +380,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Home;
