@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, FileCheck, UserCheck, Sparkles, Baby, Briefcase, Check, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
-import heroImage from "@/assets/hero-support.jpg";
+import heroOffice from "@/assets/hero-office.png";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -12,54 +12,56 @@ import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
 const Home = () => {
   return (
     <>
-      {/* Hero Section - Full Width with Left Curve */}
-      <section className="relative min-h-[90vh] lg:min-h-screen flex items-center hero-curve-left bg-white overflow-hidden">
+      {/* Hero Section - Full Width Banner */}
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={heroOffice} 
+            alt="Professional social work office" 
+            className="w-full h-full object-cover"
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
+        </div>
+        
+        {/* Content */}
         <div className="container-wide relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Content */}
-            <motion.div initial="hidden" animate="visible" variants={stagger} className="py-16 lg:py-0">
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-6">
-                <Award className="h-4 w-4" />
-                <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
-              </motion.div>
-
-              <motion.h1 variants={fadeUp} className="text-display text-foreground mb-6">
-                Expert Social Work Services
-              </motion.h1>
-
-              <motion.p variants={fadeUp} className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-xl">
-                Delivering evidence-based clinical, organisational, and community social work 
-                services that promote healing, resilience, and empowerment.
-              </motion.p>
-
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="btn-primary-gradient btn-glow">
-                  <Link to="/contact">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Book a Consultation
-                  </Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/services">
-                    View Services
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </motion.div>
+          <motion.div 
+            initial="hidden" 
+            animate="visible" 
+            variants={stagger} 
+            className="max-w-2xl py-16 lg:py-0"
+          >
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary-foreground/80 text-sm font-medium mb-6">
+              <Award className="h-4 w-4" />
+              <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
             </motion.div>
 
-            {/* Right Image */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="hidden lg:block"
-            >
-              <div className="aspect-[4/5] rounded overflow-hidden">
-                <img src={heroImage} alt="Supportive care" className="w-full h-full object-cover" />
-              </div>
+            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              Resilience in Action.<br />Care in Practice.
+            </motion.h1>
+
+            <motion.p variants={fadeUp} className="text-lg md:text-xl text-white/80 leading-relaxed mb-10">
+              Empowering individuals, families, and organizations across the Northern Cape 
+              through expert clinical social work and transformative wellness consulting.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="btn-primary-gradient btn-glow">
+                <Link to="/contact">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book a Consultation
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                <Link to="/impact">
+                  Join the #MatricUngazibulali Movement
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
