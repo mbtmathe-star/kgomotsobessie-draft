@@ -13,11 +13,10 @@ import {
   Baby,
   Sparkles,
   Clock,
+  Check,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
-import workshopParenting from "@/assets/workshop-parenting.jpg";
-import workshopPresentation from "@/assets/workshop-presentation.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery2 from "@/assets/workshop-breakfast-2.jpg";
 import breakfastGallery3 from "@/assets/workshop-breakfast-3.jpg";
@@ -35,47 +34,47 @@ const Services = () => {
     {
       icon: Heart,
       title: "Individual Counselling & Therapy",
-      description:
-        "Support for anxiety, depression, trauma, grief, and personal development. Evidence-based therapeutic approaches tailored to your unique needs.",
-      forWho: "Adults seeking personal growth, healing, and mental wellness support",
+      description: "Support for anxiety, depression, trauma, grief, and personal development.",
+      features: ["Anxiety & Depression", "Trauma Recovery", "Personal Growth"],
+      forWho: "Adults seeking personal growth and mental wellness",
     },
     {
       icon: Users,
       title: "Family & Couples Counselling",
-      description:
-        "Strengthening relationships through improved communication, conflict resolution, and rebuilding trust within families and partnerships.",
-      forWho: "Couples and families navigating relationship challenges",
+      description: "Strengthening relationships through improved communication and conflict resolution.",
+      features: ["Communication Skills", "Conflict Resolution", "Trust Building"],
+      forWho: "Couples and families navigating challenges",
     },
     {
       icon: Baby,
       title: "Child & Adolescent Support",
-      description:
-        "Behavioural and emotional support for young people and their families. Age-appropriate interventions that address developmental challenges.",
-      forWho: "Children, teenagers, and their parents/guardians",
+      description: "Behavioural and emotional support for young people and their families.",
+      features: ["Behavioural Support", "Emotional Guidance", "Family Integration"],
+      forWho: "Children, teenagers, and their parents",
     },
   ];
 
   const organisationalServices = [
     {
       icon: Building2,
-      title: "Employee Health & Wellness Services",
-      description:
-        "Comprehensive workplace wellness programmes designed to promote mental health, reduce burnout, and build supportive organisational cultures.",
-      forWho: "Organisations committed to employee wellbeing and productivity",
+      title: "Employee Wellness Programmes",
+      description: "Comprehensive workplace wellness to promote mental health and reduce burnout.",
+      features: ["Mental Health Awareness", "Burnout Prevention", "Culture Building"],
+      forWho: "Organisations committed to employee wellbeing",
     },
     {
       icon: Clock,
-      title: "Trauma Debriefing (Within 72 Hours)",
-      description:
-        "Rapid response trauma debriefing services for workplace incidents. Professional support delivered within 72 hours post-incident.",
-      forWho: "Organisations responding to workplace trauma or critical incidents",
+      title: "Trauma Debriefing (72 Hours)",
+      description: "Rapid response trauma debriefing for workplace incidents.",
+      features: ["Immediate Response", "Professional Support", "Recovery Planning"],
+      forWho: "Organisations responding to critical incidents",
     },
     {
       icon: Users,
       title: "Group & Individual Interventions",
-      description:
-        "Tailored group sessions and one-on-one support for staff facing work-related stress, burnout, or personal challenges.",
-      forWho: "Teams and individuals within organisational settings",
+      description: "Tailored sessions for staff facing work-related stress or personal challenges.",
+      features: ["Group Sessions", "One-on-One Support", "Stress Management"],
+      forWho: "Teams and individuals in organisational settings",
     },
   ];
 
@@ -83,23 +82,23 @@ const Services = () => {
     {
       icon: AlertTriangle,
       title: "Crisis Intervention",
-      description:
-        "Immediate professional support during acute crisis situations. Stabilisation and safety planning for individuals and families in distress.",
+      description: "Immediate professional support during acute crisis situations.",
+      features: ["Immediate Response", "Safety Planning", "Stabilisation"],
       forWho: "Individuals and families in acute crisis",
     },
     {
       icon: Brain,
-      title: "Trauma Support (Immediate & Long-Term)",
-      description:
-        "Comprehensive trauma services from initial response through to long-term healing. Evidence-based approaches for all types of trauma.",
-      forWho: "Trauma survivors at any stage of their healing journey",
+      title: "Trauma Support",
+      description: "Comprehensive trauma services from initial response to long-term healing.",
+      features: ["Acute Care", "Long-Term Healing", "Evidence-Based Approaches"],
+      forWho: "Trauma survivors at any stage of healing",
     },
     {
       icon: Shield,
-      title: "Disaster-Related Psychosocial Services",
-      description:
-        "Specialised support for communities and individuals affected by disasters. Expertise in disaster management and community resilience.",
-      forWho: "Communities, emergency services, and disaster response teams",
+      title: "Disaster Psychosocial Services",
+      description: "Specialised support for communities affected by disasters.",
+      features: ["Community Resilience", "Emergency Response", "Recovery Support"],
+      forWho: "Communities and emergency response teams",
     },
   ];
 
@@ -107,64 +106,83 @@ const Services = () => {
     {
       icon: Users,
       title: "Breakfast with my Teenager",
-      description:
-        "An interactive workshop designed to bring parents and teenagers closer together. Focus on improving communication, building trust, and strengthening family bonds.",
-      cta: "Contact us to learn more or join the next session",
+      description: "An interactive workshop to bring parents and teenagers closer through meaningful conversations.",
     },
     {
       icon: Baby,
       title: "Parenting in the 21st Century",
-      description:
-        "A workshop for modern parenting challenges. Guidance on mental wellness, behavioural understanding, and effective parenting strategies for today's families.",
-      cta: "Request more information to participate",
+      description: "Guidance on mental wellness and effective parenting strategies for modern families.",
     },
     {
       icon: Briefcase,
       title: "Healthy Entrepreneur Wellness",
-      description:
-        "Corporate and entrepreneur wellness programme focused on leadership mental health, stress management, and building resilience for business success.",
-      cta: "Contact us to schedule a session for your team",
+      description: "Leadership mental health, stress management, and resilience for business success.",
     },
   ];
 
   const breakfastGalleryImages = [
-    { src: breakfastGallery1, alt: "Breakfast with my Teenager event - parents and teens connecting" },
-    { src: breakfastGallery2, alt: "Breakfast with my Teenager workshop session" },
-    { src: breakfastGallery3, alt: "Breakfast with my Teenager community gathering" },
-    { src: breakfastGallery4, alt: "Family photo at Breakfast with my Teenager event" },
-    { src: breakfastGallery5, alt: "Parents and teens at Breakfast with my Teenager" },
-    { src: breakfastGallery6, alt: "Speaker presenting at the workshop" },
-    { src: breakfastGallery7, alt: "Workshop facilitator engaging with attendees" },
-    { src: breakfastGallery8, alt: "Guest speaker sharing insights" },
-    { src: breakfastGallery9, alt: "Keynote presentation at the event" },
-    { src: breakfastGallery10, alt: "Speaker addressing parents and teenagers" },
-    { src: breakfastGallery11, alt: "Workshop facilitator leading a session" },
+    { src: breakfastGallery1, alt: "Breakfast event - parents and teens connecting" },
+    { src: breakfastGallery2, alt: "Workshop session" },
+    { src: breakfastGallery3, alt: "Community gathering" },
+    { src: breakfastGallery4, alt: "Family photo at event" },
+    { src: breakfastGallery5, alt: "Parents and teens" },
+    { src: breakfastGallery6, alt: "Speaker presenting" },
+    { src: breakfastGallery7, alt: "Workshop facilitator" },
+    { src: breakfastGallery8, alt: "Guest speaker" },
+    { src: breakfastGallery9, alt: "Keynote presentation" },
+    { src: breakfastGallery10, alt: "Speaker addressing attendees" },
+    { src: breakfastGallery11, alt: "Workshop session" },
   ];
+
+  const ServiceCard = ({ service, index }: { service: typeof individualServices[0]; index: number }) => (
+    <motion.div
+      key={index}
+      variants={fadeUp}
+      className="bg-white rounded-xl p-8 shadow-md border border-border hover:shadow-lg transition-shadow"
+    >
+      <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center mb-6">
+        <service.icon className="h-7 w-7 text-white" />
+      </div>
+      <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed mb-5">
+        {service.description}
+      </p>
+      <ul className="space-y-2 mb-6">
+        {service.features.map((feature, i) => (
+          <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+            <Check className="h-4 w-4 text-primary shrink-0" />
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <div className="pt-4 border-t border-border">
+        <p className="text-xs text-muted-foreground">
+          <span className="text-primary font-semibold">Who it's for:</span> {service.forWho}
+        </p>
+      </div>
+    </motion.div>
+  );
 
   return (
     <>
       {/* Hero Section */}
       <section className="section-padding section-teal">
-        <div className="container-custom">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-3xl"
           >
-            <motion.p variants={fadeUp} className="text-primary font-medium uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               Our Services
             </motion.p>
-            <motion.h1
-              variants={fadeUp}
-              className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6"
-            >
+            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Comprehensive Social Work Services
             </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-muted-foreground leading-relaxed"
-            >
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground leading-relaxed">
               Expert support for individuals, families, organisations, and communities — 
               delivered with compassion, integrity, and clinical excellence.
             </motion.p>
@@ -173,8 +191,8 @@ const Services = () => {
       </section>
 
       {/* Individual & Family Services */}
-      <section className="section-padding section-cream">
-        <div className="container-custom">
+      <section className="section-padding section-white section-divider">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -182,15 +200,17 @@ const Services = () => {
             variants={stagger}
             className="mb-12"
           >
-            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl icon-container-solid flex items-center justify-center">
-                <Heart className="h-6 w-6 text-primary-foreground" />
+            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
+              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
+                <Heart className="h-7 w-7 text-white" />
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Individual & Family Services
-              </h2>
+              <div>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                  Individual & Family Services
+                </h2>
+              </div>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
               Personalised therapeutic services rooted in compassion and clinical excellence.
             </motion.p>
           </motion.div>
@@ -203,33 +223,15 @@ const Services = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {individualServices.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full border-l-4 border-l-primary"
-              >
-                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
-                  <service.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                  {service.description}
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-primary font-semibold">Who it's for:</p>
-                  <p className="text-xs text-muted-foreground mt-1">{service.forWho}</p>
-                </div>
-              </motion.div>
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </motion.div>
         </div>
       </section>
 
       {/* Employee Health & Wellness */}
-      <section className="section-padding section-teal">
-        <div className="container-custom">
+      <section className="section-padding section-cream section-divider">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -237,15 +239,17 @@ const Services = () => {
             variants={stagger}
             className="mb-12"
           >
-            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl icon-container-solid flex items-center justify-center">
-                <Briefcase className="h-6 w-6 text-primary-foreground" />
+            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
+              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
+                <Briefcase className="h-7 w-7 text-white" />
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Employee Health & Wellness Services
-              </h2>
+              <div>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                  Employee Health & Wellness
+                </h2>
+              </div>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
               Organisational solutions that prioritise mental health and build thriving workplace cultures.
             </motion.p>
           </motion.div>
@@ -258,33 +262,15 @@ const Services = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {organisationalServices.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full border-l-4 border-l-primary"
-              >
-                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
-                  <service.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                  {service.description}
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-primary font-semibold">Who it's for:</p>
-                  <p className="text-xs text-muted-foreground mt-1">{service.forWho}</p>
-                </div>
-              </motion.div>
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Trauma, Crisis & Disaster Support */}
-      <section className="section-padding">
-        <div className="container-custom">
+      {/* Crisis & Trauma Services */}
+      <section className="section-padding section-white section-divider">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -292,15 +278,17 @@ const Services = () => {
             variants={stagger}
             className="mb-12"
           >
-            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
-                <Shield className="h-6 w-6 text-primary-foreground" />
+            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
+              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
+                <Shield className="h-7 w-7 text-white" />
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-foreground">
-                Trauma, Crisis Intervention & Disaster Support
-              </h2>
+              <div>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
+                  Crisis, Trauma & Disaster Support
+                </h2>
+              </div>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
               Specialised expertise in emergency response and building community resilience.
             </motion.p>
           </motion.div>
@@ -313,54 +301,37 @@ const Services = () => {
             className="grid md:grid-cols-3 gap-8"
           >
             {crisisServices.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full"
-              >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
-                  <service.icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
-                  {service.description}
-                </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="text-xs text-primary font-medium">Who it's for:</p>
-                  <p className="text-xs text-muted-foreground mt-1">{service.forWho}</p>
-                </div>
-              </motion.div>
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Workshops & Support Groups */}
-      <section className="section-padding bg-secondary">
-        <div className="container-custom">
+      {/* Workshops */}
+      <section className="section-padding section-teal section-divider">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="text-center mb-12"
+            className="mb-12"
           >
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/15 text-primary px-4 py-2 rounded-full mb-4 border border-primary/20">
               <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-medium">Request More Information</span>
+              <span className="text-sm font-semibold">Request More Information</span>
             </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
-            >
-              Workshops & Community Initiatives
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
-              Interactive programmes designed to build skills, strengthen relationships, 
-              and promote mental wellness across communities and organisations.
-            </motion.p>
+            <motion.div variants={fadeUp} className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+              <div>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
+                  Workshops & Community Initiatives
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl">
+                  Interactive programmes designed to build skills, strengthen relationships, 
+                  and promote mental wellness.
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -374,21 +345,21 @@ const Services = () => {
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="card-elevated p-8 flex flex-col h-full"
+                className="bg-white rounded-xl p-8 shadow-md border border-border"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
                   <workshop.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                   {workshop.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-1">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   {workshop.description}
                 </p>
-                <Button asChild variant="outline" size="sm" className="w-full">
+                <Button asChild variant="outline" className="w-full">
                   <Link to="/contact">
                     <MessageCircle className="mr-2 h-4 w-4" />
-                    {workshop.cta}
+                    Enquire Now
                   </Link>
                 </Button>
               </motion.div>
@@ -397,29 +368,25 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Breakfast with my Teenager Gallery */}
-      <section className="section-padding">
-        <div className="container-custom">
+      {/* Gallery */}
+      <section className="section-padding section-white section-divider">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="text-center mb-12"
+            className="mb-10"
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
               <Users className="h-4 w-4" />
-              <span className="text-sm font-medium">Event Highlights</span>
+              <span className="text-sm font-semibold">Event Highlights</span>
             </motion.div>
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4"
-            >
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
               Breakfast with my Teenager
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-muted-foreground max-w-2xl mx-auto">
-              Moments from our signature event bringing parents and teenagers together 
-              for meaningful conversations over breakfast.
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-2xl">
+              Moments from our flagship parent-teen workshop bringing families closer together.
             </motion.p>
           </motion.div>
 
@@ -428,71 +395,46 @@ const Services = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid md:grid-cols-3 gap-6"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
           >
             {breakfastGalleryImages.map((image, index) => (
               <motion.div
                 key={index}
                 variants={fadeUp}
-                className="aspect-[4/3] overflow-hidden rounded-2xl shadow-lg"
+                className="aspect-[4/3] overflow-hidden rounded-lg shadow-md group"
               >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </motion.div>
             ))}
           </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center mt-8"
-          >
-            <Button asChild variant="outline" size="lg">
-              <Link to="/contact">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Inquire About the Next Event
-              </Link>
-            </Button>
-          </motion.div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-4"
-            >
-              Not Sure Which Service You Need?
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/90 mb-8"
-            >
-              Schedule a consultation and let's explore how we can best support your journey.
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <Button asChild size="xl" variant="heroOutline">
+      {/* CTA */}
+      <section className="bg-primary py-16">
+        <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="text-center lg:text-left">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-2">
+                Ready to Get Started?
+              </h2>
+              <p className="text-white/90 text-lg">
+                Book a consultation to discuss how we can support you.
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" variant="heroOutline">
                 <Link to="/contact">
-                  Book Your Consultation
+                  Book a Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
     </>
