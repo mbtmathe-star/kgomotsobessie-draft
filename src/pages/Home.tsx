@@ -183,7 +183,7 @@ const Home = () => {
             duration: 0.6
           }} className="relative">
               <div className="aspect-[4/5] rounded overflow-hidden">
-                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d5724d65-408f-47cd-a10d-b013ca1ae53b.jpg" />
+                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d04bdbcd-a47f-4346-946d-4fdbb7dd35b7.jpg" />
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
                 <p className="text-2xl md:text-3xl font-bold">13+</p>
