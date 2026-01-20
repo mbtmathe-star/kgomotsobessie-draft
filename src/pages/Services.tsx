@@ -163,7 +163,7 @@ const Services = () => {
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
               Expert support for individuals, families, organisations, and communities — 
-              delivered with compassion, integrity, and clinical excellence.
+              delivered with compassion, integrity, and professional excellence.
             </motion.p>
           </motion.div>
         </div>
@@ -186,7 +186,7 @@ const Services = () => {
               </div>
             </motion.div>
             <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
-              Personalised therapeutic services rooted in compassion and clinical excellence.
+              Personalised support services rooted in compassion and professional excellence.
             </motion.p>
           </motion.div>
 
