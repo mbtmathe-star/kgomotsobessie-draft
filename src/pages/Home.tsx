@@ -12,6 +12,7 @@ import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
 import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
+import breakfastRecapVideo from "@/assets/breakfast-recap-video.mp4";
 const Home = () => {
   return <>
       {/* Hero Banner - Full Width with Large Image */}
@@ -365,14 +366,14 @@ const Home = () => {
           }} variants={stagger}>
               <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
                 <Sparkles className="h-4 w-4" />
-                <span>Annual Events & Workshops</span>
+                <span>Event Highlights</span>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">
-                Workshops & Community Initiatives
+                Breakfast with my Teenager Recap
               </motion.h2>
               <motion.p variants={fadeUp} className="text-body mb-8">
-                Interactive programmes designed to build skills, strengthen relationships, 
-                and promote mental wellness across communities and organisations.
+                Highlights from our interactive parent-teen bonding workshops that strengthen 
+                relationships and promote open communication between parents and teenagers.
               </motion.p>
 
               {/* Workshop List */}
@@ -407,8 +408,30 @@ const Home = () => {
               </motion.div>
             </motion.div>
 
-            {/* Gallery Grid */}
-            
+            {/* Video Feature */}
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="rounded-lg overflow-hidden shadow-card border border-border">
+                <video 
+                  src={breakfastRecapVideo} 
+                  controls 
+                  className="w-full aspect-video object-cover"
+                  poster={breakfastWorkshop}
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-4 text-center">
+                <p className="text-sm text-muted-foreground">
+                  Watch highlights from our recent Breakfast with my Teenager event
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
