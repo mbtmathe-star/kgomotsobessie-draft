@@ -20,7 +20,7 @@ const Impact = () => {
   }];
   return <>
       {/* Hero Section */}
-      <section className="bg-primary py-20 md:py-28">
+      <section className="bg-primary py-14 md:py-20">
         <div className="container-wide">
           <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-white/15 text-white px-4 py-2 rounded-full mb-6 border border-white/20">
@@ -71,59 +71,41 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Campaign Overview - Two Column */}
+      {/* Campaign Overview */}
       <section className="section-padding section-white section-divider">
         <div className="container-wide">
-          <div className="two-col-layout">
-            {/* Content Column */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{
+          <motion.div initial="hidden" whileInView="visible" viewport={{
             once: true
-          }} variants={stagger}>
-              <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
-                The Campaign
-              </motion.p>
-              <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-                What is #MatricUngazibulali?
-              </motion.h2>
+          }} variants={stagger} className="max-w-4xl">
+            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
+              The Campaign
+            </motion.p>
+            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
+              What is #MatricUngazibulali?
+            </motion.h2>
 
-              <motion.div variants={fadeUp} className="space-y-4 text-muted-foreground leading-relaxed text-lg">
-                <p>
-                  The matric year represents one of the most high-pressure periods in a young 
-                  South African's life. Academic stress, peer pressure, family expectations, 
-                  and uncertainty about the future create a perfect storm that can overwhelm 
-                  even the most resilient students.
-                </p>
+            <motion.div variants={fadeUp} className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+              <p>
+                The matric year represents one of the most high-pressure periods in a young 
+                South African's life. Academic stress, peer pressure, family expectations, 
+                and uncertainty about the future create a perfect storm that can overwhelm 
+                even the most resilient students.
+              </p>
 
-                <p>
-                  <strong className="text-foreground">#MatricUngazibulali</strong> — meaning 
-                  "Matric, Don't Kill Yourself" — is our response to this crisis. What began 
-                  as a heartfelt message has grown into a comprehensive movement that reaches 
-                  schools, families, and communities across the Northern Cape.
-                </p>
+              <p>
+                <strong className="text-foreground">#MatricUngazibulali</strong> — meaning 
+                "Matric, Don't Kill Yourself" — is our response to this crisis. What began 
+                as a heartfelt message has grown into a comprehensive movement that reaches 
+                schools, families, and communities across the Northern Cape.
+              </p>
 
-                <p>
-                  Through awareness campaigns, school partnerships, and community engagement, 
-                  we work to break the stigma around mental health, provide practical coping 
-                  strategies, and create support networks that catch students before they fall.
-                </p>
-              </motion.div>
+              <p>
+                Through awareness campaigns, school partnerships, and community engagement, 
+                we work to break the stigma around mental health, provide practical coping 
+                strategies, and create support networks that catch students before they fall.
+              </p>
             </motion.div>
-
-            {/* Image Column */}
-            <motion.div initial={{
-            opacity: 0,
-            x: 30
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="relative">
-              
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
