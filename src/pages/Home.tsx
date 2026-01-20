@@ -368,13 +368,8 @@ const Home = () => {
                 <Sparkles className="h-4 w-4" />
                 <span>Event Highlights</span>
               </motion.div>
-              <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">
-                Parent-teen bonding workshops
-              </motion.h2>
-              <motion.p variants={fadeUp} className="text-body mb-8">
-                Highlights from our interactive parent-teen bonding workshops that strengthen 
-                relationships and promote open communication between parents and teenagers.
-              </motion.p>
+              <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">Breakfast with my Teenager  recap</motion.h2>
+              
 
               {/* Workshop List */}
               <motion.div variants={fadeUp} className="space-y-4">
@@ -387,15 +382,7 @@ const Home = () => {
               }, {
                 title: "Healthy Entrepreneur Wellness",
                 desc: "Leadership mental health"
-              }].map((workshop, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white rounded border border-border">
-                    <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center shrink-0">
-                      <Check className="h-4 w-4 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground text-sm">{workshop.title}</h4>
-                      <p className="text-xs text-muted-foreground">{workshop.desc}</p>
-                    </div>
-                  </div>)}
+              }].map((workshop, index) => {})}
               </motion.div>
 
               <motion.div variants={fadeUp} className="mt-8">
@@ -409,20 +396,19 @@ const Home = () => {
             </motion.div>
 
             {/* Video Feature */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: 30
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
               <div className="rounded-lg overflow-hidden shadow-card border border-border">
-                <video 
-                  src={breakfastRecapVideo} 
-                  controls 
-                  className="w-full aspect-video object-cover"
-                  poster={breakfastWorkshop}
-                >
+                <video src={breakfastRecapVideo} controls className="w-full aspect-video object-cover" poster={breakfastWorkshop}>
                   Your browser does not support the video tag.
                 </video>
               </div>
