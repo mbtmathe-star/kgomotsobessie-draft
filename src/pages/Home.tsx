@@ -58,22 +58,22 @@ const Home = () => {
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
             {[{
             image: breakfastWorkshop,
             title: "Breakfast with my Teenager",
             description: "Parent-teen bonding workshops",
-            link: "/services"
+            link: "/services#breakfast-with-my-teenager"
           }, {
             image: healthyEntrepreneur,
             title: "Healthy Entrepreneur Wellness",
             description: "Leadership mental health & resilience",
-            link: "/services"
+            link: "/services#healthy-entrepreneur-wellness"
           }, {
             image: workshopParenting,
             title: "Parenting in the 21st Century",
             description: "Modern parenting strategies",
-            link: "/services"
+            link: "/services#parenting-in-the-21st-century"
           }].map((card, index) => <motion.div key={index} variants={fadeUp}>
                 <Link to={card.link} className="block group bg-white border border-border rounded overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
                   <div className="aspect-[16/10] overflow-hidden">
