@@ -14,6 +14,9 @@ const navLinks = [{
   href: "/services",
   label: "Services"
 }, {
+  href: "/events",
+  label: "Events"
+}, {
   href: "/impact",
   label: "Impact"
 }, {
