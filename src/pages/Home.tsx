@@ -85,9 +85,7 @@ const Home = () => {
                     <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold text-foreground text-sm md:text-base mb-1 group-hover:text-primary transition-colors">
-                      {card.title}
-                    </h3>
+                    
                     <p className="text-xs md:text-sm text-muted-foreground">
                       {card.description}
                     </p>
@@ -245,75 +243,7 @@ const Home = () => {
       </section>
 
       {/* Services Grid - Dense Layout */}
-      <section className="section-py bg-section-teal">
-        <div className="container-wide">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="text-center max-w-2xl mx-auto mb-12">
-            <motion.p variants={fadeUp} className="text-overline mb-4">
-              What We Offer
-            </motion.p>
-            <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">
-              Comprehensive Social Work Services
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-body">
-              Expert support for individuals, families, organisations, and communities.
-            </motion.p>
-          </motion.div>
-
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[{
-            icon: Heart,
-            title: "Individual & Family Services",
-            description: "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
-            features: ["Individual Counselling", "Family Therapy", "Grief Support"]
-          }, {
-            icon: Users,
-            title: "Employee Health & Wellness",
-            description: "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions.",
-            features: ["Workplace Wellness", "Trauma Debriefing", "Group Interventions"]
-          }, {
-            icon: Shield,
-            title: "Crisis & Trauma Support",
-            description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
-            features: ["Crisis Intervention", "Trauma Support", "Disaster Response"]
-          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="bg-white p-6 rounded border border-border hover:shadow-card-hover transition-shadow">
-                <div className="icon-box mb-4">
-                  <service.icon className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {service.description}
-                </p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => <li key={i} className="flex items-center gap-2 text-sm text-foreground">
-                      <Check className="h-4 w-4 text-primary shrink-0" />
-                      {feature}
-                    </li>)}
-                </ul>
-              </motion.div>)}
-          </motion.div>
-
-          <motion.div initial={{
-          opacity: 0
-        }} whileInView={{
-          opacity: 1
-        }} viewport={{
-          once: true
-        }} className="text-center mt-10">
-            <Button asChild size="lg" className="btn-primary-gradient btn-glow">
-              <Link to="/services">
-                View All Services
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Why Choose Us - Icon Grid */}
       <section className="py-12 bg-white border-b border-border">
@@ -357,70 +287,7 @@ const Home = () => {
       </section>
 
       {/* Split Screen - Community Section */}
-      <section className="section-py bg-section-cream">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Content Side */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{
-            once: true
-          }} variants={stagger}>
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
-                <Sparkles className="h-4 w-4" />
-                <span>Event Highlights</span>
-              </motion.div>
-              <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">Breakfast with my Teenager  recap</motion.h2>
-              
-
-              {/* Workshop List */}
-              <motion.div variants={fadeUp} className="space-y-4">
-                {[{
-                title: "Breakfast with my Teenager",
-                desc: "Parent-teen bonding workshops"
-              }, {
-                title: "Parenting in the 21st Century",
-                desc: "Modern parenting strategies"
-              }, {
-                title: "Healthy Entrepreneur Wellness",
-                desc: "Leadership mental health"
-              }].map((workshop, index) => {})}
-              </motion.div>
-
-              <motion.div variants={fadeUp} className="mt-8">
-                <Button asChild size="lg" className="btn-primary-gradient btn-glow">
-                  <Link to="/services">
-                    View All Events
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
-
-            {/* Video Feature */}
-            <motion.div initial={{
-            opacity: 0,
-            x: 30
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="relative">
-              <div className="rounded-lg overflow-hidden shadow-card border border-border">
-                <video src={breakfastRecapVideo} controls className="w-full aspect-video object-cover" poster={breakfastWorkshop}>
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-muted-foreground">
-                  Watch highlights from our recent Breakfast with my Teenager event
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Banner */}
       <section className="bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-12">
