@@ -75,8 +75,8 @@ const Impact = () => {
       <section className="section-padding section-white section-divider">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
-            once: true
-          }} variants={stagger} className="max-w-4xl">
+          once: true
+        }} variants={stagger} className="max-w-4xl">
             <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
               The Campaign
             </motion.p>
@@ -154,32 +154,7 @@ const Impact = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-foreground py-20">
-        <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="max-w-2xl">
-            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
-              Together, We Save Lives
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-lg text-white/80 mb-8">
-              Whether you're a student who needs support, a parent seeking guidance, 
-              or an organization wanting to make a difference — we're here for you.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <Button asChild size="lg" variant="hero">
-                <Link to="/contact">
-                  Get in Touch
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="heroOutline">
-                <Link to="/services">Explore Our Services</Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      
     </>;
 };
 export default Impact;
