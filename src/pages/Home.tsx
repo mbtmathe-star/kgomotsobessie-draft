@@ -114,20 +114,18 @@ const Home = () => {
       {/* Services Overview - Simple Text Section */}
       <section className="bg-section-light py-12 border-b border-border">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Services</h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              We provide a range of professional social work services including individual and family counselling, 
-              trauma support, employee wellness programmes, and community workshops. Our approach is grounded in 
-              ethical practice, compassion, and a commitment to empowering those we serve.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
-              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
-              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
-              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
-              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
-            </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Services</h2>
+          <p className="text-muted-foreground leading-relaxed mb-8 max-w-none">
+            We provide a range of professional social work services including individual and family counselling, 
+            trauma support, employee wellness programmes, and community workshops. Our approach is grounded in 
+            ethical practice, compassion, and a commitment to empowering those we serve.
+          </p>
+          <div className="flex flex-wrap gap-3 text-sm">
+            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
+            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
+            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
+            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
+            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
           </div>
         </div>
       </section>
@@ -216,38 +214,43 @@ const Home = () => {
       {/* Why Choose Us - Simple Text */}
       <section className="py-12 bg-white border-b border-border">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">Why Choose Us</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">SACSSP Registered Practice</strong> — We are a registered 
-                  social work practice (Reg. 1033-819) operating in full compliance with the South African 
-                  Council for Social Service Professions.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Evidence-Based Approach</strong> — Our interventions are 
-                  grounded in proven methodologies and best practices in social work.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Personalised Service</strong> — Every client receives 
-                  tailored support that addresses their unique circumstances and needs.
-                </p>
-              </div>
-              <div className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Flexible Delivery</strong> — We offer both in-person 
-                  and virtual sessions to accommodate your schedule and preferences.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Confidential & Safe</strong> — We maintain strict 
-                  confidentiality and provide a safe, non-judgmental environment for all clients.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Community-Rooted</strong> — With over 13 years of 
-                  experience serving the Northern Cape, we understand the unique needs of our community.
-                </p>
-              </div>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Why Choose Us</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">SACSSP Registered Practice</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We are a registered social work practice (Reg. 1033-819) operating in full compliance with the South African Council for Social Service Professions.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">Evidence-Based Approach</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Our interventions are grounded in proven methodologies and best practices in social work.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">Personalised Service</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Every client receives tailored support that addresses their unique circumstances and needs.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">Flexible Delivery</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We offer both in-person and virtual sessions to accommodate your schedule and preferences.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">Confidential & Safe</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                We maintain strict confidentiality and provide a safe, non-judgmental environment for all clients.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-foreground mb-2">Community-Rooted</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                With over 13 years of experience serving the Northern Cape, we understand the unique needs of our community.
+              </p>
             </div>
           </div>
         </div>
