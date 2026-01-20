@@ -62,7 +62,7 @@ const Home = () => {
             {[{
             image: breakfastWorkshop,
             title: "Breakfast with my Teenager",
-            description: "Interactive parent-teen workshops",
+            description: "Breakfast with my Teenager",
             link: "/services"
           }, {
             image: healthyEntrepreneur,
