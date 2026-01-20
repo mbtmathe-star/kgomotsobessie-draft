@@ -81,7 +81,7 @@ const Home = () => {
                   </div>
                   <div className="p-4">
                     
-                    <p className="text-xs md:text-sm text-muted-foreground">
+                    <p className="text-xs md:text-sm text-muted-foreground font-bold">
                       {card.description}
                     </p>
                   </div>
