@@ -75,14 +75,17 @@ const Services = () => {
   const workshops = [{
     icon: Users,
     title: "Breakfast with my Teenager",
+    id: "breakfast-with-my-teenager",
     description: "An interactive workshop to bring parents and teenagers closer through meaningful conversations."
   }, {
     icon: Baby,
     title: "Parenting in the 21st Century",
+    id: "parenting-in-the-21st-century",
     description: "Guidance on mental wellness and effective parenting strategies for modern families."
   }, {
     icon: Briefcase,
     title: "Healthy Entrepreneur Wellness",
+    id: "healthy-entrepreneur-wellness",
     description: "Leadership mental health, stress management, and resilience for business success."
   }];
   const breakfastGalleryImages = [{
@@ -279,7 +282,7 @@ const Services = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="grid md:grid-cols-3 gap-8">
-            {workshops.map((workshop, index) => <motion.div key={index} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-md border border-border">
+            {workshops.map((workshop, index) => <motion.div key={index} id={workshop.id} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-md border border-border scroll-mt-24">
                 <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
                   <workshop.icon className="h-7 w-7 text-primary" />
                 </div>
