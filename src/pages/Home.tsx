@@ -7,7 +7,7 @@ import heroOffice from "@/assets/hero-office.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import breakfastTeenagerBanner from "@/assets/breakfast-teenager-banner.jpg";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
-import parenting21stBanner from "@/assets/parenting-21st-banner.jpg";
+import parenting21stFamily from "@/assets/parenting-21st-family.png";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -70,7 +70,7 @@ const Home = () => {
             description: "Healthy Entrepreneur Wellness",
             link: "/services#healthy-entrepreneur-wellness"
           }, {
-            image: parenting21stBanner,
+            image: parenting21stFamily,
             title: "Parenting in the 21st Century",
             description: "Parenting in the 21st Century",
             link: "/services#parenting-in-the-21st-century"
