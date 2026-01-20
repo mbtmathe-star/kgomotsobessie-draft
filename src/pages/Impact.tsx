@@ -4,28 +4,21 @@ import { ArrowRight, Heart, School, Sparkles, Calendar, Target, HandHeart } from
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import communityImage from "@/assets/community-resilience.jpg";
-
 const Impact = () => {
-  const pillars = [
-    {
-      icon: Target,
-      title: "Restoring Societal Stability",
-      description: "By addressing youth mental health at its roots, we contribute to healthier families, stronger communities, and a more stable society."
-    },
-    {
-      icon: School,
-      title: "School & Community Partnerships",
-      description: "We partner with schools, traditional leadership, and local organizations to create comprehensive support systems for learners."
-    },
-    {
-      icon: Heart,
-      title: "No Learner Left Alone",
-      description: "Every matriculant deserves to know that someone cares. We ensure no student navigates their transition without support."
-    }
-  ];
-
-  return (
-    <>
+  const pillars = [{
+    icon: Target,
+    title: "Restoring Societal Stability",
+    description: "By addressing youth mental health at its roots, we contribute to healthier families, stronger communities, and a more stable society."
+  }, {
+    icon: School,
+    title: "School & Community Partnerships",
+    description: "We partner with schools, traditional leadership, and local organizations to create comprehensive support systems for learners."
+  }, {
+    icon: Heart,
+    title: "No Learner Left Alone",
+    description: "Every matriculant deserves to know that someone cares. We ensure no student navigates their transition without support."
+  }];
+  return <>
       {/* Hero Section */}
       <section className="bg-primary py-20 md:py-28">
         <div className="container-wide">
@@ -54,13 +47,9 @@ const Impact = () => {
       {/* Milestone Bar */}
       <section className="bg-primary py-12">
         <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="flex flex-col md:flex-row items-center justify-between gap-8"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="flex flex-col md:flex-row items-center justify-between gap-8">
             <motion.div variants={fadeUp} className="flex items-center gap-4">
               <Calendar className="h-10 w-10 text-white" />
               <div>
@@ -87,12 +76,9 @@ const Impact = () => {
         <div className="container-wide">
           <div className="two-col-layout">
             {/* Content Column */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
                 The Campaign
               </motion.p>
@@ -124,81 +110,32 @@ const Impact = () => {
             </motion.div>
 
             {/* Image Column */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-2xl">
-                <img
-                  src={communityImage}
-                  alt="Community resilience"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <motion.div initial={{
+            opacity: 0,
+            x: 30
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
+              
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Mission Pillars */}
-      <section className="section-padding section-teal section-divider">
-        <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="mb-12"
-          >
-            <motion.p variants={fadeUp} className="text-primary font-semibold uppercase tracking-wider text-sm mb-3">
-              Our Mission
-            </motion.p>
-            <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-              How We Make an Impact
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid md:grid-cols-3 gap-8"
-          >
-            {pillars.map((pillar, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="bg-white rounded-xl p-8 shadow-md border border-border"
-              >
-                <div className="w-16 h-16 mb-6 rounded-xl icon-container-solid flex items-center justify-center">
-                  <pillar.icon className="h-8 w-8 text-white" />
-                </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
-                  {pillar.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {pillar.description}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Partnership CTA */}
       <section className="section-padding section-white section-divider">
         <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="bg-primary-light/50 rounded-2xl p-10 md:p-16 border border-primary/20"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="bg-primary-light/50 rounded-2xl p-10 md:p-16 border border-primary/20">
             <div className="flex flex-col lg:flex-row items-center gap-10">
               <div className="w-20 h-20 shrink-0 rounded-full bg-primary flex items-center justify-center">
                 <HandHeart className="h-10 w-10 text-white" />
@@ -237,13 +174,9 @@ const Impact = () => {
       {/* Final CTA */}
       <section className="bg-foreground py-20">
         <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="max-w-2xl"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="max-w-2xl">
             <motion.h2 variants={fadeUp} className="font-heading text-3xl md:text-4xl font-bold text-white mb-4">
               Together, We Save Lives
             </motion.h2>
@@ -265,8 +198,6 @@ const Impact = () => {
           </motion.div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Impact;
