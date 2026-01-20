@@ -243,39 +243,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={communityImage} alt="Community resilience" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/85" />
-        </div>
-
-        <div className="container-wide section-py relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="max-w-2xl">
-            <motion.h2 variants={fadeUp} className="text-headline text-white mb-6">
-              Ready to Work With Us?
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-xl text-white/80 leading-relaxed mb-8">
-              Whether you need individual support, family counselling, or organisational 
-              wellness services — we're here to help.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="btn-primary-gradient btn-glow">
-                <Link to="/services">
-                  Explore Our Services
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
-                <Link to="/contact">
-                  Contact Us
-                </Link>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      
     </>;
 };
 export default About;
