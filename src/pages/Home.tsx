@@ -58,7 +58,7 @@ const Home = () => {
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
+        }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[{
             image: breakfastTeenagerBanner,
             title: "Breakfast with my Teenager",
