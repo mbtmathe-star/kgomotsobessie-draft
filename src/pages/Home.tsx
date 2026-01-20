@@ -7,7 +7,7 @@ import heroOffice from "@/assets/hero-office.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
 import breakfastWorkshop from "@/assets/breakfast-workshop.png";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
-import workshopParenting from "@/assets/workshop-parenting.jpg";
+import parenting21stCentury from "@/assets/parenting-21st-century.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -70,7 +70,7 @@ const Home = () => {
             description: "Leadership mental health & resilience",
             link: "/services#healthy-entrepreneur-wellness"
           }, {
-            image: workshopParenting,
+            image: parenting21stCentury,
             title: "Parenting in the 21st Century",
             description: "Modern parenting strategies",
             link: "/services#parenting-in-the-21st-century"
