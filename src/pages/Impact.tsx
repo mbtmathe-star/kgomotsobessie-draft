@@ -45,7 +45,7 @@ const Impact = () => {
       </section>
 
       {/* Milestone Bar */}
-      <section className="bg-primary py-12">
+      <section className="bg-primary py-8">
         <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
