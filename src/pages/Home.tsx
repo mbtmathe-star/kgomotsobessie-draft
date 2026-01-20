@@ -369,7 +369,7 @@ const Home = () => {
                 <span>Event Highlights</span>
               </motion.div>
               <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-4">
-                Breakfast with my Teenager Recap
+                Parent-teen bonding workshops
               </motion.h2>
               <motion.p variants={fadeUp} className="text-body mb-8">
                 Highlights from our interactive parent-teen bonding workshops that strengthen 
