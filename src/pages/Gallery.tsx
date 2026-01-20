@@ -16,18 +16,6 @@ import galleryEvent7 from "@/assets/gallery-event-7.jpg";
 import galleryEvent8 from "@/assets/gallery-event-8.jpg";
 import galleryEvent9 from "@/assets/gallery-event-9.jpg";
 import galleryEvent10 from "@/assets/gallery-event-10.jpg";
-import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
-import breakfastGallery2 from "@/assets/workshop-breakfast-2.jpg";
-import breakfastGallery3 from "@/assets/workshop-breakfast-3.jpg";
-import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
-import breakfastGallery5 from "@/assets/breakfast-gallery-5.jpg";
-import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
-import breakfastGallery7 from "@/assets/breakfast-gallery-7.jpg";
-import breakfastGallery8 from "@/assets/breakfast-gallery-8.jpg";
-import breakfastGallery9 from "@/assets/breakfast-gallery-9.jpg";
-import breakfastGallery10 from "@/assets/breakfast-gallery-10.jpg";
-import breakfastGallery11 from "@/assets/breakfast-gallery-11.jpg";
-
 const galleryImages = [
   { src: galleryEvent1, alt: "Workshop presentation" },
   { src: galleryEvent2, alt: "Community workshop session" },
@@ -39,17 +27,6 @@ const galleryImages = [
   { src: galleryEvent8, alt: "Speaker addressing attendees" },
   { src: galleryEvent9, alt: "Keynote presentation" },
   { src: galleryEvent10, alt: "Workshop session" },
-  { src: breakfastGallery1, alt: "Breakfast event - parents and teens connecting" },
-  { src: breakfastGallery2, alt: "Workshop session" },
-  { src: breakfastGallery3, alt: "Community gathering" },
-  { src: breakfastGallery4, alt: "Family photo at event" },
-  { src: breakfastGallery5, alt: "Parents and teens" },
-  { src: breakfastGallery6, alt: "Speaker presenting" },
-  { src: breakfastGallery7, alt: "Workshop facilitator" },
-  { src: breakfastGallery8, alt: "Guest speaker" },
-  { src: breakfastGallery9, alt: "Keynote presentation" },
-  { src: breakfastGallery10, alt: "Speaker addressing attendees" },
-  { src: breakfastGallery11, alt: "Workshop session" },
 ];
 
 const Events = () => {
