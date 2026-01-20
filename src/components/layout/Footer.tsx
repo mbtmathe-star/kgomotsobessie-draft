@@ -16,8 +16,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <img alt="KB Social Workers" className="h-20 w-auto mb-4" src={logo} />
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
-              Black woman-owned, Level 1 BBBEE social work practice delivering expert 
-              clinical, organisational, and community services.
+              Black woman-owned, Level 1 BBBEE social work practice delivering professional 
+              social work, organisational, and community services.
             </p>
             <div className="flex gap-3">
               <a href="https://www.facebook.com/profile.php?id=100064121128498" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">

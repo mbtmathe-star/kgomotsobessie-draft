@@ -38,7 +38,7 @@ const About = () => {
   }, {
     icon: Award,
     title: "Bachelor of Social Work",
-    description: "Foundation in clinical social work practice"
+    description: "Foundation in professional social work practice"
   }, {
     icon: Briefcase,
     title: "13+ Years Experience",
@@ -56,8 +56,8 @@ const About = () => {
               A Trusted Social Work Practice
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
-              Black woman-owned, Level 1 BBBEE Social Work Practice delivering expert 
-              clinical, organisational, and community services with compassion and integrity.
+              Black woman-owned, Level 1 BBBEE Social Work Practice delivering professional 
+              social work, organisational, and community services with compassion and integrity.
             </motion.p>
           </motion.div>
         </div>

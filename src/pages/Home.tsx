@@ -1,18 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Shield, Phone, Calendar, CheckCircle, Award, FileCheck, UserCheck, Sparkles, Baby, Briefcase, Check, Play, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Phone, Calendar, Award, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
-import founderPortrait from "@/assets/founder-portrait.jpg";
 import breakfastTeenagerWorkshop from "@/assets/breakfast-teenager-workshop.png";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
 import parenting21stFamily from "@/assets/parenting-21st-family.png";
-import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
-import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
-import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
-import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
-import breakfastRecapVideo from "@/assets/breakfast-recap-video.mp4";
 const Home = () => {
   return <>
       {/* Hero Banner - Full Width with Large Image */}
@@ -38,7 +32,7 @@ const Home = () => {
 
             <motion.p variants={fadeUp} className="text-base md:text-lg text-white/80 leading-relaxed mb-8">
               Empowering individuals, families, and organizations across the Northern Cape 
-              through expert clinical social work and transformative wellness consulting.
+              through professional social work services and transformative wellness consulting.
             </motion.p>
 
             <motion.div variants={fadeUp}>
@@ -117,45 +111,24 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Highlights Grid - Resource Links */}
-      <section className="bg-section-light py-10 border-b border-border">
+      {/* Services Overview - Simple Text Section */}
+      <section className="bg-section-light py-12 border-b border-border">
         <div className="container-wide">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[{
-            icon: Heart,
-            label: "Counselling",
-            link: "/services"
-          }, {
-            icon: Users,
-            label: "Family Therapy",
-            link: "/services"
-          }, {
-            icon: Shield,
-            label: "Trauma Support",
-            link: "/services"
-          }, {
-            icon: Briefcase,
-            label: "EAP Services",
-            link: "/services"
-          }, {
-            icon: Baby,
-            label: "Child & Adolescent",
-            link: "/services"
-          }, {
-            icon: Sparkles,
-            label: "Workshops",
-            link: "/services"
-          }].map((item, index) => <motion.div key={index} variants={fadeUp}>
-                <Link to={item.link} className="flex flex-col items-center gap-2 p-4 rounded bg-white border border-border hover:border-primary hover:shadow-card transition-all text-center group">
-                  <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                    <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <span className="text-sm font-medium text-foreground">{item.label}</span>
-                </Link>
-              </motion.div>)}
-          </motion.div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Services</h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              We provide a range of professional social work services including individual and family counselling, 
+              trauma support, employee wellness programmes, and community workshops. Our approach is grounded in 
+              ethical practice, compassion, and a commitment to empowering those we serve.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
+              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
+              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
+              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
+              <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -240,44 +213,43 @@ const Home = () => {
       {/* Services Grid - Dense Layout */}
       
 
-      {/* Why Choose Us - Icon Grid */}
+      {/* Why Choose Us - Simple Text */}
       <section className="py-12 bg-white border-b border-border">
         <div className="container-wide">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {[{
-            icon: FileCheck,
-            title: "SACSSP Registered",
-            description: "Practice Reg. 1033-819"
-          }, {
-            icon: Award,
-            title: "Licensed Professionals",
-            description: "Registered practitioners"
-          }, {
-            icon: CheckCircle,
-            title: "Evidence-Based",
-            description: "Proven methodologies"
-          }, {
-            icon: UserCheck,
-            title: "Personalised",
-            description: "Tailored delivery"
-          }, {
-            icon: Users,
-            title: "Multiple Modalities",
-            description: "In-person & virtual"
-          }, {
-            icon: Shield,
-            title: "Confidential",
-            description: "Safe environment"
-          }].map((item, index) => <motion.div key={index} variants={fadeUp} className="text-center">
-                <div className="icon-box mx-auto mb-3">
-                  <item.icon className="h-5 w-5 text-white" />
-                </div>
-                <h3 className="font-semibold text-foreground text-sm mb-1">{item.title}</h3>
-                <p className="text-xs text-muted-foreground">{item.description}</p>
-              </motion.div>)}
-          </motion.div>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">Why Choose Us</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">SACSSP Registered Practice</strong> — We are a registered 
+                  social work practice (Reg. 1033-819) operating in full compliance with the South African 
+                  Council for Social Service Professions.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Evidence-Based Approach</strong> — Our interventions are 
+                  grounded in proven methodologies and best practices in social work.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Personalised Service</strong> — Every client receives 
+                  tailored support that addresses their unique circumstances and needs.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Flexible Delivery</strong> — We offer both in-person 
+                  and virtual sessions to accommodate your schedule and preferences.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Confidential & Safe</strong> — We maintain strict 
+                  confidentiality and provide a safe, non-judgmental environment for all clients.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  <strong className="text-foreground">Community-Rooted</strong> — With over 13 years of 
+                  experience serving the Northern Cape, we understand the unique needs of our community.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
