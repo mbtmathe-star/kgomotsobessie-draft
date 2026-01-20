@@ -6,32 +6,7 @@ const Footer = () => {
   return <footer className="bg-foreground text-primary-foreground">
       {/* Pre-Footer CTA */}
       <div className="border-b border-primary-foreground/10">
-        <div className="container-custom px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <h3 className="font-heading text-xl md:text-2xl font-semibold text-primary-foreground mb-2">
-                Ready to take the next step?
-              </h3>
-              <p className="text-primary-foreground/70 text-sm">
-                Book a consultation or reach out — we're here to help.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild variant="hero" size="lg">
-                <Link to="/contact">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  Book Consultation
-                </Link>
-              </Button>
-              <Button asChild variant="heroOutline" size="lg">
-                <a href="tel:0713787172">
-                  <Phone className="mr-2 h-4 w-4" />
-                  Call Now
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {/* Main Footer */}

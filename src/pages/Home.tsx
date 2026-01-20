@@ -12,10 +12,8 @@ import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
 import breakfastEventVideo from "@/assets/breakfast-event-video.mp4";
-
 const Home = () => {
-  return (
-    <>
+  return <>
       {/* Hero Banner - Full Width with Large Image */}
       <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden">
         {/* Background Image */}
@@ -57,50 +55,33 @@ const Home = () => {
       {/* Nav Card Grid - NASW Style */}
       <section className="bg-white py-10 border-b border-border">
         <div className="container-wide">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
-          >
-            {[
-              {
-                image: breakfastWorkshop,
-                title: "Breakfast with my Teenager",
-                description: "Interactive parent-teen workshops",
-                link: "/services"
-              },
-              {
-                image: healthyEntrepreneur,
-                title: "Healthy Entrepreneur Wellness",
-                description: "Leadership mental health & resilience",
-                link: "/services"
-              },
-              {
-                image: workshopParenting,
-                title: "Parenting in the 21st Century",
-                description: "Modern parenting strategies",
-                link: "/services"
-              },
-              {
-                image: founderPortrait,
-                title: "#MatricUngazibulali",
-                description: "Supporting matric students' mental health",
-                link: "/impact"
-              }
-            ].map((card, index) => (
-              <motion.div key={index} variants={fadeUp}>
-                <Link 
-                  to={card.link}
-                  className="block group bg-white border border-border rounded overflow-hidden hover:shadow-card-hover transition-shadow duration-300"
-                >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {[{
+            image: breakfastWorkshop,
+            title: "Breakfast with my Teenager",
+            description: "Interactive parent-teen workshops",
+            link: "/services"
+          }, {
+            image: healthyEntrepreneur,
+            title: "Healthy Entrepreneur Wellness",
+            description: "Leadership mental health & resilience",
+            link: "/services"
+          }, {
+            image: workshopParenting,
+            title: "Parenting in the 21st Century",
+            description: "Modern parenting strategies",
+            link: "/services"
+          }, {
+            image: founderPortrait,
+            title: "#MatricUngazibulali",
+            description: "Supporting matric students' mental health",
+            link: "/impact"
+          }].map((card, index) => <motion.div key={index} variants={fadeUp}>
+                <Link to={card.link} className="block group bg-white border border-border rounded overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
                   <div className="aspect-[16/10] overflow-hidden">
-                    <img 
-                      src={card.image} 
-                      alt={card.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-foreground text-sm md:text-base mb-1 group-hover:text-primary transition-colors">
@@ -111,8 +92,7 @@ const Home = () => {
                     </p>
                   </div>
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -146,33 +126,41 @@ const Home = () => {
       {/* Highlights Grid - Resource Links */}
       <section className="bg-section-light py-10 border-b border-border">
         <div className="container-wide">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
-          >
-            {[
-              { icon: Heart, label: "Counselling", link: "/services" },
-              { icon: Users, label: "Family Therapy", link: "/services" },
-              { icon: Shield, label: "Trauma Support", link: "/services" },
-              { icon: Briefcase, label: "EAP Services", link: "/services" },
-              { icon: Baby, label: "Child & Adolescent", link: "/services" },
-              { icon: Sparkles, label: "Workshops", link: "/services" }
-            ].map((item, index) => (
-              <motion.div key={index} variants={fadeUp}>
-                <Link 
-                  to={item.link}
-                  className="flex flex-col items-center gap-2 p-4 rounded bg-white border border-border hover:border-primary hover:shadow-card transition-all text-center group"
-                >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[{
+            icon: Heart,
+            label: "Counselling",
+            link: "/services"
+          }, {
+            icon: Users,
+            label: "Family Therapy",
+            link: "/services"
+          }, {
+            icon: Shield,
+            label: "Trauma Support",
+            link: "/services"
+          }, {
+            icon: Briefcase,
+            label: "EAP Services",
+            link: "/services"
+          }, {
+            icon: Baby,
+            label: "Child & Adolescent",
+            link: "/services"
+          }, {
+            icon: Sparkles,
+            label: "Workshops",
+            link: "/services"
+          }].map((item, index) => <motion.div key={index} variants={fadeUp}>
+                <Link to={item.link} className="flex flex-col items-center gap-2 p-4 rounded bg-white border border-border hover:border-primary hover:shadow-card transition-all text-center group">
                   <div className="w-10 h-10 rounded bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                     <item.icon className="h-5 w-5 text-primary group-hover:text-white transition-colors" />
                   </div>
                   <span className="text-sm font-medium text-foreground">{item.label}</span>
                 </Link>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -182,19 +170,19 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image Side */}
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            x: -20
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
               <div className="aspect-[4/5] rounded overflow-hidden">
-                <img 
-                  alt="Kgomotso Bessie - Founder" 
-                  className="w-full h-full object-cover" 
-                  src="/lovable-uploads/d5724d65-408f-47cd-a10d-b013ca1ae53b.jpg" 
-                />
+                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d5724d65-408f-47cd-a10d-b013ca1ae53b.jpg" />
               </div>
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
                 <p className="text-2xl md:text-3xl font-bold">13+</p>
@@ -203,12 +191,9 @@ const Home = () => {
             </motion.div>
 
             {/* Content Side */}
-            <motion.div 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }} 
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.p variants={fadeUp} className="text-overline mb-4">
                 About Our Practice
               </motion.p>
@@ -230,16 +215,19 @@ const Home = () => {
               
               {/* Quick Stats */}
               <motion.div variants={fadeUp} className="grid grid-cols-3 gap-4 mt-8 py-6 border-t border-b border-border">
-                {[
-                  { value: "2012", label: "In Practice Since" },
-                  { value: "Level 1", label: "BBBEE" },
-                  { value: "SACSSP", label: "Registered" }
-                ].map((stat, index) => (
-                  <div key={index} className="text-center">
+                {[{
+                value: "2012",
+                label: "In Practice Since"
+              }, {
+                value: "Level 1",
+                label: "BBBEE"
+              }, {
+                value: "SACSSP",
+                label: "Registered"
+              }].map((stat, index) => <div key={index} className="text-center">
                     <p className="text-xl md:text-2xl font-bold text-primary">{stat.value}</p>
                     <p className="text-xs text-muted-foreground">{stat.label}</p>
-                  </div>
-                ))}
+                  </div>)}
               </motion.div>
 
               <motion.div variants={fadeUp} className="mt-8">
@@ -258,13 +246,9 @@ const Home = () => {
       {/* Services Grid - Dense Layout */}
       <section className="section-py bg-section-teal">
         <div className="container-wide">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger} 
-            className="text-center max-w-2xl mx-auto mb-12"
-          >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="text-center max-w-2xl mx-auto mb-12">
             <motion.p variants={fadeUp} className="text-overline mb-4">
               What We Offer
             </motion.p>
@@ -276,38 +260,25 @@ const Home = () => {
             </motion.p>
           </motion.div>
 
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger} 
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {[
-              {
-                icon: Heart,
-                title: "Individual & Family Services",
-                description: "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
-                features: ["Individual Counselling", "Family Therapy", "Grief Support"]
-              },
-              {
-                icon: Users,
-                title: "Employee Health & Wellness",
-                description: "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions.",
-                features: ["Workplace Wellness", "Trauma Debriefing", "Group Interventions"]
-              },
-              {
-                icon: Shield,
-                title: "Crisis & Trauma Support",
-                description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
-                features: ["Crisis Intervention", "Trauma Support", "Disaster Response"]
-              }
-            ].map((service, index) => (
-              <motion.div 
-                key={index} 
-                variants={fadeUp} 
-                className="bg-white p-6 rounded border border-border hover:shadow-card-hover transition-shadow"
-              >
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[{
+            icon: Heart,
+            title: "Individual & Family Services",
+            description: "Individual counselling, family & couples therapy, child & adolescent support, grief and bereavement counselling.",
+            features: ["Individual Counselling", "Family Therapy", "Grief Support"]
+          }, {
+            icon: Users,
+            title: "Employee Health & Wellness",
+            description: "Workplace wellness programmes, trauma debriefing within 72 hours, group and individual interventions.",
+            features: ["Workplace Wellness", "Trauma Debriefing", "Group Interventions"]
+          }, {
+            icon: Shield,
+            title: "Crisis & Trauma Support",
+            description: "Immediate and long-term trauma support, crisis intervention, disaster-related psychosocial services.",
+            features: ["Crisis Intervention", "Trauma Support", "Disaster Response"]
+          }].map((service, index) => <motion.div key={index} variants={fadeUp} className="bg-white p-6 rounded border border-border hover:shadow-card-hover transition-shadow">
                 <div className="icon-box mb-4">
                   <service.icon className="h-5 w-5 text-white" />
                 </div>
@@ -318,23 +289,21 @@ const Home = () => {
                   {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-foreground">
+                  {service.features.map((feature, i) => <li key={i} className="flex items-center gap-2 text-sm text-foreground">
                       <Check className="h-4 w-4 text-primary shrink-0" />
                       {feature}
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mt-10"
-          >
+          <motion.div initial={{
+          opacity: 0
+        }} whileInView={{
+          opacity: 1
+        }} viewport={{
+          once: true
+        }} className="text-center mt-10">
             <Button asChild size="lg" className="btn-primary-gradient btn-glow">
               <Link to="/services">
                 View All Services
@@ -348,29 +317,40 @@ const Home = () => {
       {/* Why Choose Us - Icon Grid */}
       <section className="py-12 bg-white border-b border-border">
         <div className="container-wide">
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={stagger} 
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
-          >
-            {[
-              { icon: FileCheck, title: "SACSSP Registered", description: "Practice Reg. 1033-819" },
-              { icon: Award, title: "Licensed Professionals", description: "Registered practitioners" },
-              { icon: CheckCircle, title: "Evidence-Based", description: "Proven methodologies" },
-              { icon: UserCheck, title: "Personalised", description: "Tailored delivery" },
-              { icon: Users, title: "Multiple Modalities", description: "In-person & virtual" },
-              { icon: Shield, title: "Confidential", description: "Safe environment" }
-            ].map((item, index) => (
-              <motion.div key={index} variants={fadeUp} className="text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{
+          once: true
+        }} variants={stagger} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[{
+            icon: FileCheck,
+            title: "SACSSP Registered",
+            description: "Practice Reg. 1033-819"
+          }, {
+            icon: Award,
+            title: "Licensed Professionals",
+            description: "Registered practitioners"
+          }, {
+            icon: CheckCircle,
+            title: "Evidence-Based",
+            description: "Proven methodologies"
+          }, {
+            icon: UserCheck,
+            title: "Personalised",
+            description: "Tailored delivery"
+          }, {
+            icon: Users,
+            title: "Multiple Modalities",
+            description: "In-person & virtual"
+          }, {
+            icon: Shield,
+            title: "Confidential",
+            description: "Safe environment"
+          }].map((item, index) => <motion.div key={index} variants={fadeUp} className="text-center">
                 <div className="icon-box mx-auto mb-3">
                   <item.icon className="h-5 w-5 text-white" />
                 </div>
                 <h3 className="font-semibold text-foreground text-sm mb-1">{item.title}</h3>
                 <p className="text-xs text-muted-foreground">{item.description}</p>
-              </motion.div>
-            ))}
+              </motion.div>)}
           </motion.div>
         </div>
       </section>
@@ -380,12 +360,9 @@ const Home = () => {
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Content Side */}
-            <motion.div 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }} 
-              variants={stagger}
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
               <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary text-sm font-medium mb-4">
                 <Sparkles className="h-4 w-4" />
                 <span>Annual Events & Workshops</span>
@@ -400,12 +377,16 @@ const Home = () => {
 
               {/* Workshop List */}
               <motion.div variants={fadeUp} className="space-y-4">
-                {[
-                  { title: "Breakfast with my Teenager", desc: "Parent-teen bonding workshops" },
-                  { title: "Parenting in the 21st Century", desc: "Modern parenting strategies" },
-                  { title: "Healthy Entrepreneur Wellness", desc: "Leadership mental health" }
-                ].map((workshop, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 bg-white rounded border border-border">
+                {[{
+                title: "Breakfast with my Teenager",
+                desc: "Parent-teen bonding workshops"
+              }, {
+                title: "Parenting in the 21st Century",
+                desc: "Modern parenting strategies"
+              }, {
+                title: "Healthy Entrepreneur Wellness",
+                desc: "Leadership mental health"
+              }].map((workshop, index) => <div key={index} className="flex items-start gap-3 p-3 bg-white rounded border border-border">
                     <div className="w-8 h-8 rounded bg-primary/10 flex items-center justify-center shrink-0">
                       <Check className="h-4 w-4 text-primary" />
                     </div>
@@ -413,8 +394,7 @@ const Home = () => {
                       <h4 className="font-semibold text-foreground text-sm">{workshop.title}</h4>
                       <p className="text-xs text-muted-foreground">{workshop.desc}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </motion.div>
 
               <motion.div variants={fadeUp} className="mt-8">
@@ -428,33 +408,7 @@ const Home = () => {
             </motion.div>
 
             {/* Gallery Grid */}
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="grid grid-cols-2 gap-3"
-            >
-              {[breakfastGallery1, breakfastGallery4, breakfastGallery6].map((img, index) => (
-                <div key={index} className="aspect-[4/3] overflow-hidden rounded">
-                  <img 
-                    src={img} 
-                    alt={`Event highlight ${index + 1}`} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  />
-                </div>
-              ))}
-              <div className="aspect-[4/3] overflow-hidden rounded relative group">
-                <video 
-                  className="w-full h-full object-cover" 
-                  controls 
-                  preload="metadata" 
-                  poster={breakfastGallery1}
-                >
-                  <source src={breakfastEventVideo} type="video/mp4" />
-                </video>
-              </div>
-            </motion.div>
+            
           </div>
         </div>
       </section>
@@ -488,8 +442,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Home;
