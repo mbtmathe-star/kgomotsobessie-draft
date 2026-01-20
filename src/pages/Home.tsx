@@ -62,7 +62,7 @@ const Home = () => {
             {[{
             image: breakfastTeenagerBanner,
             title: "Breakfast with my Teenager",
-            description: "Parenting in the 21st Century",
+            description: "Breakfast with my Teenager",
             link: "/services#breakfast-with-my-teenager"
           }, {
             image: healthyEntrepreneur,
@@ -72,7 +72,7 @@ const Home = () => {
           }, {
             image: parenting21stBanner,
             title: "Parenting in the 21st Century",
-            description: "Breakfast with my Teenager",
+            description: "Parenting in the 21st Century",
             link: "/services#parenting-in-the-21st-century"
           }].map((card, index) => <motion.div key={index} variants={fadeUp}>
                 <Link to={card.link} className="block group bg-white border border-border rounded overflow-hidden hover:shadow-card-hover transition-shadow duration-300">
