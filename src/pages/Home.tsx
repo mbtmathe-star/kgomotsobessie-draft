@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-import breakfastWorkshop from "@/assets/breakfast-workshop.png";
+import breakfastTeenagerBanner from "@/assets/breakfast-teenager-banner.jpg";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
-import parenting21stCentury from "@/assets/parenting-21st-century.jpg";
+import parenting21stBanner from "@/assets/parenting-21st-banner.jpg";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
 import breakfastGallery4 from "@/assets/breakfast-gallery-4.jpg";
 import breakfastGallery6 from "@/assets/breakfast-gallery-6.jpg";
@@ -60,7 +60,7 @@ const Home = () => {
           once: true
         }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
             {[{
-            image: breakfastWorkshop,
+            image: breakfastTeenagerBanner,
             title: "Breakfast with my Teenager",
             description: "Parenting in the 21st Century",
             link: "/services#breakfast-with-my-teenager"
@@ -70,7 +70,7 @@ const Home = () => {
             description: "Healthy Entrepreneur Wellness",
             link: "/services#healthy-entrepreneur-wellness"
           }, {
-            image: parenting21stCentury,
+            image: parenting21stBanner,
             title: "Parenting in the 21st Century",
             description: "Breakfast with my Teenager",
             link: "/services#parenting-in-the-21st-century"
