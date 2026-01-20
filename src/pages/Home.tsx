@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
 import founderPortrait from "@/assets/founder-portrait.jpg";
-import breakfastTeenagerBanner from "@/assets/breakfast-teenager-banner.jpg";
+import breakfastTeenagerWorkshop from "@/assets/breakfast-teenager-workshop.png";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
 import parenting21stFamily from "@/assets/parenting-21st-family.png";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
@@ -60,7 +60,7 @@ const Home = () => {
           once: true
         }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {[{
-            image: breakfastTeenagerBanner,
+            image: breakfastTeenagerWorkshop,
             title: "Breakfast with my Teenager",
             description: "Breakfast with my Teenager",
             link: "/services#breakfast-with-my-teenager"
