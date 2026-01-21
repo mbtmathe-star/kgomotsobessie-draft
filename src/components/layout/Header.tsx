@@ -52,7 +52,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map(link => <Link key={link.href} to={link.href} className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-accent ${location.pathname === link.href ? "text-primary" : "text-foreground/70 hover:text-foreground"}`}>
+            {navLinks.map(link => <Link key={link.href} to={link.href} className={`relative px-4 py-2 text-sm font-medium transition-colors duration-200 rounded-lg hover:bg-accent ${location.pathname === link.href ? "text-primary" : "text-foreground hover:text-primary"}`}>
                 {link.label}
                 {location.pathname === link.href && <motion.div layoutId="activeNav" className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full" />}
               </Link>)}
@@ -89,7 +89,7 @@ const Header = () => {
         height: 0
       }} className="lg:hidden bg-background border-t border-border shadow-lg">
             <nav className="container-custom px-4 py-6 flex flex-col gap-2">
-              {navLinks.map(link => <Link key={link.href} to={link.href} onClick={() => setIsOpen(false)} className={`text-base font-medium transition-colors py-3 px-4 rounded-lg ${location.pathname === link.href ? "text-primary bg-accent" : "text-foreground/80 hover:bg-accent"}`}>
+              {navLinks.map(link => <Link key={link.href} to={link.href} onClick={() => setIsOpen(false)} className={`text-base font-medium transition-colors py-3 px-4 rounded-lg ${location.pathname === link.href ? "text-primary bg-accent" : "text-foreground hover:bg-accent hover:text-primary"}`}>
                   {link.label}
                 </Link>)}
               <div className="pt-4 mt-2 border-t border-border space-y-3">
