@@ -98,7 +98,13 @@ const Home = () => {
             <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
               <a href="tel:0713787172">
                 <Phone className="mr-2 h-4 w-4" />
-                Call: 071 378 7172
+                071 378 7172
+              </a>
+            </Button>
+            <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+              <a href="tel:0795871204">
+                <Phone className="mr-2 h-4 w-4" />
+                079 587 1204
               </a>
             </Button>
             <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
@@ -282,6 +288,12 @@ const Home = () => {
                 <a href="tel:0713787172">
                   <Phone className="mr-2 h-5 w-5" />
                   071 378 7172
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                <a href="tel:0795871204">
+                  <Phone className="mr-2 h-5 w-5" />
+                  079 587 1204
                 </a>
               </Button>
             </div>
