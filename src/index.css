@@ -8,7 +8,7 @@
   :root {
     /* Core brand colors - Clean White & Teal */
     --background: 0 0% 100%;
-    --foreground: 210 20% 12%;
+    --foreground: 210 25% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 210 20% 12%;
@@ -33,7 +33,7 @@
 
     /* Muted */
     --muted: 210 10% 96%;
-    --muted-foreground: 210 15% 25%;
+    --muted-foreground: 210 20% 18%;
 
     /* Accent */
     --accent: 174 35% 94%;
