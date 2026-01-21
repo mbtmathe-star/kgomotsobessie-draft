@@ -46,16 +46,16 @@ const About = () => {
   }];
   return <>
       {/* Hero Section */}
-      <section className="bg-primary py-20 md:py-28">
+      <section className="bg-primary py-12 md:py-16 lg:py-20">
         <div className="container-wide">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
-            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-sm mb-4">
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
+            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-xs md:text-sm mb-2">
               About Our Practice
             </motion.p>
-            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4">
               A Trusted Social Work Practice
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/85 leading-relaxed max-w-4xl">
               Black woman-owned, Level 1 BBBEE Social Work Practice delivering professional 
               social work, organisational, and community services with compassion and integrity.
             </motion.p>
@@ -64,9 +64,9 @@ const About = () => {
       </section>
 
       {/* Founder Story */}
-      <section className="section-py bg-white">
+      <section className="py-10 md:py-14 lg:py-16 bg-white">
         <div className="container-wide">
-          <div className="layout-split">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
             <motion.div initial={{
             opacity: 0,
@@ -133,31 +133,31 @@ const About = () => {
       </section>
 
       {/* Qualifications */}
-      <section className="section-py bg-section-cream">
+      <section className="py-10 md:py-14 bg-[hsl(45_20%_98%)]">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="max-w-2xl mb-14">
-            <motion.p variants={fadeUp} className="text-overline mb-4">
+        }} variants={stagger} className="mb-8">
+            <motion.p variants={fadeUp} className="text-overline mb-2">
               Credentials
             </motion.p>
-            <motion.h2 variants={fadeUp} className="text-headline text-foreground">
+            <motion.h2 variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
               Qualifications & Expertise
             </motion.h2>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="space-y-0 divide-y divide-border/60">
-            {qualifications.map((qual, index) => <motion.div key={index} variants={fadeUp} className="py-8 md:py-10 flex flex-col md:flex-row gap-5">
-                <div className="icon-box-lg shrink-0">
-                  <qual.icon className="h-6 w-6 text-white" />
+        }} variants={stagger} className="grid sm:grid-cols-2 gap-4 md:gap-6">
+            {qualifications.map((qual, index) => <motion.div key={index} variants={fadeUp} className="p-5 bg-white rounded-lg border border-border flex gap-4">
+                <div className="w-10 h-10 rounded-lg icon-container-solid flex items-center justify-center shrink-0">
+                  <qual.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                  <h3 className="text-base md:text-lg font-semibold text-foreground mb-1">
                     {qual.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-foreground text-sm">
                     {qual.description}
                   </p>
                 </div>
@@ -167,9 +167,9 @@ const About = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section-py bg-white">
+      <section className="py-10 md:py-14 bg-white">
         <div className="container-wide">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             <motion.div initial={{
             opacity: 0,
             y: 20
@@ -178,9 +178,9 @@ const About = () => {
             y: 0
           }} viewport={{
             once: true
-          }} className="p-8 md:p-10 bg-section-light border-l-4 border-primary">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Mission</h3>
-              <p className="text-body">
+          }} className="p-6 md:p-8 bg-[hsl(210_10%_98%)] border-l-4 border-primary">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">Our Mission</h3>
+              <p className="text-foreground text-sm md:text-base">
                 To provide expert social work services that promote healing, resilience, 
                 and empowerment while upholding the highest ethical standards.
               </p>
@@ -196,9 +196,9 @@ const About = () => {
             once: true
           }} transition={{
             delay: 0.1
-          }} className="p-8 md:p-10 bg-section-light border-l-4 border-primary">
-              <h3 className="text-2xl font-semibold text-foreground mb-4">Our Vision</h3>
-              <p className="text-body">
+          }} className="p-6 md:p-8 bg-[hsl(210_10%_98%)] border-l-4 border-primary">
+              <h3 className="text-lg md:text-xl font-semibold text-foreground mb-3">Our Vision</h3>
+              <p className="text-foreground text-sm md:text-base">
                 To be a trusted, reliable, and leading social work practice delivering innovative, 
                 accessible, and personalised services that strengthen individuals, organisations, 
                 and communities.
@@ -209,31 +209,31 @@ const About = () => {
       </section>
 
       {/* Core Values */}
-      <section className="section-py bg-section-teal section-curve-left">
-        <div className="container-wide relative z-10">
+      <section className="py-10 md:py-14 bg-[hsl(174_30%_97%)]">
+        <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="max-w-2xl mb-14">
-            <motion.p variants={fadeUp} className="text-overline mb-4">
+        }} variants={stagger} className="mb-8">
+            <motion.p variants={fadeUp} className="text-overline mb-2">
               What Guides Us
             </motion.p>
-            <motion.h2 variants={fadeUp} className="text-headline text-foreground">
+            <motion.h2 variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
               Our Core Values
             </motion.h2>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
-            {coreValues.map((value, index) => <motion.div key={index} variants={fadeUp} className="flex items-start gap-4">
-                <div className="icon-box-lg shrink-0">
-                  <value.icon className="h-6 w-6 text-white" />
+        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {coreValues.map((value, index) => <motion.div key={index} variants={fadeUp} className="flex items-start gap-3 p-4 bg-white rounded-lg border border-border">
+                <div className="w-10 h-10 rounded-lg icon-container-solid flex items-center justify-center shrink-0">
+                  <value.icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-1">
+                  <h3 className="text-base font-semibold text-foreground mb-1">
                     {value.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-foreground text-sm">
                     {value.description}
                   </p>
                 </div>
