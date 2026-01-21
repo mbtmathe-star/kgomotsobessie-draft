@@ -11,10 +11,10 @@
     --foreground: 0 0% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 12%;
+    --card-foreground: 0 0% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 12%;
+    --popover-foreground: 0 0% 5%;
 
     /* Primary - Professional Teal */
     --primary: 174 55% 32%;
@@ -24,7 +24,7 @@
 
     /* Secondary */
     --secondary: 210 15% 96%;
-    --secondary-foreground: 210 20% 15%;
+    --secondary-foreground: 0 0% 5%;
 
     /* Section backgrounds - Very subtle */
     --section-cream: 45 20% 98%;
@@ -33,7 +33,7 @@
 
     /* Muted */
     --muted: 210 10% 96%;
-    --muted-foreground: 0 0% 15%;
+    --muted-foreground: 0 0% 5%;
 
     /* Accent */
     --accent: 174 35% 94%;
