@@ -15,7 +15,7 @@ const Home = () => {
         <div className="absolute inset-0">
           <img src={heroOffice} alt="Professional social work office" className="w-full h-full object-cover" />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/85 via-foreground/60 to-foreground/30" />
         </div>
         
         {/* Content */}
