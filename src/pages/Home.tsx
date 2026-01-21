@@ -48,11 +48,11 @@ const Home = () => {
       </section>
 
       {/* Nav Card Grid - NASW Style */}
-      <section className="bg-white py-10 border-b border-border">
+      <section className="bg-white py-6 md:py-10 border-b border-border">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+        }} variants={stagger} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {[{
             image: breakfastTeenagerWorkshop,
             title: "Breakfast with my Teenager",
@@ -86,9 +86,9 @@ const Home = () => {
       </section>
 
       {/* Action Row - Quick Links */}
-      <section className="bg-primary py-6">
+      <section className="bg-primary py-4 md:py-6">
         <div className="container-wide">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
             <Button asChild variant="secondary" className="bg-white text-primary hover:bg-white/90">
               <Link to="/contact">
                 <Calendar className="mr-2 h-4 w-4" />
@@ -112,28 +112,28 @@ const Home = () => {
       </section>
 
       {/* Services Overview - Simple Text Section */}
-      <section className="bg-section-light py-12 border-b border-border">
+      <section className="bg-section-light py-8 md:py-12 border-b border-border">
         <div className="container-wide">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Our Services</h2>
-          <p className="text-foreground leading-relaxed mb-8 max-w-none">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 md:mb-6">Our Services</h2>
+          <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
             We provide a range of professional social work services including individual and family counselling, 
             trauma support, employee wellness programmes, and community workshops. Our approach is grounded in 
             ethical practice, compassion, and a commitment to empowering those we serve.
           </p>
-          <div className="flex flex-wrap gap-3 text-sm">
-            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
-            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
-            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
-            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
-            <span className="px-4 py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
+          <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
           </div>
         </div>
       </section>
 
       {/* Split Screen - About Section */}
-      <section className="section-py bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image Side */}
             <motion.div initial={{
             opacity: 0,
@@ -212,10 +212,10 @@ const Home = () => {
       
 
       {/* Why Choose Us - Simple Text */}
-      <section className="py-12 bg-white border-b border-border">
+      <section className="py-8 md:py-12 bg-white border-b border-border">
         <div className="container-wide">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">Why Choose Us</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6 md:mb-8">Why Choose Us</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div>
               <h3 className="font-semibold text-foreground mb-2">SACSSP Registered Practice</h3>
               <p className="text-foreground leading-relaxed">
@@ -260,7 +260,7 @@ const Home = () => {
       
 
       {/* CTA Banner */}
-      <section className="bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-12">
+      <section className="bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-8 md:py-12">
         <div className="container-wide">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
