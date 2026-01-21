@@ -15,21 +15,20 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-primary py-20 md:py-28">
+      <section className="bg-primary py-12 md:py-16 lg:py-20">
         <div className="container-wide">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-3xl"
           >
-            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-sm mb-3">
+            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-xs md:text-sm mb-2">
               Get in Touch
             </motion.p>
-            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4">
               Let's Start Your Journey
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/85 leading-relaxed max-w-4xl">
               Whether you're seeking personal support, organisational consulting, 
               or partnership opportunities — we're here to listen and help.
             </motion.p>
@@ -38,9 +37,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="section-padding section-white section-divider">
+      <section className="py-10 md:py-14 lg:py-16 bg-white">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Info */}
             <motion.div
               initial="hidden"
@@ -49,120 +48,119 @@ const Contact = () => {
               variants={stagger}
               className="lg:col-span-2"
             >
-              <motion.h2 variants={fadeUp} className="font-heading text-2xl font-bold text-foreground mb-8">
+              <motion.h2 variants={fadeUp} className="font-heading text-xl md:text-2xl font-bold text-foreground mb-6">
                 Contact Information
               </motion.h2>
 
-              <motion.div variants={fadeUp} className="space-y-6">
+              <motion.div variants={fadeUp} className="space-y-5">
                 {/* Address */}
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-xl icon-container-solid flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-white" />
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                    <MapPin className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Office Address</h3>
-                    <p className="text-muted-foreground">
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Office Address</h3>
+                    <p className="text-foreground text-sm">
                       Medicare, 259 Barkly Road, Homestead<br />
-                      Kimberley 8301<br />
-                      Northern Cape, South Africa
+                      Kimberley 8301, Northern Cape
                     </p>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-xl icon-container-solid flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-white" />
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                    <Phone className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone / WhatsApp</h3>
-                    <a href="tel:0713787172" className="text-primary hover:text-primary-dark transition-colors text-lg font-medium">
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Phone / WhatsApp</h3>
+                    <a href="tel:0713787172" className="text-primary hover:text-primary-dark transition-colors font-medium">
                       071 378 7172
                     </a>
                   </div>
                 </div>
 
                 {/* Email */}
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-xl icon-container-solid flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-white" />
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                    <Mail className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a href="mailto:kgomotsobessie88@gmail.com" className="text-primary hover:text-primary-dark transition-colors">
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Email</h3>
+                    <a href="mailto:kgomotsobessie88@gmail.com" className="text-primary hover:text-primary-dark transition-colors text-sm">
                       kgomotsobessie88@gmail.com
                     </a>
                   </div>
                 </div>
 
                 {/* Hours */}
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 shrink-0 rounded-xl icon-container-solid flex items-center justify-center">
-                    <Clock className="h-5 w-5 text-white" />
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                    <Clock className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Office Hours</h3>
-                    <p className="text-muted-foreground">
-                      Monday – Friday: 8:00 AM – 5:00 PM<br />
-                      Saturday: By appointment
+                    <h3 className="font-semibold text-foreground text-sm mb-1">Office Hours</h3>
+                    <p className="text-foreground text-sm">
+                      Mon – Fri: 8:00 AM – 5:00 PM<br />
+                      Sat: By appointment
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               {/* Registration Details */}
-              <motion.div variants={fadeUp} className="mt-10 p-6 bg-primary-light/50 rounded-xl border border-primary/15">
-                <div className="flex items-start gap-4">
-                  <Shield className="h-6 w-6 text-primary shrink-0" />
+              <motion.div variants={fadeUp} className="mt-6 p-4 bg-primary-light/50 rounded-lg border border-primary/15">
+                <div className="flex items-start gap-3">
+                  <Shield className="h-5 w-5 text-primary shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-foreground mb-3">Professional Registration</h3>
-                    <div className="text-muted-foreground space-y-1">
+                    <h3 className="font-semibold text-foreground text-sm mb-2">Professional Registration</h3>
+                    <div className="text-foreground text-xs space-y-0.5">
                       <p>Company Reg: 2024/800742/21</p>
                       <p>SACSSP Reg: 1033-819</p>
-                      <p>BHF Number: 9990890001145061</p>
+                      <p>BHF: 9990890001145061</p>
                     </div>
                   </div>
                 </div>
               </motion.div>
 
               {/* Payment Methods */}
-              <motion.div variants={fadeUp} className="mt-6 p-6 bg-accent/50 rounded-xl border border-border">
-                <h3 className="font-semibold text-foreground mb-3">Payment Methods</h3>
-                <p className="text-muted-foreground">
-                  We accept <strong className="text-foreground">cash</strong> and electronic payments for all consultations.
+              <motion.div variants={fadeUp} className="mt-4 p-4 bg-accent/50 rounded-lg border border-border">
+                <h3 className="font-semibold text-foreground text-sm mb-2">Payment Methods</h3>
+                <p className="text-foreground text-sm">
+                  We accept <strong>cash</strong> and electronic payments.
                 </p>
               </motion.div>
 
               {/* Social Links */}
-              <motion.div variants={fadeUp} className="mt-8">
-                <h3 className="font-semibold text-foreground mb-4">Connect With Us</h3>
-                <div className="flex gap-3">
+              <motion.div variants={fadeUp} className="mt-6">
+                <h3 className="font-semibold text-foreground text-sm mb-3">Connect With Us</h3>
+                <div className="flex gap-2">
                   <a
                     href="https://www.facebook.com/profile.php?id=100064121128498"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
+                    className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
                     aria-label="Facebook"
                   >
-                    <Facebook className="h-5 w-5" />
+                    <Facebook className="h-4 w-4" />
                   </a>
                   <a
                     href="https://instagram.com/kgomotsobessie"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
+                    className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
                     aria-label="Instagram"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Instagram className="h-4 w-4" />
                   </a>
                 </div>
               </motion.div>
 
               {/* WhatsApp Button */}
-              <motion.div variants={fadeUp} className="mt-8">
-                <Button asChild variant="whatsapp" size="lg" className="w-full">
+              <motion.div variants={fadeUp} className="mt-6">
+                <Button asChild variant="whatsapp" className="w-full">
                   <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="mr-2 h-5 w-5" />
+                    <MessageCircle className="mr-2 h-4 w-4" />
                     Chat on WhatsApp
                   </a>
                 </Button>
@@ -177,11 +175,11 @@ const Contact = () => {
               variants={stagger}
               className="lg:col-span-3"
             >
-              <motion.div variants={fadeUp} className="bg-white rounded-xl p-8 md:p-10 shadow-lg border border-border">
-                <h2 className="font-heading text-2xl font-bold text-foreground mb-2">
+              <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 md:p-8 shadow-md border border-border">
+                <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-1">
                   Send Us a Message
                 </h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-foreground text-sm mb-6">
                   Fill out the form below and we'll respond within 24-48 hours.
                 </p>
 

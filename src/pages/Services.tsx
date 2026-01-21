@@ -128,40 +128,40 @@ const Services = () => {
   }: {
     service: typeof individualServices[0];
     index: number;
-  }) => <motion.div key={index} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-md border border-border hover:shadow-lg transition-shadow">
-      <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center mb-6">
-        <service.icon className="h-7 w-7 text-white" />
+  }) => <motion.div key={index} variants={fadeUp} className="bg-white rounded-lg p-5 md:p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
+      <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center mb-4">
+        <service.icon className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </div>
-      <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+      <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-2">
         {service.title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed mb-5">
+      <p className="text-foreground text-sm leading-relaxed mb-4">
         {service.description}
       </p>
-      <ul className="space-y-2 mb-6">
+      <ul className="space-y-1.5 mb-4">
         {service.features.map((feature, i) => <li key={i} className="flex items-center gap-2 text-sm text-foreground">
             <Check className="h-4 w-4 text-primary shrink-0" />
             {feature}
           </li>)}
       </ul>
-      <div className="pt-4 border-t border-border">
-        <p className="text-xs text-muted-foreground">
-          <span className="text-primary font-semibold">Who it's for:</span> {service.forWho}
+      <div className="pt-3 border-t border-border">
+        <p className="text-xs text-foreground">
+          <span className="text-primary font-semibold">For:</span> {service.forWho}
         </p>
       </div>
     </motion.div>;
   return <>
       {/* Hero Section */}
-      <section className="bg-primary py-20 md:py-28">
+      <section className="bg-primary py-12 md:py-16 lg:py-20">
         <div className="container-wide">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-3xl">
-            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-sm mb-3">
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
+            <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-xs md:text-sm mb-2">
               Our Services
             </motion.p>
-            <motion.h1 variants={fadeUp} className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <motion.h1 variants={fadeUp} className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4">
               Comprehensive Social Work Services
             </motion.h1>
-            <motion.p variants={fadeUp} className="text-xl text-white/85 leading-relaxed">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/85 leading-relaxed max-w-4xl">
               Expert support for individuals, families, organisations, and communities — 
               delivered with compassion, integrity, and professional excellence.
             </motion.p>
@@ -170,129 +170,121 @@ const Services = () => {
       </section>
 
       {/* Individual & Family Services */}
-      <section className="section-padding section-white section-divider">
+      <section className="py-8 md:py-12 bg-white border-b border-border">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="mb-12">
-            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
-                <Heart className="h-7 w-7 text-white" />
+        }} variants={stagger} className="mb-6 md:mb-8">
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center">
+                <Heart className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
-              <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-                  Individual & Family Services
-                </h2>
-              </div>
+              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
+                Individual & Family Services
+              </h2>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
               Personalised support services rooted in compassion and professional excellence.
             </motion.p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid md:grid-cols-3 gap-8">
+        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {individualServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
           </motion.div>
         </div>
       </section>
 
       {/* Employee Health & Wellness */}
-      <section className="section-padding section-cream section-divider">
+      <section className="py-8 md:py-12 bg-[hsl(45_20%_98%)] border-b border-border">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="mb-12">
-            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
-                <Briefcase className="h-7 w-7 text-white" />
+        }} variants={stagger} className="mb-6 md:mb-8">
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center">
+                <Briefcase className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
-              <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-                  Employee Health & Wellness
-                </h2>
-              </div>
+              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
+                Employee Health & Wellness
+              </h2>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
               Organisational solutions that prioritise mental health and build thriving workplace cultures.
             </motion.p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid md:grid-cols-3 gap-8">
+        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {organisationalServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
           </motion.div>
         </div>
       </section>
 
       {/* Crisis & Trauma Services */}
-      <section className="section-padding section-white section-divider">
+      <section className="py-8 md:py-12 bg-white border-b border-border">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="mb-12">
-            <motion.div variants={fadeUp} className="flex items-center gap-4 mb-4">
-              <div className="w-14 h-14 rounded-xl icon-container-solid flex items-center justify-center">
-                <Shield className="h-7 w-7 text-white" />
+        }} variants={stagger} className="mb-6 md:mb-8">
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center">
+                <Shield className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
-              <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">
-                  Crisis, Trauma & Disaster Support
-                </h2>
-              </div>
+              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
+                Crisis, Trauma & Disaster Support
+              </h2>
             </motion.div>
-            <motion.p variants={fadeUp} className="text-lg text-muted-foreground max-w-3xl">
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
               Specialised expertise in emergency response and building community resilience.
             </motion.p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid md:grid-cols-3 gap-8">
+        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {crisisServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
           </motion.div>
         </div>
       </section>
 
       {/* Workshops */}
-      <section className="section-padding section-teal section-divider">
+      <section className="py-8 md:py-12 bg-[hsl(174_30%_97%)] border-b border-border">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="mb-12">
-            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/15 text-primary px-4 py-2 rounded-full mb-4 border border-primary/20">
-              <Sparkles className="h-4 w-4" />
-              <span className="text-sm font-semibold">Request More Information</span>
+        }} variants={stagger} className="mb-6 md:mb-8">
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 bg-primary/15 text-primary px-3 py-1.5 rounded-full mb-3 border border-primary/20">
+              <Sparkles className="h-3.5 w-3.5" />
+              <span className="text-xs font-semibold">Request More Information</span>
             </motion.div>
-            <motion.div variants={fadeUp} className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
-              <div>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3">
-                  Workshops & Community Initiatives
-                </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl">
-                  Interactive programmes designed to build skills, strengthen relationships, 
-                  and promote mental wellness.
-                </p>
-              </div>
-            </motion.div>
+            <div>
+              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-2">
+                Workshops & Community Initiatives
+              </h2>
+              <p className="text-sm md:text-base text-foreground">
+                Interactive programmes designed to build skills, strengthen relationships, 
+                and promote mental wellness.
+              </p>
+            </div>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
-        }} variants={stagger} className="grid md:grid-cols-3 gap-8">
-            {workshops.map((workshop, index) => <motion.div key={index} id={workshop.id} variants={fadeUp} className="bg-white rounded-xl p-8 shadow-md border border-border scroll-mt-24">
-                <div className="w-14 h-14 rounded-xl icon-container flex items-center justify-center mb-6">
-                  <workshop.icon className="h-7 w-7 text-primary" />
+        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {workshops.map((workshop, index) => <motion.div key={index} id={workshop.id} variants={fadeUp} className="bg-white rounded-lg p-5 md:p-6 shadow-sm border border-border scroll-mt-24">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container flex items-center justify-center mb-4">
+                  <workshop.icon className="h-5 w-5 md:h-6 md:w-6 text-primary" />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-2">
                   {workshop.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-foreground text-sm leading-relaxed mb-4">
                   {workshop.description}
                 </p>
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="outline" size="sm" className="w-full">
                   <Link to="/contact">
                     <MessageCircle className="mr-2 h-4 w-4" />
                     Enquire Now
@@ -307,25 +299,23 @@ const Services = () => {
       
 
       {/* CTA */}
-      <section className="bg-primary py-16">
-        <div className="container-wide px-6 sm:px-8 lg:px-16 xl:px-20">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div className="text-center lg:text-left">
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-2">
+      <section className="bg-primary py-8 md:py-12">
+        <div className="container-wide">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="text-center md:text-left">
+              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1">
                 Ready to Get Started?
               </h2>
-              <p className="text-white/90 text-lg">
+              <p className="text-white/90 text-sm md:text-base">
                 Book a consultation to discuss how we can support you.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" variant="heroOutline">
-                <Link to="/contact">
-                  Book a Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
+            <Button asChild size="lg" variant="heroOutline">
+              <Link to="/contact">
+                Book a Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

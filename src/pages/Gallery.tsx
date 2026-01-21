@@ -35,32 +35,31 @@ const Events = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10">
+      <section className="bg-primary py-12 md:py-16 lg:py-20">
         <div className="container-wide">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="max-w-3xl text-center mx-auto"
           >
             <motion.span
               variants={fadeUp}
-              className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6"
+              className="inline-block px-3 py-1 bg-white/15 text-white text-xs font-medium rounded-full mb-4"
             >
-              <Camera className="inline-block w-4 h-4 mr-2" />
+              <Camera className="inline-block w-3.5 h-3.5 mr-1.5" />
               Photo Gallery
             </motion.span>
 
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-heading font-bold text-white mb-4"
             >
-              Event <span className="text-primary">Gallery</span>
+              Event <span className="text-white/90">Gallery</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
-              className="text-lg md:text-xl text-muted-foreground leading-relaxed"
+              className="text-base md:text-lg text-white/85 leading-relaxed max-w-3xl"
             >
               Capturing meaningful moments from our workshops and community events.
             </motion.p>
@@ -69,14 +68,14 @@ const Events = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-10 md:py-14 bg-white">
         <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4"
+            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3"
           >
             {galleryImages.map((image, index) => (
               <motion.div
@@ -126,32 +125,34 @@ const Events = () => {
       </AnimatePresence>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-primary">
-        <div className="container-wide text-center">
+      <section className="py-10 md:py-14 bg-primary">
+        <div className="container-wide">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={stagger}
-            className="max-w-2xl mx-auto"
+            className="flex flex-col md:flex-row items-center justify-between gap-6"
           >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-heading font-bold text-primary-foreground mb-4"
-            >
-              Join Our Next Event
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-primary-foreground/80 mb-8"
-            >
-              Be part of our transformative workshops and community initiatives.
-            </motion.p>
+            <div className="text-center md:text-left">
+              <motion.h2
+                variants={fadeUp}
+                className="text-xl md:text-2xl lg:text-3xl font-heading font-bold text-white mb-2"
+              >
+                Join Our Next Event
+              </motion.h2>
+              <motion.p
+                variants={fadeUp}
+                className="text-sm md:text-base text-white/80"
+              >
+                Be part of our transformative workshops and community initiatives.
+              </motion.p>
+            </div>
             <motion.div variants={fadeUp}>
-              <Button asChild variant="heroOutline" size="lg">
+              <Button asChild variant="heroOutline">
                 <Link to="/contact">
                   Contact Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </motion.div>
