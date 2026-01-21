@@ -48,11 +48,22 @@ const FloatingButtons = () => {
             exit={{ opacity: 0, y: 20, scale: 0.8 }}
             className="flex flex-col gap-3"
           >
-            {/* Phone Button */}
+            {/* Phone Button - Primary */}
             <motion.a
               href="tel:0713787172"
               className="w-12 h-12 rounded-full bg-primary text-primary-foreground hover:bg-primary-dark transition-colors flex items-center justify-center shadow-lg"
-              aria-label="Call us"
+              aria-label="Call 071 378 7172"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Phone className="h-5 w-5" />
+            </motion.a>
+
+            {/* Phone Button - Office */}
+            <motion.a
+              href="tel:0795871204"
+              className="w-12 h-12 rounded-full bg-primary/80 text-primary-foreground hover:bg-primary transition-colors flex items-center justify-center shadow-lg"
+              aria-label="Call 079 587 1204"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
