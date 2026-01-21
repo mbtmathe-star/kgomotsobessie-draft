@@ -18,7 +18,8 @@ const FloatingButtons = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const whatsappNumber = "27713787172";
+  const whatsappNumber1 = "27713787172";
+  const whatsappNumber2 = "27795871204";
   const whatsappMessage = encodeURIComponent("Hello! I would like to inquire about your services.");
 
   return (
@@ -70,13 +71,26 @@ const FloatingButtons = () => {
               <Phone className="h-5 w-5" />
             </motion.a>
 
-            {/* WhatsApp Button */}
+            {/* WhatsApp Button - Primary */}
             <motion.a
-              href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
+              href={`https://wa.me/${whatsappNumber1}?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full bg-[hsl(142,70%,45%)] text-white hover:bg-[hsl(142,70%,40%)] transition-colors flex items-center justify-center shadow-lg"
-              aria-label="Chat on WhatsApp"
+              aria-label="WhatsApp 071 378 7172"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <MessageCircle className="h-5 w-5" />
+            </motion.a>
+
+            {/* WhatsApp Button - Office */}
+            <motion.a
+              href={`https://wa.me/${whatsappNumber2}?text=${whatsappMessage}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-[hsl(142,70%,40%)] text-white hover:bg-[hsl(142,70%,35%)] transition-colors flex items-center justify-center shadow-lg"
+              aria-label="WhatsApp 079 587 1204"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
