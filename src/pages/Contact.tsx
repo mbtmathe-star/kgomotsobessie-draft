@@ -74,8 +74,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground text-sm mb-1">Phone / WhatsApp</h3>
-                    <a href="tel:0713787172" className="text-primary hover:text-primary-dark transition-colors font-medium">
+                    <a href="tel:0713787172" className="text-primary hover:text-primary-dark transition-colors font-medium block">
                       071 378 7172
+                    </a>
+                    <a href="tel:0795871204" className="text-primary hover:text-primary-dark transition-colors font-medium block">
+                      079 587 1204
                     </a>
                   </div>
                 </div>
