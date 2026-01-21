@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Source Sans Pro", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-        heading: ["Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
+        sans: ["Verdana", "Geneva", "sans-serif"],
+        heading: ["Georgia", "'Times New Roman'", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
