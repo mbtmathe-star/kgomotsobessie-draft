@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Heart, Users, Sparkles, X, Calendar, Play } from "lucide-react";
+import { ArrowRight, Heart, Users, Sparkles, X, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { fadeUp, stagger } from "@/lib/animations";
 
 // Import video and gallery images from the Breakfast with my Teenager event
@@ -252,24 +253,36 @@ const Impact = () => {
               Moments from Our Workshops
             </motion.h2>
 
-            <motion.div
-              variants={fadeUp}
-              className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 md:gap-3"
-            >
-              {eventGallery.map((image, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
-                  onClick={() => setSelectedImage(image.src)}
-                >
-                  <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </motion.div>
-              ))}
+            <motion.div variants={fadeUp} className="px-12">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {eventGallery.map((image, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                    >
+                      <div
+                        className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
+                        onClick={() => setSelectedImage(image.src)}
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-0" />
+                <CarouselNext className="right-0" />
+              </Carousel>
             </motion.div>
           </motion.div>
         </div>
