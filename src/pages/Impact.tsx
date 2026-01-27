@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Heart, Users, Sparkles, X, Calendar } from "lucide-react";
+import { ArrowRight, Heart, Users, Sparkles, X, Calendar, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 
-// Import gallery images from the Breakfast with my Teenager event
+// Import video and gallery images from the Breakfast with my Teenager event
+import breakfastRecapVideo from "@/assets/breakfast-recap-video.mp4";
 import galleryEvent1 from "@/assets/gallery-event-1.jpg";
 import galleryEvent2 from "@/assets/gallery-event-2.jpg";
 import galleryEvent3 from "@/assets/gallery-event-3.jpg";
@@ -121,8 +122,53 @@ const Impact = () => {
         </div>
       </section>
 
-      {/* Key Highlights */}
+      {/* Video Recap Section */}
       <section className="py-10 md:py-14 bg-muted/30">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              Event Recap
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              Watch the Workshop in Action
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="max-w-4xl"
+            >
+              <div className="relative rounded-lg overflow-hidden bg-black aspect-video">
+                <video
+                  src={breakfastRecapVideo}
+                  controls
+                  poster={galleryEvent1}
+                  className="w-full h-full object-cover"
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-sm text-muted-foreground mt-3">
+                Highlights from our Breakfast with my Teenager workshop sessions.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Key Highlights */}
+      <section className="py-10 md:py-14 bg-white">
         <div className="container-wide">
           <motion.div
             initial="hidden"
@@ -141,7 +187,7 @@ const Impact = () => {
               variants={fadeUp}
               className="grid md:grid-cols-3 gap-6"
             >
-              <div className="bg-white rounded-lg p-6 border border-border">
+              <div className="bg-muted/30 rounded-lg p-6 border border-border">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
@@ -154,7 +200,7 @@ const Impact = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 border border-border">
+              <div className="bg-muted/30 rounded-lg p-6 border border-border">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
@@ -167,7 +213,7 @@ const Impact = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-lg p-6 border border-border">
+              <div className="bg-muted/30 rounded-lg p-6 border border-border">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <Calendar className="h-6 w-6 text-primary" />
                 </div>
