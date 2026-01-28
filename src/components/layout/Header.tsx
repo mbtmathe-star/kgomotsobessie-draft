@@ -36,10 +36,10 @@ const Header = () => {
   }, []);
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? "shadow-sm border-b border-border/50" : ""}`}>
       <div className="container-wide">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="Kgomotso Bessie Social Workers and Consulting Inc" className="h-14 md:h-18 w-auto transition-transform duration-300 group-hover:scale-105" />
+            <img src={logo} alt="Kgomotso Bessie Social Workers and Consulting Inc" className="h-16 md:h-20 w-auto transition-transform duration-300 group-hover:scale-105" />
             <div className="hidden sm:block">
               <p className="font-heading text-sm font-semibold text-foreground leading-tight">
                 Kgomotso Bessie
