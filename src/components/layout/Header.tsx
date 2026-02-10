@@ -45,7 +45,7 @@ const Header = () => {
                 Kgomotso Bessie
               </p>
               <p className="text-xs text-muted-foreground">
-                Social Workers & Consulting
+                Social Workers & Consulting Inc
               </p>
             </div>
           </Link>
