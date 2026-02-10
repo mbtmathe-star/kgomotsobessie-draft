@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Heart, Users, Sparkles, X, Calendar } from "lucide-react";
+import { ArrowRight, Heart, Users, Sparkles, X, Calendar, Newspaper, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { fadeUp, stagger } from "@/lib/animations";
@@ -224,6 +224,59 @@ const Impact = () => {
         }} src={selectedImage} alt="Event gallery image" className="max-w-full max-h-[90vh] object-contain rounded-lg" onClick={e => e.stopPropagation()} />
           </motion.div>}
       </AnimatePresence>
+
+      {/* Featured In The Press */}
+      <section className="py-10 md:py-14 bg-[hsl(45_20%_98%)] border-t border-border">
+        <div className="container-wide">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 mb-2">
+              <Newspaper className="h-4 w-4 text-primary" />
+              <span className="text-primary font-semibold uppercase tracking-wider text-xs">In The Press</span>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6">
+              Featured Media Coverage
+            </motion.h2>
+
+            <motion.div variants={fadeUp} className="bg-white rounded-lg border border-border overflow-hidden">
+              <div className="p-6 md:p-8">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                    <Newspaper className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-xs text-muted-foreground mb-1">Diamond Fields Advertiser (DFA)</p>
+                    <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-3">
+                      From Humble Beginnings to Impacting Lives: A Local Social Worker's Inspiring Journey
+                    </h3>
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
+                      "Kgomotso Bessie, a local social worker, has emerged as a beacon of determination 
+                      and resilience in her fight against social ills… Born in the North West village of 
+                      Mmiga Ramatlabama, she faced challenges that shaped her character and commitment to 
+                      her career."
+                    </p>
+                    <blockquote className="border-l-4 border-primary pl-4 py-2 mb-5 bg-muted/30 rounded-r">
+                      <p className="text-foreground italic text-sm md:text-base">
+                        "I look back at my life and realise that each of those happenings was building my 
+                        character. It was not money that brought me to this point, but the struggles and 
+                        challenges I managed to overcome."
+                      </p>
+                    </blockquote>
+                    <a
+                      href="https://www.dfa.co.za/news/from-humble-beginnings-to-impacting-lives-a-local-social-workers-inspiring-journey-1a89a572-1093-4710-adf7-39d0bf61cf51/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary font-semibold text-sm hover:underline"
+                    >
+                      Read the Full Article
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-10 md:py-14 bg-primary">
