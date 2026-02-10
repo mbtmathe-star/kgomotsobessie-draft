@@ -6,22 +6,15 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { fadeUp, stagger } from "@/lib/animations";
-
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const whatsappNumber = "27713787172";
   const whatsappMessage = encodeURIComponent("Hello! I would like to inquire about your services.");
-
-  return (
-    <>
+  return <>
       {/* Hero Section */}
       <section className="bg-primary py-12 md:py-16 lg:py-20">
         <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={stagger}
-          >
+          <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.p variants={fadeUp} className="text-white/80 font-semibold uppercase tracking-wider text-xs md:text-sm mb-2">
               Get in Touch
             </motion.p>
@@ -41,13 +34,9 @@ const Contact = () => {
         <div className="container-wide">
           <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
             {/* Contact Info */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="lg:col-span-2"
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger} className="lg:col-span-2">
               <motion.h2 variants={fadeUp} className="font-heading text-xl md:text-2xl font-bold text-foreground mb-6">
                 Contact Information
               </motion.h2>
@@ -129,8 +118,7 @@ const Contact = () => {
               {/* Payment Methods */}
               <motion.div variants={fadeUp} className="mt-4 p-4 bg-accent/50 rounded-lg border border-border">
                 <h3 className="font-semibold text-foreground text-sm mb-2">Payment Methods</h3>
-                <p className="text-foreground text-sm">
-                  We accept <strong>cash</strong> and electronic payments.
+                <p className="text-foreground text-sm">We accept cash, medical aid and electronic payments<strong>cash</strong> and electronic payments.
                 </p>
               </motion.div>
 
@@ -138,22 +126,10 @@ const Contact = () => {
               <motion.div variants={fadeUp} className="mt-6">
                 <h3 className="font-semibold text-foreground text-sm mb-3">Connect With Us</h3>
                 <div className="flex gap-2">
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100064121128498"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
-                    aria-label="Facebook"
-                  >
+                  <a href="https://www.facebook.com/profile.php?id=100064121128498" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15" aria-label="Facebook">
                     <Facebook className="h-4 w-4" />
                   </a>
-                  <a
-                    href="https://instagram.com/kgomotsobessie"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15"
-                    aria-label="Instagram"
-                  >
+                  <a href="https://instagram.com/kgomotsobessie" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-lg bg-primary-light/50 flex items-center justify-center hover:bg-primary hover:text-white transition-colors border border-primary/15" aria-label="Instagram">
                     <Instagram className="h-4 w-4" />
                   </a>
                 </div>
@@ -171,13 +147,9 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="lg:col-span-3"
-            >
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger} className="lg:col-span-3">
               <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 md:p-8 shadow-md border border-border">
                 <h2 className="font-heading text-xl md:text-2xl font-bold text-foreground mb-1">
                   Send Us a Message
@@ -224,8 +196,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Contact;
