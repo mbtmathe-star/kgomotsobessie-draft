@@ -245,7 +245,25 @@ const Services = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{
           once: true
         }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            {crisisServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
+           {crisisServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
+          </motion.div>
+
+          {/* Disaster Training Highlight */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-6 md:mt-8 bg-primary/5 border-2 border-primary/20 rounded-lg p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-1">
+                Disaster Trauma Training & Frontline Resilience
+              </h3>
+              <p className="text-sm text-foreground">
+                Specialised trauma training and psychosocial support for professionals in disaster-affected communities.
+              </p>
+            </div>
+            <Button asChild className="shrink-0">
+              <Link to="/services/disaster-training">
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </motion.div>
         </div>
       </section>
