@@ -68,9 +68,9 @@ const Services = () => {
   }, {
     icon: Shield,
     title: "Disaster Psychosocial Services",
-    description: "Specialised support for communities affected by disasters.",
-    features: ["Community Resilience", "Emergency Response", "Recovery Support"],
-    forWho: "Communities and emergency response teams"
+    description: "Specialised psychosocial support for professionals working in disaster-affected environments.",
+    features: ["Frontline Resilience", "Emergency Response", "Trauma Preparedness"],
+    forWho: "Disaster-response professionals and frontline officials"
   }];
   const workshops = [{
     icon: Users,
@@ -238,7 +238,7 @@ const Services = () => {
               </h2>
             </motion.div>
             <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
-              Specialised expertise in emergency response and building community resilience.
+              Specialised expertise in crisis response and frontline professional resilience.
             </motion.p>
           </motion.div>
 
