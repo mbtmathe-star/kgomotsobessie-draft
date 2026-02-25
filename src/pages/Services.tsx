@@ -224,8 +224,7 @@ const Services = () => {
       </section>
 
       {/* Crisis & Trauma Services */}
-      <section className="py-8 md:py-12 bg-white border-b border-border">
-        
+      
 
 
 
@@ -266,7 +265,8 @@ const Services = () => {
 
 
 
-      </section>
+
+
 
       {/* Workshops */}
       <section className="py-8 md:py-12 bg-[hsl(174_30%_97%)] border-b border-border">
