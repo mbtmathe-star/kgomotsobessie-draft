@@ -125,10 +125,10 @@ const Services = () => {
   const ServiceCard = ({
     service,
     index
-  }: {
-    service: typeof individualServices[0];
-    index: number;
-  }) => <motion.div key={index} variants={fadeUp} className="bg-white rounded-lg p-5 md:p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
+
+
+
+  }: {service: typeof individualServices[0];index: number;}) => <motion.div key={index} variants={fadeUp} className="bg-white rounded-lg p-5 md:p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
       <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center mb-4">
         <service.icon className="h-5 w-5 md:h-6 md:w-6 text-white" />
       </div>
@@ -225,47 +225,47 @@ const Services = () => {
 
       {/* Crisis & Trauma Services */}
       <section className="py-8 md:py-12 bg-white border-b border-border">
-        <div className="container-wide">
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="mb-6 md:mb-8">
-            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg icon-container-solid flex items-center justify-center">
-                <Shield className="h-5 w-5 md:h-6 md:w-6 text-white" />
-              </div>
-              <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-                Crisis, Trauma & Disaster Support
-              </h2>
-            </motion.div>
-            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
-              Specialised expertise in emergency response and building community resilience.
-            </motion.p>
-          </motion.div>
+        
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-           {crisisServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
-          </motion.div>
 
-          {/* Disaster Training Highlight */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-6 md:mt-8 bg-primary/5 border-2 border-primary/20 rounded-lg p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div>
-              <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-1">
-                Disaster Trauma Training & Frontline Resilience
-              </h3>
-              <p className="text-sm text-foreground">
-                Specialised trauma training and psychosocial support for professionals in disaster-affected communities.
-              </p>
-            </div>
-            <Button asChild className="shrink-0">
-              <Link to="/services/disaster-training">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </section>
 
       {/* Workshops */}
