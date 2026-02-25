@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Heart, Users, Shield, Brain, Briefcase, MessageCircle, Building2, AlertTriangle, Baby, Sparkles, Clock, Check } from "lucide-react";
+import { ArrowRight, Heart, Users, Shield, Brain, Briefcase, MessageCircle, Building2, AlertTriangle, Baby, Sparkles, Clock, Check, Flame, HandHelping, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp, stagger } from "@/lib/animations";
 import breakfastGallery1 from "@/assets/workshop-breakfast-1.jpg";
@@ -53,25 +53,35 @@ const Services = () => {
     features: ["Group Sessions", "One-on-One Support", "Stress Management"],
     forWho: "Teams and individuals in organisational settings"
   }];
-  const crisisServices = [{
-    icon: AlertTriangle,
-    title: "Crisis Intervention",
-    description: "Immediate professional support during acute crisis situations.",
-    features: ["Immediate Response", "Safety Planning", "Stabilisation"],
-    forWho: "Individuals and families in acute crisis"
-  }, {
-    icon: Brain,
-    title: "Trauma Support",
-    description: "Comprehensive trauma services from initial response to long-term healing.",
-    features: ["Acute Care", "Long-Term Healing", "Evidence-Based Approaches"],
-    forWho: "Trauma survivors at any stage of healing"
-  }, {
-    icon: Shield,
-    title: "Disaster Psychosocial Services",
-    description: "Specialised psychosocial support for professionals working in disaster-affected environments.",
-    features: ["Frontline Resilience", "Emergency Response", "Trauma Preparedness"],
-    forWho: "Disaster-response professionals and frontline officials"
-  }];
+  const trainingAudience = [
+    { icon: Heart, label: "Social Workers" },
+    { icon: AlertTriangle, label: "Disaster Management Officials" },
+    { icon: Flame, label: "Fire & Emergency Services" },
+    { icon: Building2, label: "Municipal Community Officers" },
+    { icon: HandHelping, label: "NGO Practitioners" },
+  ];
+
+  const trainingTopics = [
+    "Understanding trauma in disaster contexts",
+    "Psychological First Aid",
+    "Supporting affected communities without secondary trauma",
+    "Boundaries and emotional regulation in crisis environments",
+    "Preventing burnout and compassion fatigue",
+  ];
+
+  const counsellingFor = [
+    "Officials directly exposed to disaster events",
+    "Staff experiencing cumulative trauma",
+    "Teams working in high-risk or high-stress environments",
+  ];
+
+  const supportIncludes = [
+    "Individual trauma counselling",
+    "Group debriefing sessions",
+    "Post-incident psychological support",
+    "Secondary trauma management",
+    "Organisational wellness interventions",
+  ];
   const workshops = [{
     icon: Users,
     title: "Breakfast with my Teenager",
@@ -234,36 +244,103 @@ const Services = () => {
                 <Shield className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
               <h2 className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground">
-                Crisis, Trauma & Disaster Support
+                Disaster Trauma Training & Frontline Resilience Services
               </h2>
             </motion.div>
             <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground">
-              Specialised expertise in crisis response and frontline professional resilience.
+              We provide specialised trauma training and psychosocial support services for professionals working in disaster-affected communities.
             </motion.p>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{
-          once: true
-        }} variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-           {crisisServices.map((service, index) => <ServiceCard key={index} service={service} index={index} />)}
+          {/* Intro */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-8">
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground leading-relaxed mb-4">
+              Our services are designed to strengthen the emotional resilience, psychological safety, and professional sustainability of officials exposed to disaster-related trauma. Led by a qualified Social Worker with Disaster Management training, our approach is trauma-informed, practical, and research-based.
+            </motion.p>
           </motion.div>
 
-          {/* Disaster Training Highlight */}
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-6 md:mt-8 bg-primary/5 border-2 border-primary/20 rounded-lg p-5 md:p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div>
-              <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-1">
-                Disaster Trauma Training & Frontline Resilience
+          {/* Training for Frontline Officials */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-8">
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg icon-container-solid flex items-center justify-center">
+                <Shield className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground">
+                1. Trauma Training for Frontline Officials
               </h3>
-              <p className="text-sm text-foreground">
-                Specialised trauma training and psychosocial support for professionals in disaster-affected communities.
-              </p>
+            </motion.div>
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground mb-4">
+              Structured workshops designed for:
+            </motion.p>
+            <motion.div variants={fadeUp} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
+              {trainingAudience.map((item, i) => (
+                <div key={i} className="bg-white rounded-lg border border-border p-4 flex flex-col items-center text-center gap-2">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <span className="text-xs md:text-sm font-medium text-foreground">{item.label}</span>
+                </div>
+              ))}
+            </motion.div>
+            <motion.div variants={fadeUp}>
+              <p className="text-sm md:text-base font-semibold text-foreground mb-3">Training includes:</p>
+              <div className="bg-white rounded-lg border border-border p-5">
+                <ul className="space-y-3">
+                  {trainingTopics.map((topic, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm md:text-base text-foreground">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Counselling & Support */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-8">
+            <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg icon-container-solid flex items-center justify-center">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground">
+                2. Trauma Counselling & Support for Disaster Officials
+              </h3>
+            </motion.div>
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground mb-4">
+              We offer confidential, professional counselling services for:
+            </motion.p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <motion.div variants={fadeUp} className="bg-[hsl(var(--section-teal-wash))] rounded-lg border border-border p-5">
+                <ul className="space-y-3">
+                  {counsellingFor.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm md:text-base text-foreground">
+                      <Users className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+              <motion.div variants={fadeUp} className="bg-[hsl(var(--section-teal-wash))] rounded-lg border border-border p-5">
+                <p className="text-sm font-semibold text-foreground mb-3">Support may include:</p>
+                <ul className="space-y-3">
+                  {supportIncludes.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-sm md:text-base text-foreground">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             </div>
-            <Button asChild className="shrink-0">
-              <Link to="/services/disaster-training">
-                Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
+          </motion.div>
+
+          {/* Why This Matters */}
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-primary/5 border-2 border-primary/20 rounded-lg p-5 md:p-6">
+            <h3 className="font-heading text-lg font-semibold text-foreground mb-2">Why This Service Matters</h3>
+            <p className="text-sm md:text-base text-foreground leading-relaxed italic">
+              Frontline professionals are often expected to provide stability during crises — yet many receive limited psychosocial support themselves. Investing in trauma preparedness and emotional resilience protects both employees and the communities they serve.
+            </p>
           </motion.div>
         </div>
       </section>
