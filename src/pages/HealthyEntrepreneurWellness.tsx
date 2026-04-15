@@ -69,7 +69,7 @@ const speakers = [
   },
   {
     name: "Charlene Laufs",
-    role: "Psychologist — Spoke",
+    role: "Psychologist",
     topic: "Mental Wellness",
     image: hewCharlene,
     icon: Brain,

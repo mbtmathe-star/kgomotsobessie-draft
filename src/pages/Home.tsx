@@ -31,7 +31,7 @@ const hewSpeakers = [
   },
   {
     name: "Charlene Laufs",
-    role: "Psychologist — Spoke",
+    role: "Psychologist",
     topic: "Mental Wellness",
     image: hewCharlene,
   },
