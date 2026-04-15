@@ -1,13 +1,77 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Calendar, Award, Mail } from "lucide-react";
+import { ArrowRight, Phone, Calendar, Award, Mail, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { fadeUp, stagger } from "@/lib/animations";
 import heroOffice from "@/assets/hero-office.png";
 import breakfastTeenagerWorkshop from "@/assets/breakfast-teenager-workshop.png";
 import healthyEntrepreneur from "@/assets/healthy-entrepreneur-wellness.png";
 import parenting21stFamily from "@/assets/parenting-21st-family.png";
+import hewKgomotso from "@/assets/hew-kgomotso-bessie.png";
+import hewPastor from "@/assets/hew-pastor-thapelo.png";
+import hewCharlene from "@/assets/hew-charlene-laufs.png";
+import hewSanlam from "@/assets/hew-sanlam-advisor.png";
+import hewJenique from "@/assets/hew-jenique-emslie.png";
+import hewCallie from "@/assets/hew-callie-hendricks.png";
+
+const hewSpeakers = [
+  {
+    name: "Kgomotso Bessie",
+    role: "Owner & Event Organiser",
+    topic: "Healthy Entrepreneur Wellness",
+    image: hewKgomotso,
+  },
+  {
+    name: "Pastor Thapelo Mohitlhi",
+    role: "Speaker",
+    topic: "Spiritual Wellness",
+    image: hewPastor,
+  },
+  {
+    name: "Charlene Laufs",
+    role: "Psychologist — Spoke",
+    topic: "Mental Wellness",
+    image: hewCharlene,
+  },
+  {
+    name: "Sanlam Financial Advisor",
+    role: "Financial Advisor — Sanlam",
+    topic: "Financial Wellness & Security",
+    image: hewSanlam,
+  },
+  {
+    name: "Jenique Emslie",
+    role: "Dietician",
+    topic: "Nutrition & Healthy Living",
+    image: hewJenique,
+  },
+  {
+    name: "Callie Hendricks",
+    role: "Master of Ceremony",
+    topic: "MC",
+    image: hewCallie,
+  },
+];
+
 const Home = () => {
+  const [speakerCarouselApi, setSpeakerCarouselApi] = useState<CarouselApi>();
+
+  useEffect(() => {
+    if (!speakerCarouselApi) return;
+
+    const interval = window.setInterval(() => {
+      if (speakerCarouselApi.canScrollNext()) {
+        speakerCarouselApi.scrollNext();
+      } else {
+        speakerCarouselApi.scrollTo(0);
+      }
+    }, 3500);
+
+    return () => window.clearInterval(interval);
+  }, [speakerCarouselApi]);
+
   return <>
       {/* Hero Banner - Full Width with Large Image */}
       <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden">
@@ -114,6 +178,51 @@ const Home = () => {
               </a>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* HEW Inaugural Event */}
+      <section className="bg-white py-8 md:py-12 border-b border-border overflow-hidden">
+        <div className="container-wide">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
+            <motion.div variants={fadeUp} className="flex items-center gap-2 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
+              <Mic className="h-4 w-4" />
+              <span>2024 HEW Inaugural Event</span>
+            </motion.div>
+            <motion.h2 variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
+              Meet the Speakers
+            </motion.h2>
+            <motion.p variants={fadeUp} className="text-sm md:text-base text-muted-foreground max-w-3xl mb-6">
+              Highlights from the very first Healthy Entrepreneur Wellness event in Kimberley, featuring the speakers and organisers who shaped the conversation.
+            </motion.p>
+
+            <motion.div variants={fadeUp} className="px-1 md:px-4">
+              <Carousel setApi={setSpeakerCarouselApi} opts={{ align: "start", loop: true }} className="w-full">
+                <CarouselContent>
+                  {hewSpeakers.map((speaker) => (
+                    <CarouselItem key={speaker.name} className="sm:basis-1/2 lg:basis-1/3">
+                      <Link to="/healthy-entrepreneur-wellness" className="block h-full group">
+                        <div className="h-full rounded border border-border bg-background overflow-hidden transition-shadow duration-300 hover:shadow-card-hover">
+                          <div className="aspect-[4/3] overflow-hidden bg-muted">
+                            <img
+                              src={speaker.image}
+                              alt={speaker.name}
+                              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            />
+                          </div>
+                          <div className="p-4 md:p-5">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">{speaker.topic}</p>
+                            <h3 className="text-base md:text-lg font-bold text-foreground">{speaker.name}</h3>
+                            <p className="text-sm text-muted-foreground">{speaker.role}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
