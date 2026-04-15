@@ -237,69 +237,6 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
-      {/* Wellness Pillars */}
-      <section className="py-10 md:py-14 bg-muted/30">
-        <div className="container-wide">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.p
-              variants={fadeUp}
-              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
-            >
-              Topics Covered
-            </motion.p>
-            <motion.h2
-              variants={fadeUp}
-              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
-            >
-              Wellness Pillars
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  icon: Church,
-                  title: "Spiritual Wellness",
-                  desc: "Finding purpose, inner peace, and spiritual grounding as an entrepreneur.",
-                },
-                {
-                  icon: Brain,
-                  title: "Mental Wellness",
-                  desc: "Managing stress, burnout, and maintaining psychological resilience.",
-                },
-                {
-                  icon: DollarSign,
-                  title: "Financial Wellness & Security",
-                  desc: "Building financial stability, security, and smart money management.",
-                },
-                {
-                  icon: Salad,
-                  title: "Nutrition & Healthy Living",
-                  desc: "Practical nutrition guidance for busy entrepreneurs on the go.",
-                },
-              ].map((pillar) => (
-                <div
-                  key={pillar.title}
-                  className="bg-white rounded-lg p-6 border border-border"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <pillar.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-foreground mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{pillar.desc}</p>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Speakers & Panel */}
       <section className="py-10 md:py-14 bg-white">
         <div className="container-wide">
