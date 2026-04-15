@@ -126,7 +126,7 @@ const Home = () => {
             image: healthyEntrepreneur,
             title: "Healthy Entrepreneur Wellness",
             description: "Healthy Entrepreneur Wellness",
-            link: "/services#healthy-entrepreneur-wellness"
+            link: "/healthy-entrepreneur-wellness"
           }, {
             image: parenting21stFamily,
             title: "Parenting in the 21st Century",
