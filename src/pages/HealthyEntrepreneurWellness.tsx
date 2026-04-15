@@ -19,6 +19,14 @@ import hewStallHealth from "@/assets/hew-stall-health.png";
 import hewStallZinzino from "@/assets/hew-stall-zinzino.png";
 import hewStallZinzinoTeam from "@/assets/hew-stall-zinzino-team.png";
 import hewStallVpk from "@/assets/hew-stall-vpk.png";
+import hewActivityPanelSession from "@/assets/hew-activity-panel-session.png";
+import hewActivityAudienceQuestion from "@/assets/hew-activity-audience-question.png";
+import hewActivityVisionActive1 from "@/assets/hew-activity-vision-active-1.png";
+import hewActivityVisionActive2 from "@/assets/hew-activity-vision-active-2.png";
+import hewActivityAudienceSmiles from "@/assets/hew-activity-audience-smiles.png";
+import hewActivityAudienceListening from "@/assets/hew-activity-audience-listening.png";
+import hewActivitySessionDiscussion from "@/assets/hew-activity-session-discussion.png";
+import hewActivityGroupPhoto from "@/assets/hew-activity-group-photo.png";
 
 const stallPhotos = [
   { src: hewStallIndalo1, alt: "Indalo ChloroLife stall presentation" },
@@ -29,6 +37,17 @@ const stallPhotos = [
   { src: hewStallZinzino, alt: "Zinzino wellness products" },
   { src: hewStallZinzinoTeam, alt: "Zinzino team at their stall" },
   { src: hewStallVpk, alt: "VPK Solutions stall" },
+];
+
+const activityPhotos = [
+  { src: hewActivityPanelSession, alt: "Healthy Entrepreneur Wellness panel session" },
+  { src: hewActivityAudienceQuestion, alt: "Audience member speaking during engagement session" },
+  { src: hewActivityVisionActive1, alt: "Vision Active activity during the wellness event" },
+  { src: hewActivityVisionActive2, alt: "Participants taking part in Vision Active session" },
+  { src: hewActivityAudienceSmiles, alt: "Audience members enjoying the wellness session" },
+  { src: hewActivityAudienceListening, alt: "Attendees listening during the engagement session" },
+  { src: hewActivitySessionDiscussion, alt: "Event discussion and audience participation" },
+  { src: hewActivityGroupPhoto, alt: "Group photo from Healthy Entrepreneur Wellness event" },
 ];
 
 const speakers = [
@@ -272,6 +291,49 @@ const HealthyEntrepreneurWellness = () => {
                     </h3>
                     <p className="text-sm text-muted-foreground">{speaker.role}</p>
                   </div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Session Engagement & Activities */}
+      <section className="py-10 md:py-14 bg-white border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              During the Event
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              Session Engagement & Vision Active Activities
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
+              {activityPhotos.map((photo) => (
+                <div
+                  key={photo.alt}
+                  className="aspect-[4/3] rounded-lg overflow-hidden border border-border"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               ))}
             </motion.div>
