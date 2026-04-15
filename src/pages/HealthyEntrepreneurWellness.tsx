@@ -11,6 +11,26 @@ import hewSanlam from "@/assets/hew-sanlam-advisor.png";
 import hewJenique from "@/assets/hew-jenique-emslie.png";
 import hewCallie from "@/assets/hew-callie-hendricks.png";
 
+import hewStallIndalo1 from "@/assets/hew-stall-indalo-1.png";
+import hewStallIndalo2 from "@/assets/hew-stall-indalo-2.png";
+import hewStallVenue from "@/assets/hew-stall-venue.png";
+import hewStallAttendee from "@/assets/hew-stall-attendee.png";
+import hewStallHealth from "@/assets/hew-stall-health.png";
+import hewStallZinzino from "@/assets/hew-stall-zinzino.png";
+import hewStallZinzinoTeam from "@/assets/hew-stall-zinzino-team.png";
+import hewStallVpk from "@/assets/hew-stall-vpk.png";
+
+const stallPhotos = [
+  { src: hewStallIndalo1, alt: "Indalo ChloroLife stall presentation" },
+  { src: hewStallIndalo2, alt: "Indalo ChloroLife representative" },
+  { src: hewStallVenue, alt: "Event venue with stalls and attendees" },
+  { src: hewStallAttendee, alt: "Event attendee at stall" },
+  { src: hewStallHealth, alt: "Health professional at stall" },
+  { src: hewStallZinzino, alt: "Zinzino wellness products" },
+  { src: hewStallZinzinoTeam, alt: "Zinzino team at their stall" },
+  { src: hewStallVpk, alt: "VPK Solutions stall" },
+];
+
 const speakers = [
   {
     name: "Kgomotso Bessie",
