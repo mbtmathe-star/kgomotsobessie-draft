@@ -17,6 +17,9 @@ const navLinks = [{
   href: "/services/disaster-training",
   label: "Disaster Training"
 }, {
+  href: "/healthy-entrepreneur-wellness",
+  label: "HEW"
+}, {
   href: "/gallery",
   label: "Gallery"
 }, {
