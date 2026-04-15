@@ -298,6 +298,49 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
+      {/* Session Engagement & Activities */}
+      <section className="py-10 md:py-14 bg-white border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              During the Event
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              Session Engagement & Vision Active Activities
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
+              {activityPhotos.map((photo) => (
+                <div
+                  key={photo.alt}
+                  className="aspect-[4/3] rounded-lg overflow-hidden border border-border"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Stalls & Event Gallery */}
       <section className="py-10 md:py-14 bg-muted/30 border-t border-border">
         <div className="container-wide">
