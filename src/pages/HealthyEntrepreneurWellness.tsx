@@ -208,8 +208,8 @@ const HealthyEntrepreneurWellness = () => {
               className="space-y-4 text-sm md:text-base leading-relaxed text-foreground"
             >
               <p>
-                The first <strong>Healthy Entrepreneur Wellness</strong> event in <strong>Kimberley</strong>,
-                hosted at <strong>Kimberley Ford</strong> on <strong>28 March</strong>, marked the
+                The inaugural <strong>Healthy Entrepreneur Wellness</strong> event in <strong>Kimberley</strong>,
+                hosted at <strong>Kimberley Ford</strong> on <strong>28 March 2026</strong>, marked the
                 beginning of a powerful conversation around what it truly means to build sustainably
                 as an entrepreneur.
               </p>
