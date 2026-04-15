@@ -11,6 +11,26 @@ import hewSanlam from "@/assets/hew-sanlam-advisor.png";
 import hewJenique from "@/assets/hew-jenique-emslie.png";
 import hewCallie from "@/assets/hew-callie-hendricks.png";
 
+import hewStallIndalo1 from "@/assets/hew-stall-indalo-1.png";
+import hewStallIndalo2 from "@/assets/hew-stall-indalo-2.png";
+import hewStallVenue from "@/assets/hew-stall-venue.png";
+import hewStallAttendee from "@/assets/hew-stall-attendee.png";
+import hewStallHealth from "@/assets/hew-stall-health.png";
+import hewStallZinzino from "@/assets/hew-stall-zinzino.png";
+import hewStallZinzinoTeam from "@/assets/hew-stall-zinzino-team.png";
+import hewStallVpk from "@/assets/hew-stall-vpk.png";
+
+const stallPhotos = [
+  { src: hewStallIndalo1, alt: "Indalo ChloroLife stall presentation" },
+  { src: hewStallIndalo2, alt: "Indalo ChloroLife representative" },
+  { src: hewStallVenue, alt: "Event venue with stalls and attendees" },
+  { src: hewStallAttendee, alt: "Event attendee at stall" },
+  { src: hewStallHealth, alt: "Health professional at stall" },
+  { src: hewStallZinzino, alt: "Zinzino wellness products" },
+  { src: hewStallZinzinoTeam, alt: "Zinzino team at their stall" },
+  { src: hewStallVpk, alt: "VPK Solutions stall" },
+];
+
 const speakers = [
   {
     name: "Kgomotso Bessie",
@@ -252,6 +272,49 @@ const HealthyEntrepreneurWellness = () => {
                     </h3>
                     <p className="text-sm text-muted-foreground">{speaker.role}</p>
                   </div>
+                </div>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Stalls & Event Gallery */}
+      <section className="py-10 md:py-14 bg-muted/30 border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              On the Day
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              Stalls & Event Highlights
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+            >
+              {stallPhotos.map((photo) => (
+                <div
+                  key={photo.alt}
+                  className="aspect-[4/3] rounded-lg overflow-hidden border border-border"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               ))}
             </motion.div>
