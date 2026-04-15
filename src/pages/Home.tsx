@@ -181,19 +181,19 @@ const Home = () => {
         </div>
       </section>
 
-      {/* HEW Inaugural Event */}
+      {/* 2026 HEW Inaugural Event */}
       <section className="bg-white py-8 md:py-12 border-b border-border overflow-hidden">
         <div className="container-wide">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="flex items-center gap-2 text-primary text-xs font-semibold uppercase tracking-wider mb-2">
               <Mic className="h-4 w-4" />
-              <span>2024 HEW Inaugural Event</span>
+              <span>2026 HEW Inaugural Event</span>
             </motion.div>
             <motion.h2 variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-3">
               Meet the Speakers
             </motion.h2>
-            <motion.p variants={fadeUp} className="text-sm md:text-base text-muted-foreground max-w-3xl mb-6">
-              Highlights from the very first Healthy Entrepreneur Wellness event in Kimberley, featuring the speakers and organisers who shaped the conversation.
+              <motion.p variants={fadeUp} className="text-sm md:text-base text-muted-foreground max-w-3xl mb-6">
+              Highlights from the inaugural 2026 Healthy Entrepreneur Wellness event in Kimberley, featuring the speakers and organisers who shaped the conversation.
             </motion.p>
 
             <motion.div variants={fadeUp} className="px-1 md:px-4">
