@@ -25,7 +25,7 @@ const hewSpeakers = [
   },
   {
     name: "Pastor Thapelo Mohitlhi",
-    role: "Speaker",
+    role: "Speaker & Founder of Financial Wealth Creation Industries",
     topic: "Spiritual Wellness",
     image: hewPastor,
   },
