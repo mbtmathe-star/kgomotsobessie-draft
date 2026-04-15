@@ -180,6 +180,63 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
+      {/* Event Recap */}
+      <section className="py-10 md:py-14 bg-muted/30 border-b border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+            className="max-w-4xl"
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              Event Recap
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              A Meaningful Beginning in Kimberley
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="space-y-4 text-sm md:text-base leading-relaxed text-foreground"
+            >
+              <p>
+                The first <strong>Healthy Entrepreneur Wellness</strong> event in <strong>Kimberley</strong>,
+                hosted at <strong>Kimberley Ford</strong> on <strong>28 March</strong>, marked the
+                beginning of a powerful conversation around what it truly means to build sustainably
+                as an entrepreneur.
+              </p>
+              <p>
+                Led by <strong>Callie Hendricks</strong>, <strong>Master of Ceremony</strong>, the
+                event featured a dynamic panel of experts who shared practical, real-world insights
+                on maintaining balance across spiritual, mental, financial, and physical well-being.
+                The session created an open space for honest dialogue, audience engagement, and
+                thought-provoking questions that resonated deeply with attendees.
+              </p>
+              <p>
+                Beyond the panel, the experience extended into live interviews, intentional
+                networking, and a high-energy wellness activity with <strong>Vision Active</strong>
+                — bringing everyone into a moment of movement, presence, and connection. The event
+                closed with appreciation through gift-giving to speakers, reinforcing the value of
+                contribution and community.
+              </p>
+              <p>
+                An intentional initiative by <strong>Kgomotso Bessie Social Workers &amp; Consulting
+                Inc</strong>, this experience reminded us that success in business is not only about
+                growth, but also about sustaining the person behind it.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Wellness Pillars */}
       <section className="py-10 md:py-14 bg-muted/30">
         <div className="container-wide">
