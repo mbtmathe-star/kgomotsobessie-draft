@@ -19,6 +19,7 @@ import hewStallHealth from "@/assets/hew-stall-health.png";
 import hewStallZinzino from "@/assets/hew-stall-zinzino.png";
 import hewStallZinzinoTeam from "@/assets/hew-stall-zinzino-team.png";
 import hewStallVpk from "@/assets/hew-stall-vpk.png";
+import hewStallVpkTeam from "@/assets/hew-stall-vpk-team.png";
 import hewActivityPanelSession from "@/assets/hew-activity-panel-session.png";
 import hewActivityAudienceQuestion from "@/assets/hew-activity-audience-question.png";
 import hewActivityVisionActive1 from "@/assets/hew-activity-vision-active-1.png";
@@ -37,6 +38,7 @@ const stallPhotos = [
   { src: hewStallZinzino, alt: "Zinzino wellness products" },
   { src: hewStallZinzinoTeam, alt: "Zinzino team at their stall" },
   { src: hewStallVpk, alt: "VPK Solutions stall" },
+  { src: hewStallVpkTeam, alt: "VPK team at their stall" },
 ];
 
 const activityPhotos = [
@@ -298,7 +300,7 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
-      {/* Session Engagement & Activities */}
+      {/* Event Highlights */}
       <section className="py-10 md:py-14 bg-white border-t border-border">
         <div className="container-wide">
           <motion.div
@@ -317,7 +319,7 @@ const HealthyEntrepreneurWellness = () => {
               variants={fadeUp}
               className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
             >
-              Session Engagement & Vision Active Activities
+              Event Highlights
             </motion.h2>
 
             <motion.div
@@ -341,7 +343,7 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
-      {/* Stalls & Event Gallery */}
+      {/* Stalls */}
       <section className="py-10 md:py-14 bg-muted/30 border-t border-border">
         <div className="container-wide">
           <motion.div
@@ -360,7 +362,7 @@ const HealthyEntrepreneurWellness = () => {
               variants={fadeUp}
               className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
             >
-              Stalls & Event Highlights
+              Stalls
             </motion.h2>
 
             <motion.div
