@@ -383,14 +383,6 @@ const HealthyEntrepreneurWellness = () => {
 
       {/* CTA Section */}
       <section className="py-10 md:py-14 bg-primary">
-        {/* Sponsor block lives just above CTA below */}
-      </section>
-      {/* Replaced above empty wrapper - real sections below */}
-    </>
-  );
-};
-
-// (removed) old export — see end of file
         <div className="container-wide">
           <motion.div
             initial="hidden"
