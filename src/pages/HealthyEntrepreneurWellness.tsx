@@ -28,6 +28,7 @@ import hewActivityAudienceSmiles from "@/assets/hew-activity-audience-smiles.png
 import hewActivityAudienceListening from "@/assets/hew-activity-audience-listening.png";
 import hewActivitySessionDiscussion from "@/assets/hew-activity-session-discussion.png";
 import hewActivityGroupPhoto from "@/assets/hew-activity-group-photo.png";
+import topNotchLogo from "@/assets/topnotch-053-logo.png";
 
 const stallPhotos = [
   { src: hewStallIndalo1, alt: "Indalo ChloroLife stall presentation" },
