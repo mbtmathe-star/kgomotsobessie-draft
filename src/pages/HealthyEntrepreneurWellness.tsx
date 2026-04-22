@@ -381,6 +381,75 @@ const HealthyEntrepreneurWellness = () => {
         </div>
       </section>
 
+      {/* Sponsor / Venue Partner */}
+      <section className="py-10 md:py-14 bg-white border-t border-border">
+        <div className="container-wide">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={stagger}
+          >
+            <motion.p
+              variants={fadeUp}
+              className="text-primary font-semibold uppercase tracking-wider text-xs mb-2"
+            >
+              Proudly Hosted In Partnership With
+            </motion.p>
+            <motion.h2
+              variants={fadeUp}
+              className="font-heading text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-6"
+            >
+              Sponsor & Venue Partner
+            </motion.h2>
+
+            <motion.div
+              variants={fadeUp}
+              className="grid md:grid-cols-2 gap-6 items-center bg-muted/20 rounded-lg border border-border p-6 md:p-8"
+            >
+              <div className="flex items-center justify-center bg-white rounded-lg border border-border p-6">
+                <img
+                  src={topNotchLogo}
+                  alt="Top Notch 053 — Outdoor Lifestyle, Bar & Grill"
+                  className="w-full max-w-sm h-auto object-contain"
+                />
+              </div>
+              <div className="space-y-3 text-sm md:text-base text-foreground leading-relaxed">
+                <h3 className="font-heading text-lg md:text-xl font-bold text-foreground">
+                  Top Notch 053
+                </h3>
+                <p>
+                  Top Notch 053 is a bar and grill space offering an outdoor &amp; indoor lifestyle —
+                  club, restaurant, salon, car wash, and chesanyama services. A popular spot for
+                  both locals and visitors in Kimberley.
+                </p>
+                <div className="pt-2 border-t border-border">
+                  <p className="font-semibold text-foreground mb-1">Address</p>
+                  <p className="text-muted-foreground">
+                    4094 Shaka Street, Vergenoeg, Kimberley
+                  </p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground mb-1">Contact</p>
+                  <p className="text-muted-foreground">
+                    Mulisa —{" "}
+                    <a href="tel:0647584413" className="text-primary hover:underline">
+                      064 758 4413
+                    </a>
+                  </p>
+                  <p className="text-muted-foreground">
+                    Thabang —{" "}
+                    <a href="tel:0734620845" className="text-primary hover:underline">
+                      073 462 0845
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-10 md:py-14 bg-primary">
         <div className="container-wide">
