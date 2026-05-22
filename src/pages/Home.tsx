@@ -232,7 +232,7 @@ const Home = () => {
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
-              HEW 2026 — Wrapped into Three Minutes
+              2026 Highlights
             </h2>
             <video
               src={hewVideo}
