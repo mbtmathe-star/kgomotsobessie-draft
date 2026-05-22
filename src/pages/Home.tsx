@@ -231,6 +231,9 @@ const Home = () => {
       <section className="bg-white py-8 md:py-12 border-b border-border">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl md:text-2xl font-bold text-foreground mb-4">
+              HEW 2026 — Wrapped into Three Minutes
+            </h2>
             <video
               src={hewVideo}
               controls
