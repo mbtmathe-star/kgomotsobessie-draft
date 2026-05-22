@@ -15,7 +15,7 @@ import hewCharlene from "@/assets/hew-charlene-laufs.png";
 import hewSanlam from "@/assets/hew-sanlam-advisor.png";
 import hewJenique from "@/assets/hew-jenique-emslie.png";
 import hewCallie from "@/assets/hew-callie-hendricks.png";
-import hewVideo from "@/assets/hew-event-video.mp4";
+const hewVideo = "/videos/hew-event-video.mp4";
 
 const hewSpeakers = [
   {
@@ -227,7 +227,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Overview - Simple Text Section */}
+      {/* HEW 2026 Event Video */}
       <section className="bg-white py-8 md:py-12 border-b border-border">
         <div className="container-wide">
           <div className="max-w-4xl mx-auto">
@@ -235,6 +235,7 @@ const Home = () => {
               src={hewVideo}
               controls
               playsInline
+              preload="metadata"
               className="w-full rounded border border-border shadow-card"
             />
           </div>
