@@ -85,17 +85,17 @@ const Home = () => {
         
         {/* Content */}
         <div className="container-wide relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl py-12 lg:py-0 mx-auto text-center">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="w-full py-12 lg:py-0 text-center">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary-foreground/80 text-sm font-medium mb-4">
               <Award className="h-4 w-4" />
               <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
             </motion.div>
 
-            <motion.h1 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            <motion.h1 variants={fadeUp} className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight whitespace-nowrap">
               Resilience in Action. Care in Practice.
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/80 leading-relaxed mb-8">
+            <motion.p variants={fadeUp} className="text-base md:text-lg text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
               Empowering individuals, families, and organizations across the Northern Cape 
               through professional social work services and transformative wellness consulting.
             </motion.p>
