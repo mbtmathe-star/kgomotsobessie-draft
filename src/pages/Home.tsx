@@ -85,7 +85,7 @@ const Home = () => {
         
         {/* Content */}
         <div className="container-wide relative z-10">
-          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl py-12 lg:py-0">
+          <motion.div initial="hidden" animate="visible" variants={stagger} className="max-w-2xl py-12 lg:py-0 mx-auto text-center">
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 text-primary-foreground/80 text-sm font-medium mb-4">
               <Award className="h-4 w-4" />
               <span>Black Woman-Owned • Level 1 BBBEE • SACSSP Registered</span>
