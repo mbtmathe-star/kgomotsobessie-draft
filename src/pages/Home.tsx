@@ -110,21 +110,45 @@ const Home = () => {
                 </Link>
               </Button>
             </motion.div>
-
-            {/* Speaker Engagement & Booking */}
-            <motion.div variants={fadeUp} className="mt-6 md:mt-8 inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-5 py-4 mx-auto max-w-xl text-center sm:text-left">
-              <div className="flex items-center gap-2 text-white text-sm md:text-base">
-                <Mic className="h-5 w-5 text-white/90 flex-shrink-0" />
-                <span>Planning an event? Book Kgomotso to speak on resilience, wellness &amp; empowerment.</span>
-              </div>
-              <Button asChild size="sm" variant="secondary" className="bg-white text-primary hover:bg-white/90 flex-shrink-0">
-                <Link to="/contact">
-                  Book Me to Speak
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Speaker Engagement & Booking */}
+      <section className="py-10 md:py-14 bg-white border-b border-border">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative max-w-md mx-auto lg:mx-0">
+              <div className="aspect-[4/5] rounded overflow-hidden shadow-card">
+                <img src={speaker2} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-4 -right-3 sm:-bottom-6 sm:-right-6 w-1/3 sm:w-2/5 aspect-[4/5] rounded overflow-hidden border-4 border-white shadow-card-hover">
+                <img src={speaker1} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
+            </motion.div>
+
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-8 lg:mt-0">
+              <motion.div variants={fadeUp} className="flex items-center gap-2 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
+                <Mic className="h-4 w-4" />
+                <span>Speaker Engagement & Booking</span>
+              </motion.div>
+              <motion.h2 variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4">
+                Book Kgomotso to Speak at Your Next Event
+              </motion.h2>
+              <motion.p variants={fadeUp} className="text-sm md:text-base text-foreground leading-relaxed mb-6 max-w-lg">
+                From conferences and workshops to corporate breakfasts, Kgomotso brings practical, powerful messaging
+                on resilience, wellness, and empowerment. Invite her to speak at your next event.
+              </motion.p>
+              <motion.div variants={fadeUp}>
+                <Button asChild size="lg" className="btn-primary-gradient btn-glow">
+                  <Link to="/contact">
+                    Book Me to Speak
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
