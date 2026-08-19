@@ -15,6 +15,8 @@ import hewCharlene from "@/assets/hew-charlene-laufs.png";
 import hewSanlam from "@/assets/hew-sanlam-advisor.png";
 import hewJenique from "@/assets/hew-jenique-emslie.png";
 import hewCallie from "@/assets/hew-callie-hendricks.png";
+import speaker1 from "@/assets/speaker1.jpg";
+import speaker2 from "@/assets/speaker2.jpg";
 const hewVideo = "/videos/hew-event-video.mp4";
 
 const hewSpeakers = [
@@ -105,6 +107,20 @@ const Home = () => {
                 <Link to="/contact">
                   Book a Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </motion.div>
+
+            {/* Speaker Engagement & Booking */}
+            <motion.div variants={fadeUp} className="mt-6 md:mt-8 inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-5 py-4 mx-auto max-w-xl text-center sm:text-left">
+              <div className="flex items-center gap-2 text-white text-sm md:text-base">
+                <Mic className="h-5 w-5 text-white/90 flex-shrink-0" />
+                <span>Planning an event? Book Kgomotso to speak on resilience, wellness &amp; empowerment.</span>
+              </div>
+              <Button asChild size="sm" variant="secondary" className="bg-white text-primary hover:bg-white/90 flex-shrink-0">
+                <Link to="/contact">
+                  Book Me to Speak
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </motion.div>
@@ -247,18 +263,30 @@ const Home = () => {
 
       <section className="bg-section-light py-8 md:py-12 border-b border-border">
         <div className="container-wide">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 md:mb-6">Our Services</h2>
-          <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
-            We provide a range of professional social work services including individual and family counselling, 
-            trauma support, employee wellness programmes, and community workshops. Our approach is grounded in 
-            ethical practice, compassion, and a commitment to empowering those we serve.
-          </p>
-          <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
-            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
-            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
-            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
-            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
-            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div>
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 md:mb-6">Our Services</h2>
+              <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
+                We provide a range of professional social work services including individual and family counselling,
+                trauma support, employee wellness programmes, and community workshops. Our approach is grounded in
+                ethical practice, compassion, and a commitment to empowering those we serve.
+              </p>
+              <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
+                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
+                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
+                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
+                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
+                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="aspect-[3/4] rounded overflow-hidden shadow-card">
+                <img src={speaker1} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-[3/4] rounded overflow-hidden shadow-card">
+                <img src={speaker2} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
