@@ -114,20 +114,89 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Split Screen - About Section */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Image Side */}
+            <motion.div initial={{
+            opacity: 0,
+            x: -20
+          }} whileInView={{
+            opacity: 1,
+            x: 0
+          }} viewport={{
+            once: true
+          }} transition={{
+            duration: 0.6
+          }} className="relative">
+              <div className="aspect-[4/5] rounded overflow-hidden">
+                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d04bdbcd-a47f-4346-946d-4fdbb7dd35b7.jpg" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
+                <p className="text-2xl md:text-3xl font-bold">13+</p>
+                <p className="text-sm text-white/80">Years Experience</p>
+              </div>
+            </motion.div>
+
+            {/* Content Side */}
+            <motion.div initial="hidden" whileInView="visible" viewport={{
+            once: true
+          }} variants={stagger}>
+              <motion.p variants={fadeUp} className="text-overline mb-4">
+                About Our Practice
+              </motion.p>
+              <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-6">
+                A Trusted, Registered Social Work Practice
+              </motion.h2>
+              <motion.div variants={fadeUp} className="space-y-4 text-body">
+                <p>
+                  Kgomotso Bessie Social Workers and Consulting Inc. is a Black woman-owned,
+                  Level 1 BBBEE social work practice based in Kimberley, Northern Cape.
+                </p>
+                <p>
+                  Founded by Kgomotso Bessie — a qualified social worker with a Master's in
+                  Disaster Management and over 13 years of experience — we deliver personalised,
+                  ethical, and evidence-based services to individuals, families, organisations,
+                  and communities.
+                </p>
+              </motion.div>
+
+              {/* Quick Stats */}
+              <motion.div variants={fadeUp} className="grid grid-cols-3 gap-4 mt-8 py-6 border-t border-b border-border">
+                {[{
+                value: "2012",
+                label: "In Practice Since"
+              }, {
+                value: "Level 1",
+                label: "BBBEE"
+              }, {
+                value: "SACSSP",
+                label: "Registered"
+              }].map((stat, index) => <div key={index} className="text-center">
+                    <p className="text-xl md:text-2xl font-bold text-primary">{stat.value}</p>
+                    <p className="text-xs text-foreground">{stat.label}</p>
+                  </div>)}
+              </motion.div>
+
+              <motion.div variants={fadeUp} className="mt-8">
+                <Button asChild size="lg" variant="outline">
+                  <Link to="/about">
+                    Meet the Founder
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Speaker Engagement & Booking */}
       <section className="py-10 md:py-14 bg-white border-b border-border">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative max-w-md mx-auto lg:mx-0">
-              <div className="aspect-[4/5] rounded overflow-hidden shadow-card">
-                <img src={speaker2} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute -bottom-4 -right-3 sm:-bottom-6 sm:-right-6 w-1/3 sm:w-2/5 aspect-[4/5] rounded overflow-hidden border-4 border-white shadow-card-hover">
-                <img src={speaker1} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
-              </div>
-            </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mt-8 lg:mt-0">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
               <motion.div variants={fadeUp} className="flex items-center gap-2 text-primary text-xs font-semibold uppercase tracking-wider mb-3">
                 <Mic className="h-4 w-4" />
                 <span>Speaker Engagement & Booking</span>
@@ -147,6 +216,15 @@ const Home = () => {
                   </Link>
                 </Button>
               </motion.div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative max-w-md mx-auto lg:ml-auto mt-8 lg:mt-0">
+              <div className="aspect-[4/5] rounded overflow-hidden shadow-card">
+                <img src={speaker2} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
+              <div className="absolute -bottom-4 -left-3 sm:-bottom-6 sm:-left-6 w-1/3 sm:w-2/5 aspect-[4/5] rounded overflow-hidden border-4 border-white shadow-card-hover">
+                <img src={speaker1} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -287,108 +365,18 @@ const Home = () => {
 
       <section className="bg-section-light py-8 md:py-12 border-b border-border">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div>
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 md:mb-6">Our Services</h2>
-              <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
-                We provide a range of professional social work services including individual and family counselling,
-                trauma support, employee wellness programmes, and community workshops. Our approach is grounded in
-                ethical practice, compassion, and a commitment to empowering those we serve.
-              </p>
-              <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
-                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
-                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
-                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
-                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
-                <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4">
-              <div className="aspect-[3/4] rounded overflow-hidden shadow-card">
-                <img src={speaker1} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
-              </div>
-              <div className="aspect-[3/4] rounded overflow-hidden shadow-card">
-                <img src={speaker2} alt="Kgomotso Bessie speaking at a past event" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Split Screen - About Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
-        <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Image Side */}
-            <motion.div initial={{
-            opacity: 0,
-            x: -20
-          }} whileInView={{
-            opacity: 1,
-            x: 0
-          }} viewport={{
-            once: true
-          }} transition={{
-            duration: 0.6
-          }} className="relative">
-              <div className="aspect-[4/5] rounded overflow-hidden">
-                <img alt="Kgomotso Bessie - Founder" className="w-full h-full object-cover" src="/lovable-uploads/d04bdbcd-a47f-4346-946d-4fdbb7dd35b7.jpg" />
-              </div>
-              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-primary text-white p-5 md:p-6 rounded">
-                <p className="text-2xl md:text-3xl font-bold">13+</p>
-                <p className="text-sm text-white/80">Years Experience</p>
-              </div>
-            </motion.div>
-
-            {/* Content Side */}
-            <motion.div initial="hidden" whileInView="visible" viewport={{
-            once: true
-          }} variants={stagger}>
-              <motion.p variants={fadeUp} className="text-overline mb-4">
-                About Our Practice
-              </motion.p>
-              <motion.h2 variants={fadeUp} className="text-headline text-foreground mb-6">
-                A Trusted, Registered Social Work Practice
-              </motion.h2>
-              <motion.div variants={fadeUp} className="space-y-4 text-body">
-                <p>
-                  Kgomotso Bessie Social Workers and Consulting Inc. is a Black woman-owned, 
-                  Level 1 BBBEE social work practice based in Kimberley, Northern Cape.
-                </p>
-                <p>
-                  Founded by Kgomotso Bessie — a qualified social worker with a Master's in 
-                  Disaster Management and over 13 years of experience — we deliver personalised, 
-                  ethical, and evidence-based services to individuals, families, organisations, 
-                  and communities.
-                </p>
-              </motion.div>
-              
-              {/* Quick Stats */}
-              <motion.div variants={fadeUp} className="grid grid-cols-3 gap-4 mt-8 py-6 border-t border-b border-border">
-                {[{
-                value: "2012",
-                label: "In Practice Since"
-              }, {
-                value: "Level 1",
-                label: "BBBEE"
-              }, {
-                value: "SACSSP",
-                label: "Registered"
-              }].map((stat, index) => <div key={index} className="text-center">
-                    <p className="text-xl md:text-2xl font-bold text-primary">{stat.value}</p>
-                    <p className="text-xs text-foreground">{stat.label}</p>
-                  </div>)}
-              </motion.div>
-
-              <motion.div variants={fadeUp} className="mt-8">
-                <Button asChild size="lg" variant="outline">
-                  <Link to="/about">
-                    Meet the Founder
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </motion.div>
-            </motion.div>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground mb-4 md:mb-6">Our Services</h2>
+          <p className="text-sm md:text-base text-foreground leading-relaxed mb-6">
+            We provide a range of professional social work services including individual and family counselling,
+            trauma support, employee wellness programmes, and community workshops. Our approach is grounded in
+            ethical practice, compassion, and a commitment to empowering those we serve.
+          </p>
+          <div className="flex flex-wrap gap-2 md:gap-3 text-xs md:text-sm">
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Individual Counselling</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Family Support</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Trauma & Crisis Support</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Employee Wellness</span>
+            <span className="px-3 py-1.5 md:px-4 md:py-2 bg-white border border-border rounded-full text-foreground">Workshops & Training</span>
           </div>
         </div>
       </section>
