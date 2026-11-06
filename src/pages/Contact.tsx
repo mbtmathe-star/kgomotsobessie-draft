@@ -56,6 +56,22 @@ const Contact = () => {
                   </div>
                 </div>
 
+                {/* New Branch */}
+                <div className="flex gap-3">
+                  <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">
+                    <MapPin className="h-4 w-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground text-sm mb-1">
+                      New Branch <span className="ml-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-semibold uppercase text-white">Now Open</span>
+                    </h3>
+                    <p className="text-foreground text-sm">
+                      37 Jan van Zyl Street<br />
+                      Monument Heights, Kimberley
+                    </p>
+                  </div>
+                </div>
+
                 {/* Phone */}
                 <div className="flex gap-3">
                   <div className="w-10 h-10 shrink-0 rounded-lg icon-container-solid flex items-center justify-center">

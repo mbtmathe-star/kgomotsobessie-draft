@@ -75,6 +75,13 @@ const Footer = () => {
                   Medicare, 259 Barkly Road,<br />Homestead, Kimberley 8301
                 </span>
               </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-primary mt-0.5 shrink-0" />
+                <span className="text-white/80">
+                  <strong className="text-white">New Branch:</strong><br />
+                  37 Jan van Zyl Street,<br />Monument Heights, Kimberley
+                </span>
+              </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-primary shrink-0" />
                 <div className="flex flex-col">
