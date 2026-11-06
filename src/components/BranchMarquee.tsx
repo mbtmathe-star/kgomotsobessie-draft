@@ -1,4 +1,6 @@
-import { BRANCH_MAPS_URL } from "@/components/NewBranchPopup";
+const BRANCH_MAPS_URL =
+  "https://www.google.com/maps/search/?api=1&query=" +
+  encodeURIComponent("37 Jan van Zyl Street, Monument Heights, Kimberley");
 
 const Item = () => (
   <div className="flex shrink-0 items-center whitespace-nowrap px-8 text-xs font-semibold uppercase tracking-widest sm:text-sm">
