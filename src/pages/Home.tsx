@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone, Calendar, Award, Mail, Mic, MapPin, Sparkles, Navigation } from "lucide-react";
+import { ArrowRight, Phone, Calendar, Award, Mail, Mic } from "lucide-react";
 import ImpactCounter from "@/components/ImpactCounter";
-import { BRANCH_ADDRESS_LINE1, BRANCH_ADDRESS_LINE2, BRANCH_MAPS_URL } from "@/components/NewBranchPopup";
+import BranchMarquee from "@/components/BranchMarquee";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { fadeUp, stagger } from "@/lib/animations";
@@ -80,6 +80,7 @@ const Home = () => {
   return <>
       {/* Hero Banner - Full Width with Large Image */}
       <section className="relative min-h-[70vh] lg:min-h-[75vh] flex items-center overflow-hidden">
+        <BranchMarquee />
         {/* Background Image */}
         <div className="absolute inset-0">
           <img src={heroOffice} alt="Professional social work office" className="w-full h-full object-cover" />
@@ -118,43 +119,6 @@ const Home = () => {
 
       {/* Impact counter: pop-up card that settles into a slim banner */}
       <ImpactCounter />
-
-      {/* New Branch Announcement */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-10 md:py-14">
-        <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
-        <div className="absolute -bottom-28 -left-16 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
-        <div className="container-wide relative z-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
-            <div className="max-w-2xl">
-              <motion.div variants={fadeUp} className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white mb-4">
-                <Sparkles className="h-4 w-4" />
-                <span>Big News • Now Open</span>
-              </motion.div>
-              <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-3">
-                Our New Branch Is Open in Monument Heights!
-              </motion.h2>
-              <motion.p variants={fadeUp} className="text-white/85 md:text-lg">
-                Professional social work and wellness services, now closer to you. Come and find us at our new location.
-              </motion.p>
-            </div>
-
-            <motion.div variants={fadeUp} className="w-full max-w-sm rounded-lg bg-white p-6 shadow-card-hover text-center">
-              <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-primary mb-1">Find Us At</p>
-              <p className="text-xl font-bold text-foreground">{BRANCH_ADDRESS_LINE1}</p>
-              <p className="text-foreground mb-5">{BRANCH_ADDRESS_LINE2}</p>
-              <Button asChild size="lg" className="btn-primary-gradient btn-glow w-full">
-                <a href={BRANCH_MAPS_URL} target="_blank" rel="noopener noreferrer">
-                  <Navigation className="mr-2 h-5 w-5" />
-                  Get Directions
-                </a>
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Split Screen - About Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
