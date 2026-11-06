@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Calendar, Award, Mail, Mic, MapPin, Sparkles, Navigation } from "lucide-react";
+import ImpactCounter from "@/components/ImpactCounter";
 import { BRANCH_ADDRESS_LINE1, BRANCH_ADDRESS_LINE2, BRANCH_MAPS_URL } from "@/components/NewBranchPopup";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -114,6 +115,9 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Impact counter: pop-up card that settles into a slim banner */}
+      <ImpactCounter />
 
       {/* New Branch Announcement */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary to-[hsl(174_55%_28%)] py-10 md:py-14">
