@@ -1,19 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useInView, useReducedMotion } from "framer-motion";
-import { X, Calendar, Users, Briefcase, Mic, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export const IMPACT_STORAGE_KEY = "impact-card-seen";
 export const IMPACT_CLOSED_EVENT = "impact-card-closed";
+
+// Module-level: the card shows once per page load (opening the site), not on in-app navigation.
+let cardShownThisLoad = false;
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const stats = [
-  { icon: Users, target: 1200, suffix: "+", label: "Clients Seen", sub: "Individual, family & couples sessions" },
-  { icon: Briefcase, target: 30, suffix: "+", label: "Wellness Workshops", sub: "Government & private sector" },
-  { icon: Mic, target: 10, suffix: "", label: "Speaking Engagements", sub: "Self-image, mental health & entrepreneurship" },
-  { icon: Heart, target: 5, suffix: "", label: "Community Events", sub: "Breakfast with my Teenager, Parenting & Healthy Entrepreneur Wellness" },
+  { target: 1200, suffix: "+", label: "Clients Seen", sub: "Individual, family & couples sessions" },
+  { target: 30, suffix: "+", label: "Wellness Workshops", sub: "Government & private sector" },
+  { target: 10, suffix: "", label: "Speaking Engagements", sub: "Self-image, mental health & entrepreneurship" },
+  { target: 5, suffix: "", label: "Community Events", sub: "Breakfast with my Teenager, Parenting & Healthy Entrepreneur Wellness" },
 ];
 
 const useCountUp = (target: number, run: boolean, duration = 1900) => {
@@ -59,26 +60,16 @@ const ImpactCounter = () => {
 
   const close = () => {
     setPhase("banner");
-    try {
-      sessionStorage.setItem(IMPACT_STORAGE_KEY, "1");
-    } catch {
-      /* ignore */
-    }
     window.dispatchEvent(new Event(IMPACT_CLOSED_EVENT));
   };
 
   useEffect(() => {
-    let seen = false;
-    try {
-      seen = !!sessionStorage.getItem(IMPACT_STORAGE_KEY);
-    } catch {
-      /* ignore */
-    }
-    if (seen) {
+    if (cardShownThisLoad) {
       setPhase("banner");
       return;
     }
-    const t = window.setTimeout(() => setPhase("card"), 700);
+    cardShownThisLoad = true;
+    const t = window.setTimeout(() => setPhase("card"), 600);
     return () => window.clearTimeout(t);
   }, []);
 
@@ -131,7 +122,7 @@ const ImpactCounter = () => {
                 aria-label="Close"
                 className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
-                <X className="h-5 w-5" />
+                <span aria-hidden="true" className="text-2xl leading-none">×</span>
               </button>
               <div className="px-6 pt-9 text-center sm:px-10">
                 <p className="text-overline mb-3">Our Impact · Past 2 Years</p>
@@ -153,9 +144,6 @@ const ImpactCounter = () => {
                       initial={{ opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0, transition: { delay: 0.35 + i * 0.12, duration: 0.6, ease: EASE } }}
                     >
-                      <div className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-full bg-primary/10">
-                        <s.icon className="h-5 w-5 text-primary" />
-                      </div>
                       <p className="text-4xl font-bold leading-none text-primary sm:text-5xl">
                         <Num target={s.target} suffix={s.suffix} run />
                       </p>
@@ -168,7 +156,6 @@ const ImpactCounter = () => {
                 <div className="mt-8 flex flex-col items-center gap-3 border-t border-border pt-6">
                   <Button asChild size="lg" className="btn-primary-gradient btn-glow w-full sm:w-auto">
                     <Link to="/contact" onClick={close}>
-                      <Calendar className="mr-2 h-5 w-5" />
                       Book a Consultation
                     </Link>
                   </Button>
@@ -197,9 +184,6 @@ const ImpactCounter = () => {
                 <div className="grid w-full grid-cols-2 gap-x-4 gap-y-4 sm:grid-cols-4 lg:flex-1">
                   {stats.map((s) => (
                     <div key={s.label} className="flex items-center justify-center gap-3">
-                      <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 sm:flex">
-                        <s.icon className="h-5 w-5 text-primary" />
-                      </div>
                       <div className="text-center sm:text-left">
                         <p className="text-2xl font-bold leading-none text-primary md:text-3xl">
                           <Num target={s.target} suffix={s.suffix} run={bannerInView} />
@@ -213,7 +197,6 @@ const ImpactCounter = () => {
                 </div>
                 <Button asChild className="btn-primary-gradient btn-glow w-full shrink-0 lg:w-auto">
                   <Link to="/contact">
-                    <Calendar className="mr-2 h-4 w-4" />
                     Book a Consultation
                   </Link>
                 </Button>

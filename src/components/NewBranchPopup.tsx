@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Sparkles, ArrowRight, Navigation } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { IMPACT_CLOSED_EVENT, IMPACT_STORAGE_KEY } from "@/components/ImpactCounter";
+import { IMPACT_CLOSED_EVENT } from "@/components/ImpactCounter";
 
 export const BRANCH_ADDRESS_LINE1 = "37 Jan van Zyl Street";
 export const BRANCH_ADDRESS_LINE2 = "Monument Heights, Kimberley";
@@ -30,14 +30,7 @@ const NewBranchPopup = () => {
     };
 
     // On the home page, let the impact card go first and show this one after it closes.
-    let impactPending = false;
-    if (window.location.pathname === "/") {
-      try {
-        impactPending = !sessionStorage.getItem(IMPACT_STORAGE_KEY);
-      } catch {
-        /* ignore */
-      }
-    }
+    const impactPending = window.location.pathname === "/";
 
     if (impactPending) {
       window.addEventListener(IMPACT_CLOSED_EVENT, show);
