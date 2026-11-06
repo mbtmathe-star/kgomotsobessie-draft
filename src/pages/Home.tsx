@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone, Calendar, Award, Mail, Mic } from "lucide-react";
-import ImpactCounter from "@/components/ImpactCounter";
+import ImpactStats from "@/components/ImpactStats";
 import BranchMarquee from "@/components/BranchMarquee";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from "@/components/ui/carousel";
@@ -117,9 +117,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Impact counter: pop-up card that settles into a slim banner */}
-      <ImpactCounter />
-
       {/* Split Screen - About Section */}
       <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container-wide">
@@ -183,6 +180,10 @@ const Home = () => {
                     <p className="text-xl md:text-2xl font-bold text-primary">{stat.value}</p>
                     <p className="text-xs text-foreground">{stat.label}</p>
                   </div>)}
+              </motion.div>
+
+              <motion.div variants={fadeUp}>
+                <ImpactStats />
               </motion.div>
 
               <motion.div variants={fadeUp} className="mt-8">
